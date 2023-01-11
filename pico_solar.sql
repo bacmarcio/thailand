@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 10/01/2023 às 21:39
+-- Tempo de geração: 11/01/2023 às 21:38
 -- Versão do servidor: 10.4.22-MariaDB
 -- Versão do PHP: 8.1.2
 
@@ -21738,6 +21738,35 @@ INSERT INTO `tbl_sliders` (`id`, `foto`, `titulo1`, `titulo2`, `breve`, `tem_bot
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tbl_sobre`
+--
+
+CREATE TABLE `tbl_sobre` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(250) DEFAULT NULL,
+  `titulo_en` varchar(255) DEFAULT NULL,
+  `titulo_th` varchar(255) DEFAULT NULL,
+  `descricao` text DEFAULT NULL,
+  `descricao_en` text DEFAULT NULL,
+  `descricao_th` text DEFAULT NULL,
+  `id_cat` int(11) DEFAULT NULL,
+  `meta_title` text DEFAULT NULL,
+  `meta_keywords` text DEFAULT NULL,
+  `meta_description` text DEFAULT NULL,
+  `foto` varchar(250) DEFAULT NULL,
+  `url_amigavel` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Despejando dados para a tabela `tbl_sobre`
+--
+
+INSERT INTO `tbl_sobre` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
+(2, '1', '2', '3', '<p>1</p>\r\n', '<p>2</p>\r\n', '<p>3</p>\r\n', NULL, '', '', '', NULL, '1');
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tbl_solucoes`
 --
 
@@ -21773,6 +21802,28 @@ INSERT INTO `tbl_solucoes` (`id`, `titulo`, `postado_por`, `conteudo`, `data_pos
 (6, 'Indústria', NULL, '<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">O nível de consumo de energia do setor industrial é elevado, apesar de as indústrias disporem de tarifas diferenciadas, reduzidas em relação ao consumidor residencial, porém em função do elevado consumo, acaba se tornando em um dos maiores da produção dos produtos.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">A saída está na adoção de geração de energia a partir da energia solar, com as soluções da Pico Solar para os sistemas de geração fotovoltaica.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">O uso desse tipo de energia é viável para de todos os portes e tipos de empreendimentos industriais, em especial porque esse tipo de empresa, em geral, dispõe de área para a instalação dos painéis fotovoltaicos. É possível reduzir o custo de energia elétrica em parte ou a praticamente ZERO e garantir os preços futuros da energia consumida por sua empresa (evitando as altas imprevistas), adotar a produção de acordo com padrões de sustentabilidade e qualidade de produtos de nível internacional.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">E ainda, se sua empresa detiver mais de uma unidade, e estas estiverem no mesmo Estado, você pode gerar excedentes em um empreendimento e repassar para outro empreendimento vinculado ao mesmo CPF ou CNPJ.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Visto que a geração de energia elétrica também pode ser um investimento rentável para aquele investidor que deseja trabalhar com um ativo de alta qualidade e que gera recursos mensalmente.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Economize na sua conta de energia, fuja das altas inesperadas, e ainda proteja o meio-ambiente!</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\"><strong>Com energia solar, você tem muito mais!</strong></span></span><br />\r\n </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Confira todos os benefícios que você pode desfrutar com o Sistema Pico Solar:<br />\r\n<br />\r\n<strong>+ Economia</strong><br />\r\nReduza o valor da sua conta de luz em até 98%. Pague apenas pela taxa obrigatória da concessionária.<br />\r\n<br />\r\n<strong>+ Energia</strong><br />\r\nAtravés do sol produzimos uma energia renovável, que mesmo em dias mais nublados te garante energia limpa, natural e infinita.<br />\r\n<br />\r\n<strong>+ Vida útil</strong><br />\r\nO Sistema de energia solar tem baixa necessidade de manutenção. Após instalado o sistema, os cuidados preventivos envolvem apenas limpeza e fiscalização dos painéis solares.<br />\r\n<br />\r\n<strong>+ Sustentabilidade</strong><br />\r\nA energia solar é uma grande aliada na redução da poluição e das taxas de carbono no meio ambiente.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\"><strong>Venha para a Pico Solar e faça parte do futuro!</strong></span></span></p>\r\n', NULL, NULL, '1610135867.07-foto-N.jpeg', '', 'Indústria - Pico Solar | Energia Solar em Brasília -DF', '', 'A Pico Solar oferece soluções em Energia Solar para de todos os portes e tipos de Indústrias em Brasília - DF', NULL, 'industria', '', '', ''),
 (7, 'Agronegócio', NULL, '<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">A produção agrícola da atualidade incorpora cada vez mais elementos de consumo de energia elétrica, especialmente para aquecimento de suínos e aves, sistemas de ordenha, beneficiamento de produtos, de resfriamento de produtos, de irrigação de cultivos, de climatização em criatórios de animais ou de estufas de produção, ou ainda de uso de energia em pontos isolados da propriedade, onde não existe rede elétrica disponível.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Os custos de energia estão cada vez maiores e acabam impactando os preços dos produtos agrícolas, reduzindo as margens dos produtores e dificultando o dia-a-dia de quem produz para consumo interno ou para exportação.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">A Pico Solar propõe a adoção de uso de geração de energia elétrica a partir de sistema de geração solar para suprir a demanda dos empreendimentos do agronegócio, adicionando uma redução de custos a produção e um nível de qualidade ambiental aos produtos que representa mais competitividade a produção mais competitiva do mundo, a Brasileira.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Economize na sua conta de energia, fuja das altas inesperadas, e ainda proteja o meio-ambiente!</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:22px\"><span style=\"font-family:Open Sans,sans-serif\"><strong>Com energia solar, você tem muito mais!</strong></span></span><br />\r\n </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:18px\"><span style=\"font-family:Open Sans,sans-serif\">Confira todos os benefícios que você pode desfrutar com o Sistema Pico Solar:<br />\r\n<br />\r\n<strong>+ Economia</strong><br />\r\nReduza o valor da sua conta de luz em até 98%. Pague apenas pela taxa obrigatória da concessionária.<br />\r\n<br />\r\n<strong>+ Energia</strong><br />\r\nAtravés do sol produzimos uma energia renovável, que mesmo em dias mais nublados te garante energia limpa, natural e infinita.<br />\r\n<br />\r\n<strong>+ Vida útil</strong><br />\r\nO Sistema de energia solar tem baixa necessidade de manutenção. Após instalado o sistema, os cuidados preventivos envolvem apenas limpeza e fiscalização dos painéis solares.<br />\r\n<br />\r\n<strong>+ Sustentabilidade</strong><br />\r\nA energia solar é uma grande aliada na redução da poluição e das taxas de carbono no meio ambiente.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:22px\"><span style=\"font-family:Open Sans,sans-serif\"><strong>Venha para a Pico Solar e faça parte do futuro!</strong></span></span></p>\r\n', NULL, NULL, '1610136526.38-foto-N.jpg', '', 'Agronegócio - Pico Solar | Energia Solar em Brasília -DF', '', 'A Pico Solar propõe a adoção de Energia Solar para suprir a demanda dos empreendimentos do agronegócio em Brasília - DF', NULL, 'agronegocio', '', '', ''),
 (8, 'Usinas Solares', NULL, '<p style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">A Pico Solar, em parceria com uma das maiores produtoras de equipamentos de geração de energia fotovoltaica, disponibiliza soluções para a geração em escala (do inglês \"<em>utility scale</em>\") e grandes volumes de energia concentrados em uma única planta. </span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">Tornando possível contemplar as demandas de energia elétrica tanto para a venda a distribuidoras, como para o abastecimento de cidades, empresas, instituições ou ainda servir de fonte de renda a possíveis investidores que desejam produzir ganhos elevados por meio de vendas de energia.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">Geração de energia elétrica também pode ser um investimento rentável para aquele investidor que deseja trabalhar com um ativo de alta qualidade e que gera recursos mensalmente.</span></span></p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">A Pico Solar oferece diversos tamanhos de usinas de geração solar para todos os tipos de investidores. Com os diferentes tamanhos de projeto:</span></span></p>\r\n\r\n<ul>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">Usinas de geração de energia solar de pequeno porte até 75 kilowatt de potência instalada que podem suprir diversos tipos de consumo, desde uma pequena vila até um pequeno empreendimento</span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">Usinas de geração de energia elétrica a partir de energia solar de médio porte, com potências entre 75 kilowatt e 10 mega watt, que podem suprir diversos tipos de consumo, desde uma pequena cidade, ilha ou até um mesmo empreendimentos.</span></span></li>\r\n	<li style=\"text-align:justify\"><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:18px\">Usinas de geração de energia elétrica a partir de energia solar de grande porte maiores do que 10 mega watt de potência que podem suprir diversos tipos de consumo, desde uma pequena cidade, vendas de energia no mercado livre, venda de energia para distribuidoras até grandes empreendimentos.</span></span></li>\r\n</ul>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n\r\n<p><span style=\"font-family:Open Sans,sans-serif\">Economize na sua conta de energia, fuja das altas inesperadas, e ainda proteja o meio-ambiente!</span></p>\r\n\r\n<p> </p>\r\n\r\n<p><span style=\"font-family:Open Sans,sans-serif\"><span style=\"font-size:22px\"><strong>Com energia solar, você tem muito mais!</strong></span></span><br />\r\n </p>\r\n\r\n<p><span style=\"font-family:Open Sans,sans-serif\">Confira todos os benefícios que você pode desfrutar com o Sistema Pico Solar:<br />\r\n<br />\r\n<strong>+ Economia</strong><br />\r\nReduza o valor da sua conta de luz em até 98%. Pague apenas pela taxa obrigatória da concessionária.<br />\r\n<br />\r\n<strong>+ Energia</strong><br />\r\nAtravés do sol produzimos uma energia renovável, que mesmo em dias mais nublados te garante energia limpa, natural e infinita.<br />\r\n<br />\r\n<strong>+ Vida útil</strong><br />\r\nO Sistema de energia solar tem baixa necessidade de manutenção. Após instalado o sistema, os cuidados preventivos envolvem apenas limpeza e fiscalização dos painéis solares.<br />\r\n<br />\r\n<strong>+ Sustentabilidade</strong><br />\r\nA energia solar é uma grande aliada na redução da poluição e das taxas de carbono no meio ambiente.</span></p>\r\n\r\n<p> </p>\r\n\r\n<p style=\"text-align:justify\"><span style=\"font-size:22px\"><span style=\"font-family:Open Sans,sans-serif\"><strong>Venha para a Pico Solar e faça parte do futuro!</strong></span></span></p>\r\n\r\n<p style=\"text-align:justify\"> </p>\r\n', NULL, NULL, '1610127144.96-foto-N.jpg', '', 'Usinas Solares - Energia Solar em Brasília -DF | (61) 98296-5547', '', 'A Pico Solar disponibiliza soluções para a geração em  grandes volumes de energia para usinas em Brasília - DF', NULL, 'usinas-solares', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_tailandia`
+--
+
+CREATE TABLE `tbl_tailandia` (
+  `id` int(11) NOT NULL,
+  `titulo` varchar(250) DEFAULT NULL,
+  `titulo_en` varchar(255) DEFAULT NULL,
+  `titulo_th` varchar(255) DEFAULT NULL,
+  `descricao` text DEFAULT NULL,
+  `descricao_en` text DEFAULT NULL,
+  `descricao_th` text DEFAULT NULL,
+  `id_cat` int(11) DEFAULT NULL,
+  `meta_title` text DEFAULT NULL,
+  `meta_keywords` text DEFAULT NULL,
+  `meta_description` text DEFAULT NULL,
+  `foto` varchar(250) DEFAULT NULL,
+  `url_amigavel` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -22146,9 +22197,21 @@ ALTER TABLE `tbl_sliders`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `tbl_sobre`
+--
+ALTER TABLE `tbl_sobre`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `tbl_solucoes`
 --
 ALTER TABLE `tbl_solucoes`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `tbl_tailandia`
+--
+ALTER TABLE `tbl_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -22402,10 +22465,22 @@ ALTER TABLE `tbl_sliders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT de tabela `tbl_sobre`
+--
+ALTER TABLE `tbl_sobre`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT de tabela `tbl_solucoes`
 --
 ALTER TABLE `tbl_solucoes`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_tailandia`
+--
+ALTER TABLE `tbl_tailandia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_testemunhos`
