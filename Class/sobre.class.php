@@ -1,7 +1,7 @@
 <?php
 @ session_start();
-$ServicosInstanciada = '';
-if(empty($ServicosInstanciada)) {
+$SobreInstanciada = '';
+if(empty($SobreInstanciada)) {
 	if(file_exists('Connection/conexao.php')) {
 		require_once('Connection/con-pdo.php');
 		require_once('funcoes.php');
@@ -10,21 +10,21 @@ if(empty($ServicosInstanciada)) {
 		require_once('../funcoes.php');
 	}
 	
-	class Servicos {
+	class Sobre {
 		
 		private $pdo = null;  
 
-		private static $Servicos = null; 
+		private static $Sobre = null; 
 
 		private function __construct($conexao){  
 			$this->pdo = $conexao;  
 		}
 	  
 		public static function getInstance($conexao){   
-			if (!isset(self::$Servicos)):    
-				self::$Servicos = new Servicos($conexao);   
+			if (!isset(self::$Sobre)):    
+				self::$Sobre = new Sobre($conexao);   
 			endif;
-			return self::$Servicos;    
+			return self::$Sobre;    
 		}
 		
 	
@@ -56,7 +56,7 @@ if(empty($ServicosInstanciada)) {
 			}
 			
 			try{   
-				$sql = "SELECT * FROM tbl_servicos_consular where 1=1 $sql $sqlOrdem $sqlLimite";
+				$sql = "SELECT * FROM tbl_sobre where 1=1 $sql $sqlOrdem $sqlLimite";
 				$stm = $this->pdo->prepare($sql);
 				
 				for($i=1; $i<=$nCampos; $i++) {
@@ -77,7 +77,7 @@ if(empty($ServicosInstanciada)) {
 		}
 
 		function add($redireciona='') {
-			if(isset($_POST['acao']) && $_POST['acao'] == 'addServico') {
+			if(isset($_POST['acao']) && $_POST['acao'] == 'addSobre') {
 	
 				$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
 				$tituloEn = filter_input(INPUT_POST, 'titulo_en', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -100,7 +100,7 @@ if(empty($ServicosInstanciada)) {
 							$pastaArquivos = '../img';
 						}
 						
-						$sql = "INSERT INTO tbl_servicos_consular (foto, titulo, titulo_en, titulo_th, descricao, descricao_en, descricao_th, id_cat, meta_title, meta_keywords, meta_description, url_amigavel) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";   
+						$sql = "INSERT INTO tbl_sobre (foto, titulo, titulo_en, titulo_th, descricao, descricao_en, descricao_th, id_cat, meta_title, meta_keywords, meta_description, url_amigavel) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";   
 						$stm = $this->pdo->prepare($sql);   
 						$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
 						$stm->bindValue(2, $titulo);   
@@ -128,15 +128,15 @@ if(empty($ServicosInstanciada)) {
 
 					
 					echo "	<script>
-								window.location='servicos.php';
+								window.location='sobre.php';
 								</script>";
 								exit;
 				
 			}
 		}
 		
-		function editar($redireciona='servicos.php') {
-			if(isset($_POST['acao']) && $_POST['acao'] == 'editaServico') {
+		function editar($redireciona='sobre.php') {
+			if(isset($_POST['acao']) && $_POST['acao'] == 'editaSobre') {
 
 				
 
@@ -163,7 +163,7 @@ if(empty($ServicosInstanciada)) {
 							$pastaArquivos = '../img';
 						}
 				
-					$sql = "UPDATE tbl_servicos_consular SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao, descricao_en=?, descricao_th=?, id_cat=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
+					$sql = "UPDATE tbl_sobre SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao, descricao_en=?, descricao_th=?, id_cat=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
 					$stm = $this->pdo->prepare($sql);   
 					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
 					$stm->bindValue(2, $titulo);   
@@ -195,10 +195,10 @@ if(empty($ServicosInstanciada)) {
 		}
 		
 		function excluir() {
-			if(isset($_GET['acao']) && $_GET['acao'] == 'excluirServico') {
+			if(isset($_GET['acao']) && $_GET['acao'] == 'excluirSobre') {
 				
 				try{   
-					$sql = "DELETE FROM tbl_servicos_consular WHERE id=? ";   
+					$sql = "DELETE FROM tbl_sobre WHERE id=? ";   
 					$stm = $this->pdo->prepare($sql);   
 					$stm->bindValue(1, $_GET['id']);   
 					$stm->execute();
@@ -207,7 +207,7 @@ if(empty($ServicosInstanciada)) {
 				}
 
 				echo "	<script>
-								window.location='servicos.php';
+								window.location='sobre.php';
 								</script>";
 								exit;
 
@@ -259,5 +259,5 @@ if(empty($ServicosInstanciada)) {
 
 	}
 	
-	$ServicosInstanciada = 'S';
+	$SobreInstanciada = 'S';
 }

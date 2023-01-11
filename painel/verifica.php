@@ -64,6 +64,13 @@ $treinamentos = Treinamentos::getInstance(Conexao::getInstance());
 include "../Class/solucoes.class.php";
 $solucoes = Solucoes::getInstance(Conexao::getInstance());
 
+include "../Class/sobre.class.php";
+$sobre = Sobre::getInstance(Conexao::getInstance());
+
+include "../Class/tailandia.class.php";
+$tailandia = Tailandia::getInstance(Conexao::getInstance());
+
+
 $verificaRestrito->restritoAdmin();
 $dadosUsuarioLogado = $verificaRestrito->rsDados($_SESSION['dadosLogado']->id);
 
@@ -71,6 +78,6 @@ function get_url(){
     return $_SERVER['SCRIPT_NAME'].$_SERVER['REQUEST_URI'];
   }
   
-  define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/pico-solar');
+  define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/thailand');
 
 ?>

@@ -43,20 +43,48 @@
                                 </li>
                             </ul>
                         </li>
-                       <!--  <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu">Serviços </span></a>
+                                    class="hide-menu">Sobre a Embaixada</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="servicos.php" class="sidebar-link"><span
-                                            class="hide-menu"> Listar serviços
+                                <li class="sidebar-item"><a href="sobre.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Itens
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="add-servico.php" class="sidebar-link"><span
-                                            class="hide-menu"> Adicionar serviço
+                                <li class="sidebar-item"><a href="add-sobre.php" class="sidebar-link"><span
+                                            class="hide-menu"> Adicionar Item
                                         </span></a>
                                 </li>
                             </ul>
-                        </li> -->
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                    class="hide-menu">Sobre a Tailândia</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="tailandia.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Itens
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="add-tailandia.php" class="sidebar-link"><span
+                                            class="hide-menu"> Adicionar Item
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                    class="hide-menu">Serviços Consulares</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="servicos.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar serviços consulares
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="add-servico.php" class="sidebar-link"><span
+                                            class="hide-menu"> Adicionar serviço consular
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
                         <li class="sidebar-item"> 
                                         <a class="sidebar-link sidebar-link" href="textos.php" aria-expanded="false">
                                             <i class="fas fa-calendar-alt"></i>

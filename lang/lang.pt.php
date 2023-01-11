@@ -43,6 +43,7 @@ $lang['POR'] = 'por';
 $lang['DIREITOS'] = 'Todos os direitos reservados';
 $lang['PARA_EMBAIXADA'] = 'Embaixada Real da Tailândia';
 
+
 // Botões
 
 $lang['BTN_ACESSAR'] = 'Acessar';
@@ -89,3 +90,4 @@ $lang['INVESTIMENTOS'] = 'Investimentos';
 $lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';
 
 
+//Novos

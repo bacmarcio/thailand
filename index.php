@@ -67,7 +67,7 @@
 	<div id="page" class="page">
 		<!-- HEADER
 			============================================= -->
-		<? include "header.php" ?>
+		<?php include "header.php" ?>
 		<!-- END HEADER -->
 		<!-- HERO-11
 			============================================= -->
