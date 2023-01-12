@@ -44,5 +44,5 @@ $solucoes = Solucoes::getInstance(Conexao::getInstance());
 include "Class/simulador.class.php";
 $simulador = Simulador::getInstance(Conexao::getInstance());
 
-define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/pico-solar');
+define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/thailand');
 ?>
