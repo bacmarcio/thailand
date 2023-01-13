@@ -203,26 +203,26 @@ if(empty($AcessoInstanciada)) {
 				/* echo $_FILES['foto']['name'];
 				exit; */
 
-				$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-				$telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
-				$endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
-				$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
-				$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-				$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-				$id_cargo = filter_input(INPUT_POST, 'id_cargo', FILTER_SANITIZE_STRING);
-				$perm_cad_usuario = filter_input(INPUT_POST, 'perm_cad_usuario', FILTER_SANITIZE_STRING);
-				$perm_cad_contato = filter_input(INPUT_POST, 'perm_cad_contato', FILTER_SANITIZE_STRING);
-				$perm_relatorio = filter_input(INPUT_POST, 'perm_relatorio', FILTER_SANITIZE_STRING);
-				$perm_add_usuario = filter_input(INPUT_POST, 'perm_add_usuario', FILTER_SANITIZE_STRING);
-				$perm_edit_usuario = filter_input(INPUT_POST, 'perm_edit_usuario', FILTER_SANITIZE_STRING);
-				$perm_del_usuario = filter_input(INPUT_POST, 'perm_del_usuario', FILTER_SANITIZE_STRING);
-				$perm_edit_contato = filter_input(INPUT_POST, 'perm_edit_contato', FILTER_SANITIZE_STRING);
-				$perm_edit_contato_nf = filter_input(INPUT_POST, 'perm_edit_contato_nf', FILTER_SANITIZE_STRING);
-				$perm_del_contato = filter_input(INPUT_POST, 'perm_del_contato', FILTER_SANITIZE_STRING);
-				$perm_pag_principal_rm = filter_input(INPUT_POST, 'perm_pag_principal_rm', FILTER_SANITIZE_STRING);
-				$perm_pag_principal_uc = filter_input(INPUT_POST, 'perm_pag_principal_uc', FILTER_SANITIZE_STRING);
-				$sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_STRING);
+				$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+				$telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_SPECIAL_CHARS);
+				$endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_SPECIAL_CHARS);
+				$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
+				$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_SPECIAL_CHARS);
+				$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_cargo = filter_input(INPUT_POST, 'id_cargo', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_cad_usuario = filter_input(INPUT_POST, 'perm_cad_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_cad_contato = filter_input(INPUT_POST, 'perm_cad_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_relatorio = filter_input(INPUT_POST, 'perm_relatorio', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_add_usuario = filter_input(INPUT_POST, 'perm_add_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_usuario = filter_input(INPUT_POST, 'perm_edit_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_del_usuario = filter_input(INPUT_POST, 'perm_del_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_contato = filter_input(INPUT_POST, 'perm_edit_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_contato_nf = filter_input(INPUT_POST, 'perm_edit_contato_nf', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_del_contato = filter_input(INPUT_POST, 'perm_del_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_pag_principal_rm = filter_input(INPUT_POST, 'perm_pag_principal_rm', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_pag_principal_uc = filter_input(INPUT_POST, 'perm_pag_principal_uc', FILTER_SANITIZE_SPECIAL_CHARS);
+				$sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
 				
 				
 				// Verificar se já existe:
@@ -292,27 +292,27 @@ if(empty($AcessoInstanciada)) {
 		function editar() {
 			if(isset($_POST['acao']) && $_POST['acao'] == 'editaUsuario') {
 
-				$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_STRING);
-				$telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_STRING);
-				$endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_STRING);
-				$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_STRING);
-				$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_STRING);
-				$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_STRING);
-				$id_cargo = filter_input(INPUT_POST, 'id_cargo', FILTER_SANITIZE_STRING);
-				$perm_cad_usuario = filter_input(INPUT_POST, 'perm_cad_usuario', FILTER_SANITIZE_STRING);
-				$perm_cad_contato = filter_input(INPUT_POST, 'perm_cad_contato', FILTER_SANITIZE_STRING);
-				$perm_relatorio = filter_input(INPUT_POST, 'perm_relatorio', FILTER_SANITIZE_STRING);
-				$perm_add_usuario = filter_input(INPUT_POST, 'perm_add_usuario', FILTER_SANITIZE_STRING);
-				$perm_edit_usuario = filter_input(INPUT_POST, 'perm_edit_usuario', FILTER_SANITIZE_STRING);
-				$perm_del_usuario = filter_input(INPUT_POST, 'perm_del_usuario', FILTER_SANITIZE_STRING);
-				$perm_edit_contato = filter_input(INPUT_POST, 'perm_edit_contato', FILTER_SANITIZE_STRING);
-				$perm_edit_contato_nf = filter_input(INPUT_POST, 'perm_edit_contato_nf', FILTER_SANITIZE_STRING);
-				$perm_del_contato = filter_input(INPUT_POST, 'perm_del_contato', FILTER_SANITIZE_STRING);
-				$sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_STRING);
-				$perm_pag_principal_rm = filter_input(INPUT_POST, 'perm_pag_principal_rm', FILTER_SANITIZE_STRING);
-				$perm_pag_principal_uc = filter_input(INPUT_POST, 'perm_pag_principal_uc', FILTER_SANITIZE_STRING);
-				$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+				$nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+				$telefone = filter_input(INPUT_POST, 'telefone', FILTER_SANITIZE_SPECIAL_CHARS);
+				$endereco = filter_input(INPUT_POST, 'endereco', FILTER_SANITIZE_SPECIAL_CHARS);
+				$cpf = filter_input(INPUT_POST, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
+				$login = filter_input(INPUT_POST, 'login', FILTER_SANITIZE_SPECIAL_CHARS);
+				$senha = filter_input(INPUT_POST, 'senha', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_cargo = filter_input(INPUT_POST, 'id_cargo', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_cad_usuario = filter_input(INPUT_POST, 'perm_cad_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_cad_contato = filter_input(INPUT_POST, 'perm_cad_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_relatorio = filter_input(INPUT_POST, 'perm_relatorio', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_add_usuario = filter_input(INPUT_POST, 'perm_add_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_usuario = filter_input(INPUT_POST, 'perm_edit_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_del_usuario = filter_input(INPUT_POST, 'perm_del_usuario', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_contato = filter_input(INPUT_POST, 'perm_edit_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_edit_contato_nf = filter_input(INPUT_POST, 'perm_edit_contato_nf', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_del_contato = filter_input(INPUT_POST, 'perm_del_contato', FILTER_SANITIZE_SPECIAL_CHARS);
+				$sexo = filter_input(INPUT_POST, 'sexo', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_pag_principal_rm = filter_input(INPUT_POST, 'perm_pag_principal_rm', FILTER_SANITIZE_SPECIAL_CHARS);
+				$perm_pag_principal_uc = filter_input(INPUT_POST, 'perm_pag_principal_uc', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 
 				if(file_exists('Connection/conexao.php')) {
 					$pastaArquivos = 'img';
@@ -358,7 +358,7 @@ if(empty($AcessoInstanciada)) {
 		}
 
 		function excluir() {
-			if(isset($_GET['acao']) && $_GET['acao'] == 'excluirUsuarios') {
+			if(isset($_GET['acao']) && $_GET['acao'] == 'excluirUsuario') {
 				
 				try{   
 					$sql = "DELETE FROM tbl_usuarios WHERE id=? ";   
@@ -378,7 +378,7 @@ if(empty($AcessoInstanciada)) {
 
 		function addCargo($redireciona='') {
 			if(isset($_POST['acao']) && $_POST['acao'] == 'addCargo') {
-				$cargo = filter_input(INPUT_POST, 'cargo', FILTER_SANITIZE_STRING);
+				$cargo = filter_input(INPUT_POST, 'cargo', FILTER_SANITIZE_SPECIAL_CHARS);
 					try{
 					
 						$sql = "INSERT INTO tbl_cargo (cargo) VALUES (?)";   
@@ -403,8 +403,8 @@ if(empty($AcessoInstanciada)) {
 		}
 		function editarCargo() {
 			if(isset($_POST['acao']) && $_POST['acao'] == 'editaCargo') {
-				$cargo = filter_input(INPUT_POST, 'cargo', FILTER_SANITIZE_STRING);
-				$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_STRING);
+				$cargo = filter_input(INPUT_POST, 'cargo', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 				try{   
 					$sql = "UPDATE tbl_cargo SET cargo=? WHERE id=?";   
 					$stm = $this->pdo->prepare($sql);   
