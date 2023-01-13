@@ -430,7 +430,16 @@ p {
 
 .header-centerbar {
   padding: 10px 0;
-  background: #fff; }
+  background: #fff; 
+  background-image: url('../images/bg-header.jpg');
+  background-size: cover;
+
+}
+.header-text-logo{
+  position: absolute;
+  margin: -89px 116px 0;
+  color: #ffffff;
+}
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   .header-centerbar-ad {
@@ -4100,7 +4109,9 @@ p {
       border-bottom: 0; }
 
 .footer-copyright {
-  background: #232D36; }
+  background: #040e4c;
+  line-height: 0px;
+}
   .footer-copyright .copyright-item {
     padding: 37px 0; }
     @media (max-width: 767px) {

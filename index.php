@@ -6,8 +6,6 @@
 	$texto3 = $textos->rsDados(16);
 	$texto4 = $textos->rsDados(17);
 	$texto5 = $textos->rsDados(18);
-	$puxaTreinamentos = $treinamentos->rsDados('', 'rand()', '6');
-	$puxaSolucoes = $solucoes->rsDados('', 'rand()', '6');
 	$puxaBlogs = $blogs->rsDados('', 'rand()', '3');
 ?>
 <!DOCTYPE html>

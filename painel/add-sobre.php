@@ -50,6 +50,13 @@ $sobre->add();
                                 <form method="POST" enctype="multipart/form-data">
                                     <div class="form-body">
                                         <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <label  class="col-form-label">Imagem </label>
+                                                <input class="form-control" type="file" name="foto"  />
+                                                <div class="clearfix">&nbsp;</div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                 <label class="mr-sm-2" for="">Título em Português</label>

@@ -101,7 +101,7 @@ if(empty($TextosInstanciada)) {
 				$rsDados = $stm->fetchAll(PDO::FETCH_OBJ);
 				//print_r($rsDados);
 				if($id <> '' or $limite == 1) {
-					return($rsDados[0]);
+					return($rsDados);
 				} else {
 					return($rsDados);
 				}
