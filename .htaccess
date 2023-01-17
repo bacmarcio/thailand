@@ -25,6 +25,7 @@ RewriteRule ^simulador$ simulador.php
 RewriteRule ^sitemap.xml$ sitemap.xml
 RewriteRule ^robots.txt$ robots.txt
 RewriteRule ^painel/$ /painel
+RewriteRule ^agendamento/$ /agendamento
 ErrorDocument 404 /404.php
 
 ## EXPIRES CACHING ##
