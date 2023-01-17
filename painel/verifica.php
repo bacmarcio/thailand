@@ -43,6 +43,9 @@ $sobre = Sobre::getInstance(Conexao::getInstance());
 include "../Class/tailandia.class.php";
 $tailandia = Tailandia::getInstance(Conexao::getInstance());
 
+include "../Class/brasil-tailandia.class.php";
+$brasilTailandia = BrasilTailandia::getInstance(Conexao::getInstance());
+
 
 $verificaRestrito->restritoAdmin();
 $dadosUsuarioLogado = $verificaRestrito->rsDados($_SESSION['dadosLogado']->id);

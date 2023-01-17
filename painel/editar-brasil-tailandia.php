@@ -2,13 +2,14 @@
 $id = '';
 if(isset($_GET['id'])){
     if(empty($_GET['id'])){
-        header('Location: tailandia.php');
+        header('Location: brasil-tailandia.php');
     }else{
         $id = $_GET['id'];        
     }
 }
-$tailandia->editar();
-$editaTailandia = $tailandia->rsDados($id);
+$brasilTailandia->editar();
+$editaBrasilTailandia = $brasilTailandia->rsDados($id);
+$puxaCategorias = $brasilTailandia->rsCatServicos();
 
 ?>
 <!DOCTYPE html>
@@ -59,13 +60,27 @@ $editaTailandia = $tailandia->rsDados($id);
                             <div class="card-body">
                                 <form method="POST" enctype="multipart/form-data">
                                     <div class="form-body">
-                                       
+                                    <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <label  class="col-form-label">Imagem </label>
+                                                <input class="form-control" type="file" name="foto"  />
+                                                <div class="clearfix">&nbsp;</div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                            <label  class="col-form-label">Categoria</label>
+                                            <select name="id_cat" id="" class="form-control">
+                                                <?php foreach($puxaCategorias as $itemCategoria){?>
+                                                <option value="<?php echo $itemCategoria->id;?>"<?php if($itemCategoria->id === $editaBrasilTailandia->id){echo "selected";}?>><?php echo $itemCategoria->nome;?></option>
+                                                <?php }?>
+                                            </select>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                           
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                 <label class="mr-sm-2" for="">Título em Português</label>
-                                                    <input type="text" class="form-control" name="titulo" value="<?php if(isset($editaTailandia->titulo) && !empty($editaTailandia->titulo)){ echo $editaTailandia->titulo;}?>" >
+                                                    <input type="text" class="form-control" name="titulo" value="<?php if(isset($editaBrasilTailandia->titulo) && !empty($editaBrasilTailandia->titulo)){ echo $editaBrasilTailandia->titulo;}?>" >
                                                 </div>
                                             </div>
                                            
@@ -76,7 +91,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">Descrição em Português</label>
-                                                   <textarea name="descricao" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaTailandia->descricao) && !empty($editaTailandia->descricao)){ echo $editaTailandia->descricao;}?></textarea>
+                                                   <textarea name="descricao" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaBrasilTailandia->descricao) && !empty($editaBrasilTailandia->descricao)){ echo $editaBrasilTailandia->descricao;}?></textarea>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -86,7 +101,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                 <label class="mr-sm-2" for="">Title in English</label>
-                                                    <input type="text" class="form-control" name="titulo_en" value="<?php if(isset($editaTailandia->titulo_en) && !empty($editaTailandia->titulo_en)){ echo $editaTailandia->titulo_en;}?>" >
+                                                    <input type="text" class="form-control" name="titulo_en" value="<?php if(isset($editaBrasilTailandia->titulo_en) && !empty($editaBrasilTailandia->titulo_en)){ echo $editaBrasilTailandia->titulo_en;}?>" >
                                                 </div>
                                             </div>
                                            
@@ -97,7 +112,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">Description in English</label>
-                                                   <textarea name="descricao_en" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaTailandia->descricao_en) && !empty($editaTailandia->descricao_en)){ echo $editaTailandia->descricao_en;}?></textarea>
+                                                   <textarea name="descricao_en" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaBrasilTailandia->descricao_en) && !empty($editaBrasilTailandia->descricao_en)){ echo $editaBrasilTailandia->descricao_en;}?></textarea>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -107,7 +122,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-6">
                                                 <div class="form-group">
                                                 <label class="mr-sm-2" for="">ชื่อเรื่องภาษาไทย</label>
-                                                    <input type="text" class="form-control" name="titulo_th" value="<?php if(isset($editaTailandia->titulo_th) && !empty($editaTailandia->titulo_th)){ echo $editaTailandia->titulo_th;}?>" >
+                                                    <input type="text" class="form-control" name="titulo_th" value="<?php if(isset($editaBrasilTailandia->titulo_th) && !empty($editaBrasilTailandia->titulo_th)){ echo $editaBrasilTailandia->titulo_th;}?>" >
                                                 </div>
                                             </div>
                                            
@@ -118,7 +133,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">คำอธิบายเป็นภาษาไทย</label>
-                                                   <textarea name="descricao_th" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaTailandia->descricao_th) && !empty($editaTailandia->descricao_th)){ echo $editaTailandia->descricao_th;}?></textarea>
+                                                   <textarea name="descricao_th" class="ckeditor" id="ckeditor" cols="30" rows="4"><?php if(isset($editaBrasilTailandia->descricao_th) && !empty($editaBrasilTailandia->descricao_th)){ echo $editaBrasilTailandia->descricao_th;}?></textarea>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -129,7 +144,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">Meta Title</label>
-                                                    <input type="text" class="form-control" name="meta_title" value="<?php if(isset($editaTailandia->meta_title) && !empty($editaTailandia->meta_title)){ echo $editaTailandia->meta_title;}?>">
+                                                    <input type="text" class="form-control" name="meta_title" value="<?php if(isset($editaBrasilTailandia->meta_title) && !empty($editaBrasilTailandia->meta_title)){ echo $editaBrasilTailandia->meta_title;}?>">
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -137,7 +152,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">Meta Keywords</label>
-                                                    <input type="text" class="form-control" name="meta_keywords" value="<?php if(isset($editaTailandia->meta_keywords) && !empty($editaTailandia->meta_keywords)){ echo $editaTailandia->meta_keywords;}?>">
+                                                    <input type="text" class="form-control" name="meta_keywords" value="<?php if(isset($editaBrasilTailandia->meta_keywords) && !empty($editaBrasilTailandia->meta_keywords)){ echo $editaBrasilTailandia->meta_keywords;}?>">
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -145,7 +160,7 @@ $editaTailandia = $tailandia->rsDados($id);
                                             <div class="col-md-12">
                                                 <div class="form-group">
                                                     <label class="mr-sm-2" for="">Meta Description</label>
-                                                   <textarea name="meta_description" class="form-control" id="" cols="30" rows="4"><?php if(isset($editaTailandia->meta_description) && !empty($editaTailandia->meta_description)){ echo $editaTailandia->meta_description;}?></textarea>
+                                                   <textarea name="meta_description" class="form-control" id="" cols="30" rows="4"><?php if(isset($editaBrasilTailandia->meta_description) && !empty($editaBrasilTailandia->meta_description)){ echo $editaBrasilTailandia->meta_description;}?></textarea>
                                                 </div>
                                             </div>                                        
                                         </div>
@@ -156,8 +171,8 @@ $editaTailandia = $tailandia->rsDados($id);
                                            
                                         </div>
                                     </div>
-                                    <input type="hidden" name="acao" value="editaTailandia">
-                                    <input type="hidden" name="id" value="<?php echo $editaTailandia->id;?>">
+                                    <input type="hidden" name="acao" value="editaBrasilTailandia">
+                                    <input type="hidden" name="id" value="<?php echo $editaBrasilTailandia->id;?>">
                                 </form>
                             </div>
                         </div>

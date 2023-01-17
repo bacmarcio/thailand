@@ -9,6 +9,7 @@ if(isset($_GET['id'])){
 }
 $tailandia->editar();
 $editaTailandia = $tailandia->rsDados($id);
+$puxaCategorias = $tailandia->rsCatServicos();
 
 ?>
 <!DOCTYPE html>
@@ -59,7 +60,21 @@ $editaTailandia = $tailandia->rsDados($id);
                             <div class="card-body">
                                 <form method="POST" enctype="multipart/form-data">
                                     <div class="form-body">
-                                       
+                                    <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <label  class="col-form-label">Imagem </label>
+                                                <input class="form-control" type="file" name="foto"  />
+                                                <div class="clearfix">&nbsp;</div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                            <label  class="col-form-label">Categoria</label>
+                                            <select name="id_cat" id="" class="form-control">
+                                                <?php foreach($puxaCategorias as $itemCategoria){?>
+                                                <option value="<?php echo $itemCategoria->id;?>"<?php if($itemCategoria->id === $editaTailandia->id){echo "selected";}?>><?php echo $itemCategoria->nome;?></option>
+                                                <?php }?>
+                                            </select>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                           
                                             <div class="col-md-6">

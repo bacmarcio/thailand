@@ -42,7 +42,7 @@ $tailandia->excluir();
                         </div>
                     </div>
                     <div class="col-5 align-self-center">
-                        <a href="add-sobre.php" class="btn btn-success float-right">Add. Item</a>
+                        <a href="add-brasil-tailandia.php" class="btn btn-success float-right">Add. Item</a>
                     </div>
                 </div>
             </div>
@@ -80,8 +80,8 @@ $tailandia->excluir();
                                                 <td><?php echo $titulo;?></td>
                                                 <td><?php echo $itemTailandia->url_amigavel;?></td>
                                                 <td>
-                                                    <a href="editar-tailandia.php?id=<?php echo $itemTailandia->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a href="tailandia.php" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
+                                                    <a href="editar-brasil-tailandia.php?id=<?php echo $itemTailandia->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a href="brasil-tailandia.php" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
                                                 </td>
                                             </tr>
                                             <?php } }?>
