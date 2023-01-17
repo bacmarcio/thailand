@@ -4,91 +4,108 @@ $lang = array();
 
 //#### Login #####//
 
-$lang['USUARIO'] = 'Usuário';
-$lang['SENHA'] = 'Senha';
-$lang['INFO'] = 'Informe seu usuário e senha para acessar o painel de administração.';
+$lang['USUARIO'] = 'User';
+$lang['SENHA'] = 'Password';
+$lang['INFO'] = 'Enter your username and password to access the administration panel.';
 
 //##### Painel de Controle #####//
 
-$lang['PAINEL'] = 'Painel de Controle';
-$lang['CADASTROS'] = 'Cadastros';
+$lang['PAINEL'] = 'Control Panel';
+$lang['CADASTROS'] = 'Registration';
 $lang['PRINCIPAL'] = 'Pricipal';
-$lang['AGENDAMENTO'] = 'Agendamento';
-$lang['AGENDAMENTO_TITULO'] = 'Agendamento de Serviços Consulares';
-$lang['OLA'] = 'Olá';
-$lang['MOSTRAR'] = 'Mostrar';
-$lang['ADICIONAR'] = 'Adicionar';
-$lang['DATA'] = 'Data';
-$lang['HORA'] = 'Hora';
+$lang['AGENDAMENTO'] = 'Schedule';
+$lang['AGENDAMENTO_TITULO'] = 'Consular Services Scheduling';
+$lang['OLA'] = 'Hello';
+$lang['MOSTRAR'] = 'Show';
+$lang['ADICIONAR'] = 'Add';
+$lang['DATA'] = 'Date';
+$lang['HORA'] = 'Time';
 $lang['STATUS'] = 'Status';
 $lang['ACOES'] = 'Ações';
-$lang['ATIVO'] = 'Ativo';
-$lang['INATIVO'] = 'Inativo';
-$lang['SOLICITANTES'] = 'Solicitantes';
-$lang['TIPO_SERVICOS'] = 'Tipo de Serviços';
-$lang['USUARIOS'] = 'Usuários';
-$lang['ADICIONAR_USUARIO'] = 'Adicionar Usuário';
-$lang['EDITAR AGENDAMENTO'] = 'Editar Agendamento';
+$lang['ATIVO'] = 'Active';
+$lang['INATIVO'] = 'Inactive';
+$lang['SOLICITANTES'] = 'Requestors';
+$lang['TIPO_SERVICOS'] = 'Type of Services';
+$lang['USUARIOS'] = 'Users';
+$lang['ADICIONAR_USUARIO'] = 'Add User';
+$lang['EDITAR AGENDAMENTO'] = 'Edit Schedule';
 $lang['NEWSLETTERS'] = 'Newsletters';
-$lang['CONFIGURACAO_SITE'] = 'Configurações do Site';
+$lang['CONFIGURACAO_SITE'] = 'Site Settings';
 $lang['BANNERS'] = 'Banners';
-$lang['TEXTOS'] = 'Textos';
+$lang['TEXTOS'] = 'Texts';
 $lang['BLOG'] = 'Blog';
-$lang['SOLUCOES'] = 'Soluções';
-$lang['CONFIGURACOES'] = 'Configurações';
+$lang['SOLUCOES'] = 'Solutions';
+$lang['CONFIGURACOES'] = 'Settings';
 $lang['EXTRA'] = 'Extra';
-$lang['FEITO_POR'] = 'Feito com';
-$lang['POR'] = 'por';
-$lang['DIREITOS'] = 'Todos os direitos reservados';
-$lang['PARA_EMBAIXADA'] = 'Embaixada Real da Tailândia';
+$lang['FEITO_POR'] = 'Made with';
+$lang['POR'] = 'by';
+$lang['DIREITOS'] = 'All rights reserved';
+$lang['PARA_EMBAIXADA'] = 'Royal Thai Embassy';
 
 // Botões
 
-$lang['BTN_ACESSAR'] = 'Acessar';
-$lang['CANCELAR'] = 'Cancelar';
-$lang['SAIR'] = 'Sair';
-$lang['SALVAR'] = 'Salvar';
+$lang['BTN_ACESSAR'] = 'Access';
+$lang['CANCELAR'] = 'Cancel';
+$lang['SAIR'] = 'Go to';
+$lang['SALVAR'] = 'Save';
 
 // Form
 
-$lang['NOME'] = 'Nome Completo';
-$lang['NACIONALIDADE'] = 'Nacionalidade';
-$lang['TELEFONE'] = 'Telefone';
+$lang['NOME'] = 'Full Name';
+$lang['NACIONALIDADE'] = 'Nationality';
+$lang['TELEFONE'] = 'Phone';
 $lang['EMAIL'] = 'E-mail';
-$lang['CAMPO_OBRIGATORIO'] = 'Campos de preenchimento obrigatório.';
-$lang['REAGENDAMENTOS'] = 'Qtd. de Reagendamento';
-$lang['ARQUIVO'] = 'Arquivo';
-$lang['DIAS_ATENDIMENTO'] = 'Dias de Atendimento';
-$lang['HORAS_ATENDIMENTO'] = 'Horas de Atendimento';
+$lang['CAMPO_OBRIGATORIO'] = 'Mandatory fields.';
+$lang['REAGENDAMENTOS'] = 'Rescheduling Qty';
+$lang['ARQUIVO'] = 'File';
+$lang['DIAS_ATENDIMENTO'] = 'Service Days';
+$lang['HORAS_ATENDIMENTO'] = 'Hours of Service';
 
 //##### Site ######//
 
 // Menu
-$lang['INICIO'] = 'Início';
-$lang['SOBRE_EMBAIXADA'] = 'Sobre a Embaixada';
-$lang['SOBRE_TAILANDIA'] = 'Sobre a Tailândia';
-$lang['TAILANDIA_BRASIL'] = 'Tailândia Brasil';
-$lang['SERVICO_CONSULAR'] = 'Servico Consular';
-$lang['MULTIMIDIA'] = 'Multimídia';
-$lang['CONTATO'] = 'Fale Conosco';
+$lang['INICIO'] = 'Home';
+$lang['SOBRE_EMBAIXADA'] = 'About the Embassy';
+$lang['SOBRE_TAILANDIA'] = 'About Thailand';
+$lang['TAILANDIA_BRASIL'] = 'Thailand Brazil';
+$lang['SERVICO_CONSULAR'] = 'Consular Service';
+$lang['MULTIMIDIA'] = 'Multimedia';
+$lang['CONTATO'] = 'Talk to Us';
 
 // Submenu
 
-$lang['EQUIPE'] = 'Lista da Embaixada Equipe';
-$lang['TIME'] = 'Time da Tailândia';
-$lang['HISTORIA'] = 'História';
-$lang['EMBAIXADORES'] = 'Lista de Embaixadores Brasil';
-$lang['EVENTOS'] = 'Lista de Embaixadores Brasil';
-$lang['MONARQUIA'] = 'A Monarquia';
-$lang['SUMARIO'] = 'Sumário Sobre a Tailândia';
-$lang['NEGOCIOS'] = 'Fazendo Negócios na Tailândia';
-$lang['INVESTIMENTOS'] = 'Investimentos';
+$lang['EQUIPE'] = 'Embassy Team List';
+$lang['TIME'] = 'Team Thailand';
+$lang['HISTORIA'] = 'History';
+$lang['EMBAIXADORES'] = 'List of Ambassadors Brazil';
+$lang['EVENTOS'] = 'List of Ambassadors Brazil';
+$lang['MONARQUIA'] = 'The Monarchy';
+$lang['SUMARIO'] = 'Summary About Thailand';
+$lang['NEGOCIOS'] = 'Doing Business in Thailand';
+$lang['INVESTIMENTOS'] = 'Investments';
 
 //Footer
-$lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';
+$lang['SITE_OFICIAL'] = 'This is the official website of the Royal Thai Embassy in Brazil - Developed by Capital Prime';
+
+
+// Agendamento
+
+$lang['AGENDAMENTO_INFO'] = "Por favor, leia com atenção e preencha as informações de forma correta.
+Ao final do agendamento, terá as informações sobre quais documentos
+são necessários para trazer para a embaixada.
+Enviaremos um e-mail automático, com a confirmação da data e hora.";
+
+$lang['AGENDAMENTO_INFO_2'] = "Enviaremos um e-mail automático, com a confirmação da data e hora.";
+
+$lang['AGENDAMENTO_INFO_3'] = "Os dias disponíveis para marcação são do mês corrente.";
+
+$lang['AGENDAMENTO_INFO_4'] = "Devido a COVID, nosso atendimento está reduzido. ";
+
+$lang['AGENDAMENTO_INFO_5'] = "Caso tenha uma dúvida, comentários ou sugestões, entre em contato com a embaixada.";
 
 
 //Paises
+
 $lang['AFEGANISTAO'] = 'AFEGANISTÃO';                         
 $lang['ACROTIRI_E_DECELIA'] = 'ACROTÍRI E DECELIA';
 $lang['AFRICA_DO_SUL'] = 'ÁFRICA DO SUL';

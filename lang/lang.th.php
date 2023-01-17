@@ -4,88 +4,106 @@ $lang = array();
 
 //#### Login #####//
 
-$lang['USUARIO'] = 'Usuário';
-$lang['SENHA'] = 'Senha';
-$lang['INFO'] = 'Informe seu usuário e senha para acessar o painel de administração.';
+$lang['USUARIO'] = 'ผู้ใช้';
+$lang['SENHA'] = 'รหัสผ่าน';
+$lang['INFO'] = 'ป้อนชื่อผู้ใช้และรหัสผ่านเพื่อเข้าถึงแผงการดูแลระบบ';
 
 //##### Painel de Controle #####//
 
-$lang['PAINEL'] = 'Painel de Controle';
-$lang['CADASTROS'] = 'Cadastros';
-$lang['PRINCIPAL'] = 'Pricipal';
-$lang['AGENDAMENTO'] = 'Agendamento';
-$lang['AGENDAMENTO_TITULO'] = 'Agendamento de Serviços Consulares';
-$lang['OLA'] = 'Olá';
-$lang['MOSTRAR'] = 'Mostrar';
-$lang['ADICIONAR'] = 'Adicionar';
-$lang['DATA'] = 'Data';
-$lang['HORA'] = 'Hora';
-$lang['STATUS'] = 'Status';
-$lang['ACOES'] = 'Ações';
-$lang['ATIVO'] = 'Ativo';
-$lang['INATIVO'] = 'Inativo';
-$lang['SOLICITANTES'] = 'Solicitantes';
-$lang['TIPO_SERVICOS'] = 'Tipo de Serviços';
-$lang['USUARIOS'] = 'Usuários';
-$lang['ADICIONAR_USUARIO'] = 'Adicionar Usuário';
-$lang['EDITAR AGENDAMENTO'] = 'Editar Agendamento';
-$lang['NEWSLETTERS'] = 'Newsletters';
-$lang['CONFIGURACAO_SITE'] = 'Configurações do Site';
-$lang['BANNERS'] = 'Banners';
-$lang['TEXTOS'] = 'Textos';
-$lang['BLOG'] = 'Blog';
-$lang['SOLUCOES'] = 'Soluções';
-$lang['CONFIGURACOES'] = 'Configurações';
-$lang['EXTRA'] = 'Extra';
-$lang['FEITO_POR'] = 'Feito com';
-$lang['POR'] = 'por';
-$lang['DIREITOS'] = 'Todos os direitos reservados';
-$lang['PARA_EMBAIXADA'] = 'Embaixada Real da Tailândia';
+$lang['PAINEL'] = 'แผงควบคุม';
+$lang['CADASTROS'] = 'การลงทะเบียน';
+$lang['PRINCIPAL'] = 'หลัก';
+$lang['AGENDAMENTO'] = 'การตั้งเวลา';
+$lang['AGENDAMENTO_TITULO'] = 'กำหนดการของบริการกงสุล';
+$lang['OLA'] = 'สวัสดี';
+$lang['MOSTRAR'] = 'แสดง';
+$lang['ADICIONAR'] = 'เพิ่ม';
+$lang['DATA'] = 'วันที่';
+$lang['HORA'] = 'ชั่วโมง';
+$lang['STATUS'] = 'สถานะ';
+$lang['ACOES'] = 'การกระทำ';
+$lang['ATIVO'] = 'คล่องแคล่ว';
+$lang['INATIVO'] = 'ไม่ใช้งาน';
+$lang['SOLICITANTES'] = 'ผู้สมัคร';
+$lang['TIPO_SERVICOS'] = 'ประเภทบริการ';
+$lang['USUARIOS'] = 'ผู้ใช้';
+$lang['ADICIONAR_USUARIO'] = 'เพิ่มผู้ใช้';
+$lang['EDITAR AGENDAMENTO'] = 'แก้ไขกำหนดการ';
+$lang['NEWSLETTERS'] = 'จดหมายข่าว';
+$lang['CONFIGURACAO_SITE'] = 'การตั้งค่าไซต์';
+$lang['BANNERS'] = 'แบนเนอร์';
+$lang['TEXTOS'] = 'ข้อความ';
+$lang['BLOG'] = 'บล็อก';
+$lang['SOLUCOES'] = 'โซลูชั่น';
+$lang['CONFIGURACOES'] = 'การตั้งค่า';
+$lang['EXTRA'] = 'พิเศษ';
+$lang['FEITO_POR'] = 'เสร็จสิ้นด้วย';
+$lang['POR'] = 'ต่อ';
+$lang['DIREITOS'] = 'สงวนลิขสิทธิ์';
+$lang['PARA_EMBAIXADA'] = 'สถานเอกอัครราชทูตไทย';
 
 // Botões
 
-$lang['BTN_ACESSAR'] = 'Acessar';
-$lang['CANCELAR'] = 'Cancelar';
-$lang['SAIR'] = 'Sair';
-$lang['SALVAR'] = 'Salvar';
+$lang['BTN_ACESSAR'] = 'เข้าถึง';
+$lang['CANCELAR'] = 'ยกเลิก';
+$lang['SAIR'] = 'ทิ้ง';
+$lang['SALVAR'] = 'เพื่อบันทึก';
 
 // Form
 
-$lang['NOME'] = 'Nome Completo';
-$lang['NACIONALIDADE'] = 'Nacionalidade';
-$lang['TELEFONE'] = 'Telefone';
-$lang['EMAIL'] = 'E-mail';
-$lang['CAMPO_OBRIGATORIO'] = 'Campos de preenchimento obrigatório.';
-$lang['REAGENDAMENTOS'] = 'Qtd. de Reagendamento';
-$lang['ARQUIVO'] = 'Arquivo';
-$lang['DIAS_ATENDIMENTO'] = 'Dias de Atendimento';
-$lang['HORAS_ATENDIMENTO'] = 'Horas de Atendimento';
+$lang['NOME'] = 'ชื่อเต็ม';
+$lang['NACIONALIDADE'] = 'สัญชาติ';
+$lang['TELEFONE'] = 'โทรศัพท์';
+$lang['EMAIL'] = 'อีเมล';
+$lang['CAMPO_OBRIGATORIO'] = 'ช่องที่ต้องเติม.';
+$lang['REAGENDAMENTOS'] = 'จำนวน ของการจัดตารางเวลาใหม่';
+$lang['ARQUIVO'] = 'คลังเก็บเอกสารสำคัญ';
+$lang['DIAS_ATENDIMENTO'] = 'วันให้บริการ';
+$lang['HORAS_ATENDIMENTO'] = 'เวลาทำการ';
 
 //##### Site ######//
 
 // Menu
-$lang['INICIO'] = 'Início';
-$lang['SOBRE_EMBAIXADA'] = 'Sobre a Embaixada';
-$lang['SOBRE_TAILANDIA'] = 'Sobre a Tailândia';
-$lang['TAILANDIA_BRASIL'] = 'Tailândia Brasil';
-$lang['SERVICO_CONSULAR'] = 'Servico Consular';
-$lang['MULTIMIDIA'] = 'Multimídia';
-$lang['CONTATO'] = 'Fale Conosco';
+$lang['INICIO'] = 'หน้าหลัก';
+$lang['SOBRE_EMBAIXADA'] = 'เกี่ยวกับสถานเอกอัครราชทูตฯ';
+$lang['SOBRE_TAILANDIA'] = 'เกี่ยวกับประเทศไทย';
+$lang['TAILANDIA_BRASIL'] = 'ประเทศไทยและบราซิล';
+$lang['SERVICO_CONSULAR'] = 'บริการคนไทย';
+$lang['MULTIMIDIA'] = 'มัลติมีเดีย';
+$lang['CONTATO'] = 'ติดต่อเรา';
 
 // Submenu
 
-$lang['EQUIPE'] = 'Lista da Embaixada Equipe';
-$lang['TIME'] = 'Time da Tailândia';
-$lang['HISTORIA'] = 'História';
-$lang['EMBAIXADORES'] = 'Lista de Embaixadores Brasil';
-$lang['EVENTOS'] = 'Lista de Embaixadores Brasil';
-$lang['MONARQUIA'] = 'A Monarquia';
-$lang['SUMARIO'] = 'Sumário Sobre a Tailândia';
-$lang['NEGOCIOS'] = 'Fazendo Negócios na Tailândia';
-$lang['INVESTIMENTOS'] = 'Investimentos';
+$lang['EQUIPE'] = 'รายชื่อทีมสถานทูต';
+$lang['TIME'] = 'ทีมชาติไทย';
+$lang['HISTORIA'] = 'ประวัติศาสตร์';
+$lang['EMBAIXADORES'] = 'รายชื่อเอกอัครราชทูตบราซิล';
+$lang['EVENTOS'] = 'รายชื่อเอกอัครราชทูตบราซิล';
+$lang['MONARQUIA'] = 'สถาบันพระมหากษัตริย์';
+$lang['SUMARIO'] = 'สรุปเกี่ยวกับประเทศไทย';
+$lang['NEGOCIOS'] = 'การทำธุรกิจในประเทศไทย';
+$lang['INVESTIMENTOS'] = 'การลงทุน';
 
 //Footer
-$lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';
+$lang['SITE_OFICIAL'] = 'นี่คือเว็บไซต์อย่างเป็นทางการของสถานเอกอัครราชทูตไทยในบราซิล - พัฒนาโดย Capital Prime';
+
+
+// Agendamento
+
+$lang['AGENDAMENTO_INFO'] = "Por favor, leia com atenção e preencha as informações de forma correta.
+Ao final do agendamento, terá as informações sobre quais documentos
+são necessários para trazer para a embaixada.
+Enviaremos um e-mail automático, com a confirmação da data e hora.";
+
+$lang['AGENDAMENTO_INFO_2'] = "Enviaremos um e-mail automático, com a confirmação da data e hora.";
+
+$lang['AGENDAMENTO_INFO_3'] = "Os dias disponíveis para marcação são do mês corrente.";
+
+$lang['AGENDAMENTO_INFO_4'] = "Devido a COVID, nosso atendimento está reduzido. ";
+
+$lang['AGENDAMENTO_INFO_5'] = "Caso tenha uma dúvida, comentários ou sugestões, entre em contato com a embaixada.";
+
+
 
 
 //Paises
