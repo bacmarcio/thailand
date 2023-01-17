@@ -237,7 +237,7 @@ if(empty($TailandiaInstanciada)) {
 			}
 			
 			try{   
-				$sql = "SELECT * FROM tbl_cat_servicos where 1=1 $sql $sqlOrdem $sqlLimite";
+				$sql = "SELECT * FROM tbl_cat_tailandia where 1=1 $sql $sqlOrdem $sqlLimite";
 				$stm = $this->pdo->prepare($sql);
 				
 				for($i=1; $i<=$nCampos; $i++) {

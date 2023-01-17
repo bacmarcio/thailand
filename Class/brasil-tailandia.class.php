@@ -22,7 +22,7 @@ if(empty($BrasilTailandia)) {
 	  
 		public static function getInstance($conexao){   
 			if (!isset(self::$BrasilTailandia)):    
-				self::$BrasilTailandia = new Tailandia($conexao);   
+				self::$BrasilTailandia = new BrasilTailandia($conexao);   
 			endif;
 			return self::$BrasilTailandia;    
 		}
@@ -237,7 +237,7 @@ if(empty($BrasilTailandia)) {
 			}
 			
 			try{   
-				$sql = "SELECT * FROM tbl_cat_servicos where 1=1 $sql $sqlOrdem $sqlLimite";
+				$sql = "SELECT * FROM tbl_cat_brasil_tailandia where 1=1 $sql $sqlOrdem $sqlLimite";
 				$stm = $this->pdo->prepare($sql);
 				
 				for($i=1; $i<=$nCampos; $i++) {

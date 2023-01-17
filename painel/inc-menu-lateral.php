@@ -29,7 +29,7 @@
                                     </li>
                         <li class="list-divider"></li>
                          <li class="nav-small-cap"><span class="hide-menu"><?php echo $lang['CONFIGURACAO_SITE']?></span></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        <!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Banners </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -42,7 +42,7 @@
                                         </span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Sobre a Embaixada</span></a>
@@ -73,14 +73,28 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                    class="hide-menu">Brasil Tailândia</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="brasil-tailandia.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Itens
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="add-brasil-tailandia.php" class="sidebar-link"><span
+                                            class="hide-menu"> Adicionar Item
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Serviços Consulares</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="servicos.php" class="sidebar-link"><span
-                                            class="hide-menu"> Listar serviços consulares
+                                            class="hide-menu"> Listar Itens
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="add-servico.php" class="sidebar-link"><span
-                                            class="hide-menu"> Adicionar serviço consular
+                                            class="hide-menu"> Adicionar Itens
                                         </span></a>
                                 </li>
                             </ul>
@@ -105,7 +119,7 @@
                                 </li>
                             </ul>
                         </li> -->
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                        <!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Blog </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -118,9 +132,9 @@
                                         </span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                          
-                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                         <!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Soluções</span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
@@ -133,7 +147,7 @@
                                         </span></a>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                        <!--  <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Produtos </span></a>
@@ -171,10 +185,10 @@
                                             class="hide-menu"> Configurações Gerais
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="metas-tags.php" class="sidebar-link"><span
+                                <!-- <li class="sidebar-item"><a href="metas-tags.php" class="sidebar-link"><span
                                             class="hide-menu"> Metas Tags
                                         </span></a>
-                                </li>
+                                </li> -->
                             </ul>
                         </li>
                         <li class="list-divider"></li>

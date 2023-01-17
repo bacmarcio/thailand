@@ -1,5 +1,6 @@
 <?php include "verifica.php";
-$tailandia->add();
+$brasilTailandia->add();
+$puxaCategorias = $brasilTailandia->rsCatServicos();
 ?>
 <!DOCTYPE html>
 <html dir="ltr" lang="pt-br">
@@ -49,6 +50,22 @@ $tailandia->add();
                             <div class="card-body">
                                 <form method="POST" enctype="multipart/form-data">
                                     <div class="form-body">
+                                    <div class="row">
+                                            <div class="col-md-6 col-sm-12">
+                                                <label  class="col-form-label">Imagem </label>
+                                                <input class="form-control" type="file" name="foto"  />
+                                                <div class="clearfix">&nbsp;</div>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                            <label  class="col-form-label">Categoria</label>
+                                            <select name="id_cat" id="" class="form-control">
+                                                <option value=""></option>
+                                                <?php foreach($puxaCategorias as $itemCategoria){?>
+                                                <option value="<?php echo $itemCategoria->id;?>"><?php echo $itemCategoria->nome;?></option>
+                                                <?php }?>
+                                            </select>
+                                            </div>
+                                        </div>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -133,7 +150,7 @@ $tailandia->add();
                                             <button type="reset" class="btn btn-dark">Resetar</button>
                                         </div>
                                     </div>
-                                    <input type="hidden" name="acao" value="addTailandia">
+                                    <input type="hidden" name="acao" value="addBrasilTailandia">
                                 </form>
                             </div>
                         </div>
