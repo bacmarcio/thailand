@@ -3144,14 +3144,7 @@ button:disabled {
   }
 }
 
-@media screen and (max-width: 600px) {
 
-  .footer {
-    padding: 18px 0%;
-    bottom: 0px;
-    position: absolute;
-  }
-}
 
 .progress-form__tabs-item {
   --button-background-color: transparent;
@@ -3234,11 +3227,7 @@ button:disabled {
   color: hsl(var(--light-blue-500));
 }
 
-.footer {
-  padding: 0px 25%;
-  bottom: -134px;
-  position: absolute;
-}
+
 
 /* --- Disabled Step --- */
 
