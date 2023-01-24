@@ -86,6 +86,10 @@ $lang['SUMARIO'] = 'Sumário Sobre a Tailândia';
 $lang['NEGOCIOS'] = 'Fazendo Negócios na Tailândia';
 $lang['INVESTIMENTOS'] = 'Investimentos';
 
+//Footer
+$lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';
+
+
 // Agendamento
 
 $lang['AGENDAMENTO_INFO'] = "Por favor, leia com atenção e preencha as informações de forma correta.
@@ -101,9 +105,9 @@ $lang['AGENDAMENTO_INFO_4'] = "Devido a COVID, nosso atendimento está reduzido.
 
 $lang['AGENDAMENTO_INFO_5'] = "Caso tenha uma dúvida, comentários ou sugestões, entre em contato com a embaixada.";
 
-//Footer
-$lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';
+$lang['AGENDAMENTO_FINAL'] = " Tudo certo! Foi enviado um e-mail com os dados do agendamento. Abaixo tem o formulário para ser baixado.";
 
+$lang['AGENDAMENTO_DOWNLOAD'] = "Clique aqui para baixar!";
 
 
 //Paises
