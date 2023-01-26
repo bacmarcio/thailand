@@ -5,12 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css" />
-=======
-    <title><?php echo $lang['AGENDAMENTO_TITULO']?></title>
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
     <link rel="stylesheet" href="main.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -21,7 +17,6 @@
       
           <!-- Step Navigation -->
           <div class="d-flex align-items-start mb-3 sm:mb-5 progress-form__tabs" role="tablist">
-<<<<<<< HEAD
             <button id="progress-form__tab-1" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-1" aria-selected="true">
               <!-- <span class="d-block step" aria-hidden="true">Step 1 <span class="sm:d-none">of 3</span></span>
               Details -->
@@ -34,11 +29,6 @@
               <!-- <span class="d-block step" aria-hidden="true">Step 3 <span class="sm:d-none">of 3</span></span>
               Survey -->
             </button>
-=======
-            <button id="progress-form__tab-1" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-1" aria-selected="true"></button>
-            <button id="progress-form__tab-2" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-2" aria-selected="false" tabindex="-1" aria-disabled="true"></button>
-            <!-- <button id="progress-form__tab-3" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-3" aria-selected="false" tabindex="-1" aria-disabled="true"></button> -->
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
           </div>
           <!-- / End Step Navigation -->
       
@@ -53,7 +43,6 @@
                 <input id="first-name" type="text" name="nome" autocomplete="given-name" required>
               </div>
       
-<<<<<<< HEAD
               
             </div>
       
@@ -631,14 +620,6 @@
                   <span data-required="true" aria-hidden="true"></span>
                 </label>
                 <select id="address-state" name="address-state" autocomplete="shipping address-level1" required>
-=======
-              <div class="mt-3 sm:mt-0 form__field">
-                <label for="last-name">
-                  Nacionalidade
-                  <span data-required="true" aria-hidden="true"></span>
-                </label>
-               <select id="address-state" name="pais" autocomplete="shipping address-level1" required>
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
                   <option value="" disabled selected>Please select</option>
                   <option value="1">
                   <?php echo $lang['AFEGANISTAO']?> </option>
