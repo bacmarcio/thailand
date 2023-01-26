@@ -62,11 +62,7 @@
                 <button type="button" onclick="window.location='form'">
                     Continue
                 </button>
-<<<<<<< HEAD
-                
-=======
                
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
             </div>
 
 
@@ -76,17 +72,11 @@
         <!-- / End Progress Form -->
 
     </div>
-    <footer class="footer text-center text-muted">
-        <p>©
-            <?php echo date('Y');?>
-            <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i>
-            <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>.
-            <?php echo $lang['PARA_EMBAIXADA']?>
-            <?php echo $lang['DIREITOS']?>.
-        </p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-    <script src="main.js"></script>
+    <footer class="footer text-center text-muted mt-auto fixed-bottom">
+                <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
+            </footer>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
+      <script src="main.js"></script>
 </body>
 
 </html>

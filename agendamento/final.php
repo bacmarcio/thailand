@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div
-                class="d-flex flex-column-reverse sm:flex-row align-items-center justify-center sm:justify-end mt-4 sm:mt-5">
+                class="d-flex flex-column-reverse sm:flex-row align-items-right justify-end sm:justify-end mt-4 sm:mt-5">
 
                 <button type="button" onclick="window.location='form'">
                     Continue
