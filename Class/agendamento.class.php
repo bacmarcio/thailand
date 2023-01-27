@@ -79,18 +79,15 @@ if(empty($AgendamentoInstanciada)) {
 		function add($redireciona='') {
 			if(isset($_POST['acao']) && $_POST['acao'] == 'addAgendamento') {
 	
-				$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
-				$tituloEn = filter_input(INPUT_POST, 'titulo_en', FILTER_SANITIZE_SPECIAL_CHARS);
-				$tituloTh = filter_input(INPUT_POST, 'titulo_th', FILTER_SANITIZE_SPECIAL_CHARS);
+				$solicitante = filter_input(INPUT_POST, 'solicitante', FILTER_SANITIZE_SPECIAL_CHARS);
+				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+				$telefone = filter_input(INPUT_POST, '$telefone', FILTER_SANITIZE_SPECIAL_CHARS);
 				//$descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
-				$descricao = $_POST['descricao'];
-				$descricaoEn = $_POST['descricao_en'];
-				$descricaoTh = $_POST['descricao_th'];
-				$id_cat = filter_input(INPUT_POST, 'id_cat', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_title = filter_input(INPUT_POST, 'meta_title', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_keywords = filter_input(INPUT_POST, 'meta_keywords', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_description = filter_input(INPUT_POST, 'meta_description', FILTER_SANITIZE_SPECIAL_CHARS);
-				$urlAmigavel = gerarTituloSEO($titulo);
+				$id_pais = filter_input(INPUT_POST, 'id_pais', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_servico = filter_input(INPUT_POST, 'id_servico', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_data = filter_input(INPUT_POST, 'id_data', FILTER_SANITIZE_SPECIAL_CHARS);
+				$status = filter_input(INPUT_POST, 'status', FILTER_SANITIZE_SPECIAL_CHARS);
+				$reagendamento = filter_input(INPUT_POST, 'reagendamento', FILTER_SANITIZE_SPECIAL_CHARS);
 				
 					try{
 
@@ -100,20 +97,16 @@ if(empty($AgendamentoInstanciada)) {
 							$pastaArquivos = '../img';
 						}
 						
-						$sql = "INSERT INTO tbl_agendamento (foto, titulo, titulo_en, titulo_th, descricao, descricao_en, descricao_th, id_cat, meta_title, meta_keywords, meta_description, url_amigavel) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";   
+						$sql = "INSERT INTO tbl_agendamento (solicitante, email, telefone, id_pais, id_servico, id_data, status, reagendamento) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";   
 						$stm = $this->pdo->prepare($sql);   
-						$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
-						$stm->bindValue(2, $titulo);   
-						$stm->bindValue(3, $tituloEn);   
-						$stm->bindValue(4, $tituloTh);   
-						$stm->bindValue(5, $descricao);
-						$stm->bindValue(6, $descricaoEn);
-						$stm->bindValue(7, $descricaoTh);
-						$stm->bindValue(8, $id_cat);   
-						$stm->bindValue(9, $meta_title);   
-						$stm->bindValue(10, $meta_keywords);   
-						$stm->bindValue(11, $meta_description); 
-						$stm->bindValue(12, $urlAmigavel);   
+						$stm->bindValue(1, $solicitante);   
+						$stm->bindValue(2, $email);   
+						$stm->bindValue(3, $telefone);   
+						$stm->bindValue(4, $id_pais);
+						$stm->bindValue(5, $id_servico);
+						$stm->bindValue(6, $id_data);
+						$stm->bindValue(7, $status);   
+						$stm->bindValue(8, $reagendamento);    
 						$stm->execute(); 
 						$idBanner = $this->pdo->lastInsertId();
 						
@@ -138,21 +131,16 @@ if(empty($AgendamentoInstanciada)) {
 		function editar($redireciona='agendamento.php') {
 			if(isset($_POST['acao']) && $_POST['acao'] == 'editaAgendamento') {
 
-				
-
-				$titulo = filter_input(INPUT_POST, 'titulo', FILTER_SANITIZE_SPECIAL_CHARS);
-				$tituloEn = filter_input(INPUT_POST, 'titulo_en', FILTER_SANITIZE_SPECIAL_CHARS);
-				$tituloTh = filter_input(INPUT_POST, 'titulo_th', FILTER_SANITIZE_SPECIAL_CHARS);
+				$solicitante = filter_input(INPUT_POST, 'solicitante', FILTER_SANITIZE_SPECIAL_CHARS);
+				$email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_SPECIAL_CHARS);
+				$telefone = filter_input(INPUT_POST, '$telefone', FILTER_SANITIZE_SPECIAL_CHARS);
 				//$descricao = filter_input(INPUT_POST, 'descricao', FILTER_SANITIZE_STRING);
-				$descricao = $_POST['descricao'];
-				$descricaoEn = $_POST['descricao_en'];
-				$descricaoTh = $_POST['descricao_th'];
-				$id_cat = filter_input(INPUT_POST, 'id_cat', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_title = filter_input(INPUT_POST, 'meta_title', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_keywords = filter_input(INPUT_POST, 'meta_keywords', FILTER_SANITIZE_SPECIAL_CHARS);
-				$meta_description = filter_input(INPUT_POST, 'meta_description', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_pais = filter_input(INPUT_POST, 'id_pais', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_servico = filter_input(INPUT_POST, 'id_servico', FILTER_SANITIZE_SPECIAL_CHARS);
+				$id_data = filter_input(INPUT_POST, 'id_data', FILTER_SANITIZE_SPECIAL_CHARS);
+				$status = filter_input(INPUT_POST, 'status', FILTER_SANITIZE_SPECIAL_CHARS);
+				$reagendamento = filter_input(INPUT_POST, 'reagendamento', FILTER_SANITIZE_SPECIAL_CHARS);
 				$id = filter_input(INPUT_POST, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
-				$urlAmigavel = gerarTituloSEO($titulo);
 
 				
 				try { 
@@ -163,21 +151,17 @@ if(empty($AgendamentoInstanciada)) {
 							$pastaArquivos = '../img';
 						}
 				
-					$sql = "UPDATE tbl_agendamento SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao, descricao_en=?, descricao_th=?, id_cat=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
+					$sql = "UPDATE tbl_agendamento SET solicitante=?, email=?, telefone=?, id_pais=?, id_servico, id_data=?, status=?, reagendamento=? WHERE id=?";   
 					$stm = $this->pdo->prepare($sql);   
-					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
-					$stm->bindValue(2, $titulo);   
-					$stm->bindValue(3, $tituloEn);   
-					$stm->bindValue(4, $tituloTh);   
-					$stm->bindValue(5, $descricao);
-					$stm->bindValue(6, $descricaoEn);
-					$stm->bindValue(7, $descricaoTh);
-					$stm->bindValue(8, $id_cat);   
-					$stm->bindValue(9, $meta_title);   
-					$stm->bindValue(10, $meta_keywords);   
-					$stm->bindValue(11, $meta_description);
-					$stm->bindValue(12, $urlAmigavel);
-					$stm->bindValue(13, $id);   
+					$stm->bindValue(1, $solicitante);   
+					$stm->bindValue(2, $email);   
+					$stm->bindValue(3, $telefone);   
+					$stm->bindValue(4, $id_pais);
+					$stm->bindValue(5, $id_servico);
+					$stm->bindValue(6, $id_data);
+					$stm->bindValue(7, $status);   
+					$stm->bindValue(8, $reagendamento);
+					$stm->bindValue(9, $id);   
 					$stm->execute(); 
 					
 					

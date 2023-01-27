@@ -29,5 +29,8 @@ $cidades = Cidades::getInstance(Conexao::getInstance());
 include "Class/servicos.class.php";
 $servicos = Servicos::getInstance(Conexao::getInstance());
 
+include "Class/sobre.class.php";
+$sobre = Sobre::getInstance(Conexao::getInstance());
+
 define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/thailand');
 ?>

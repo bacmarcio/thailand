@@ -78,5 +78,4 @@
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
       <script src="main.js"></script>
 </body>
-
 </html>

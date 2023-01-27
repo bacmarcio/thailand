@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Tempo de geração: 11/01/2023 às 21:38
+-- Tempo de geração: 27/01/2023 às 18:23
 -- Versão do servidor: 10.4.22-MariaDB
 -- Versão do PHP: 8.1.2
 
@@ -21064,6 +21064,27 @@ INSERT INTO `simulador` (`id`, `identificacao_local`, `uf`, `municipio`, `anual_
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tbl_agendamento`
+--
+
+CREATE TABLE `tbl_agendamento` (
+  `id` int(11) NOT NULL,
+  `solicitante` varchar(250) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `telefone` varchar(50) DEFAULT NULL,
+  `id_pais` int(11) DEFAULT NULL,
+  `id_servico` int(11) DEFAULT NULL,
+  `id_data` int(11) DEFAULT NULL,
+  `id_horario` int(11) DEFAULT NULL,
+  `status` varchar(1) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  `reagendamento` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tbl_blog`
 --
 
@@ -21149,6 +21170,27 @@ CREATE TABLE `tbl_cat_servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `tbl_cat_tailandia`
+--
+
+CREATE TABLE `tbl_cat_tailandia` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(255) DEFAULT NULL,
+  `nome_en` varchar(255) DEFAULT NULL,
+  `nome_th` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Despejando dados para a tabela `tbl_cat_tailandia`
+--
+
+INSERT INTO `tbl_cat_tailandia` (`id`, `nome`, `nome_en`, `nome_th`) VALUES
+(1, 'A Monarquia', NULL, NULL),
+(2, 'Sumário Sobre a Tailândia', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -21762,7 +21804,7 @@ CREATE TABLE `tbl_sobre` (
 --
 
 INSERT INTO `tbl_sobre` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
-(2, '1', '2', '3', '<p>1</p>\r\n', '<p>2</p>\r\n', '<p>3</p>\r\n', NULL, '', '', '', NULL, '1');
+(3, 'Lista da embaixada equipe', '', '', '<div style=\"background-color:#262335; color:#bbbbbb; font-family:\'Fira Code\',\'Droid Sans Mono\',\'monospace\',monospace; font-size:14px; font-weight:normal; line-height:19px; white-space:pre\">\r\n<div><span style=\"color:#ffffff\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci sequi nemo odio iure repellat repellendus dolorum fuga vitae, tempore quam numquam saepe dicta maxime consequuntur nam magnam officiis eaque.</span></div>\r\n</div>\r\n', '', '', NULL, '', '', '', NULL, 'lista-embaixada-equipe');
 
 -- --------------------------------------------------------
 
@@ -21884,6 +21926,19 @@ INSERT INTO `tbl_textos` (`id`, `titulo`, `descricao`, `texto`, `foto`, `meta_ti
 -- --------------------------------------------------------
 
 --
+-- Estrutura para tabela `tbl_tipo_servico`
+--
+
+CREATE TABLE `tbl_tipo_servico` (
+  `id` int(11) NOT NULL,
+  `nome` varchar(250) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estrutura para tabela `tbl_tratamentos`
 --
 
@@ -21973,8 +22028,7 @@ CREATE TABLE `tbl_usuarios` (
 --
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `email`, `telefone`, `endereco`, `cpf`, `login`, `senha`, `foto`, `id_cargo`, `sexo`, `perm_cad_usuario`, `perm_relatorio`, `perm_add_usuario`, `perm_edit_usuario`, `perm_del_usuario`, `perm_cad_contato`, `perm_edit_contato`, `perm_del_contato`, `perm_edit_contato_nf`, `perm_pag_principal_rm`, `perm_pag_principal_uc`, `admin_geral`, `data_frase`, `id_frase`, `frase_lida`) VALUES
-(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-01-10', 4, 'N'),
-(2, 'Picosolar', 'contato@picosolar.com.br', '', '', '', 'picosolar', 'hoogli@2021', NULL, 1, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2021-02-01', 38, 'N');
+(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-01-27', 44, 'N');
 
 --
 -- Índices para tabelas despejadas
@@ -22011,6 +22065,12 @@ ALTER TABLE `simulador`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `tbl_agendamento`
+--
+ALTER TABLE `tbl_agendamento`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `tbl_blog`
 --
 ALTER TABLE `tbl_blog`
@@ -22038,6 +22098,12 @@ ALTER TABLE `tbl_categoria`
 -- Índices de tabela `tbl_cat_servicos`
 --
 ALTER TABLE `tbl_cat_servicos`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Índices de tabela `tbl_cat_tailandia`
+--
+ALTER TABLE `tbl_cat_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -22227,6 +22293,12 @@ ALTER TABLE `tbl_textos`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Índices de tabela `tbl_tipo_servico`
+--
+ALTER TABLE `tbl_tipo_servico`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Índices de tabela `tbl_tratamentos`
 --
 ALTER TABLE `tbl_tratamentos`
@@ -22279,6 +22351,12 @@ ALTER TABLE `simulador`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5573;
 
 --
+-- AUTO_INCREMENT de tabela `tbl_agendamento`
+--
+ALTER TABLE `tbl_agendamento`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de tabela `tbl_blog`
 --
 ALTER TABLE `tbl_blog`
@@ -22307,6 +22385,12 @@ ALTER TABLE `tbl_categoria`
 --
 ALTER TABLE `tbl_cat_servicos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_cat_tailandia`
+--
+ALTER TABLE `tbl_cat_tailandia`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_cidades`
@@ -22468,7 +22552,7 @@ ALTER TABLE `tbl_sliders`
 -- AUTO_INCREMENT de tabela `tbl_sobre`
 --
 ALTER TABLE `tbl_sobre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_solucoes`
@@ -22493,6 +22577,12 @@ ALTER TABLE `tbl_testemunhos`
 --
 ALTER TABLE `tbl_textos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT de tabela `tbl_tipo_servico`
+--
+ALTER TABLE `tbl_tipo_servico`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_tratamentos`
