@@ -128,8 +128,10 @@
                                     <li><a href="">Sobre a Tailândia</a>
 
                                         <ul>
-                                            <li class="has-sub"><a href="#">General Posts</a>
+                                        <?php foreach($puxaCatTailandia as $itemCat) { ?>
+                                            <li class="has-sub"><a href="#"><?php echo $itemCat->nome?></a>
                                                 <ul>
+
                                                     <li><a href="post-1.html">Post 1</a>
                                                     </li>
                                                     <li><a href="post-2.html">Post 2</a>
@@ -139,7 +141,7 @@
                                                 </ul>
                                                 <a class="dd-toggle" href="#"><span class="icon-plus"></span></a>
                                             </li>
-                                            <li class="has-sub"><a href="#">Video Posts</a>
+                                            <!-- <li class="has-sub"><a href="#">Video Posts</a>
                                                 <ul>
                                                     <li><a href="#">Video Style 1</a>
                                                     </li>
@@ -160,7 +162,9 @@
                                                     </li>
                                                 </ul>
                                                 <a class="dd-toggle" href="#"><span class="icon-plus"></span></a>
-                                            </li>
+                                            </li> -->
+                                            <?php }?>
+                                            
                                         </ul>
                                     </li>
                                     <li><a href="">Tailandia e Brasil </a>

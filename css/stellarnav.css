@@ -46,7 +46,7 @@
 .stellarnav li.drop-left ul ul { left: auto; right: 220px; }
 
 /* light theme */
-.stellarnav.light { background: rgba(255, 255, 255, 1); }
+.stellarnav.light {background: rgba(255, 255, 255, 0); }
 .stellarnav.light a { color: #000; }
 .stellarnav.light ul ul { background: rgba(255, 255, 255, 1);  }
 .stellarnav.light li a { color: #17222B; font-size: 16px; font-weight: 400; }

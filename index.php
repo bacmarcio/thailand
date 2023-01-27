@@ -2,6 +2,8 @@
 <?php 
 include "includes.php";
 $puxaSobre = $sobre->rsDados();
+$puxaCatTailandia = $tailandia->rsCatServicos();
+$puxaTailandia = $tailandia->rsDados();
 include "header.php";
 ?>
 <!--====== HEADER PART ENDS ======-->
