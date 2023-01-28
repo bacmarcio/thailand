@@ -491,7 +491,7 @@ p {
     height: 25px;
     line-height: 25px;
     padding-left: 15px;
-    padding-right: 40px; }
+    padding-right: 30px; }
     @media only screen and (min-width: 992px) and (max-width: 1200px) {
       .nice-select-item .nice-select {
         padding-right: 25px; } }
