@@ -144,24 +144,24 @@ ready(function () {
    * Expects a Node (input[type="tel"]).
    */
 
-  const validatePhone = (field) => {
-    const val = field.value.trim();
+  // const validatePhone = (field) => {
+  //   const val = field.value.trim();
 
-    if (val === "" && field.required) {
-      return {
-        isValid: false
-      };
-    } else if (val !== "" && !isValidPhone(val)) {
-      return {
-        isValid: false,
-        message: "Please provide a valid US phone number."
-      };
-    } else {
-      return {
-        isValid: true
-      };
-    }
-  };
+  //   if (val === "" && field.required) {
+  //     return {
+  //       isValid: false
+  //     };
+  //   } else if (val !== "" && !isValidPhone(val)) {
+  //     return {
+  //       isValid: false,
+  //       message: "Please provide a valid US phone number."
+  //     };
+  //   } else {
+  //     return {
+  //       isValid: true
+  //     };
+  //   }
+  // };
 
   /*****************************************************************************
    * Expects a Node (input[type="email"]).

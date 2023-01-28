@@ -57,7 +57,7 @@
                 </div>
             </div>
             <div
-                class="d-flex flex-column-reverse sm:flex-row align-items-center justify-center sm:justify-end mt-4 sm:mt-5">
+                class="d-flex flex-column-reverse sm:flex-row align-items-right justify-end  sm:justify-end mt-4 sm:mt-5">
 
                 <button type="button" onclick="window.location='form'">
                     Continue
@@ -76,6 +76,6 @@
                 <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
             </footer>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
-      <script src="main.js"></script>
+      <!-- <script src="main.js"></script> -->
 </body>
 </html>
