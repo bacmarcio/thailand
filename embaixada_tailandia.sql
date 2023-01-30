@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Tempo de geração: 30-Jan-2023 às 03:44
--- Versão do servidor: 10.4.27-MariaDB
--- versão do PHP: 8.1.12
+-- Host: localhost
+-- Tempo de geração: 30/01/2023 às 21:34
+-- Versão do servidor: 10.4.22-MariaDB
+-- Versão do PHP: 8.1.2
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `contadores_paginas`
+-- Estrutura para tabela `contadores_paginas`
 --
 
 CREATE TABLE `contadores_paginas` (
@@ -35,12 +35,12 @@ CREATE TABLE `contadores_paginas` (
   `pagina` int(11) DEFAULT NULL,
   `id_campanha` int(11) DEFAULT NULL,
   `veio_de_onde` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `dados_cidades`
+-- Estrutura para tabela `dados_cidades`
 --
 
 CREATE TABLE `dados_cidades` (
@@ -48,10 +48,10 @@ CREATE TABLE `dados_cidades` (
   `id_estado` int(4) NOT NULL DEFAULT 0,
   `uf` varchar(4) NOT NULL DEFAULT '',
   `nome` varchar(50) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `dados_cidades`
+-- Despejando dados para a tabela `dados_cidades`
 --
 
 INSERT INTO `dados_cidades` (`id`, `id_estado`, `uf`, `nome`) VALUES
@@ -9780,17 +9780,17 @@ INSERT INTO `dados_cidades` (`id`, `id_estado`, `uf`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `dados_estados`
+-- Estrutura para tabela `dados_estados`
 --
 
 CREATE TABLE `dados_estados` (
   `id` tinyint(4) NOT NULL,
   `uf` varchar(10) NOT NULL DEFAULT '',
   `nome` varchar(20) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `dados_estados`
+-- Despejando dados para a tabela `dados_estados`
 --
 
 INSERT INTO `dados_estados` (`id`, `uf`, `nome`) VALUES
@@ -9826,7 +9826,7 @@ INSERT INTO `dados_estados` (`id`, `uf`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `estado`
+-- Estrutura para tabela `estado`
 --
 
 CREATE TABLE `estado` (
@@ -9835,10 +9835,10 @@ CREATE TABLE `estado` (
   `Nome` varchar(50) NOT NULL,
   `Uf` char(2) NOT NULL,
   `Regiao` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `estado`
+-- Despejando dados para a tabela `estado`
 --
 
 INSERT INTO `estado` (`Id`, `CodigoUf`, `Nome`, `Uf`, `Regiao`) VALUES
@@ -9873,7 +9873,7 @@ INSERT INTO `estado` (`Id`, `CodigoUf`, `Nome`, `Uf`, `Regiao`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `municipio`
+-- Estrutura para tabela `municipio`
 --
 
 CREATE TABLE `municipio` (
@@ -9881,10 +9881,10 @@ CREATE TABLE `municipio` (
   `Codigo` int(11) NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Uf` char(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `municipio`
+-- Despejando dados para a tabela `municipio`
 --
 
 INSERT INTO `municipio` (`Id`, `Codigo`, `Nome`, `Uf`) VALUES
@@ -15466,7 +15466,7 @@ INSERT INTO `municipio` (`Id`, `Codigo`, `Nome`, `Uf`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `simulador`
+-- Estrutura para tabela `simulador`
 --
 
 CREATE TABLE `simulador` (
@@ -15475,10 +15475,10 @@ CREATE TABLE `simulador` (
   `uf` varchar(20) DEFAULT NULL,
   `municipio` varchar(100) DEFAULT NULL,
   `anual_kwh` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `simulador`
+-- Despejando dados para a tabela `simulador`
 --
 
 INSERT INTO `simulador` (`id`, `identificacao_local`, `uf`, `municipio`, `anual_kwh`) VALUES
@@ -21064,7 +21064,7 @@ INSERT INTO `simulador` (`id`, `identificacao_local`, `uf`, `municipio`, `anual_
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_agendamento`
+-- Estrutura para tabela `tbl_agendamento`
 --
 
 CREATE TABLE `tbl_agendamento` (
@@ -21080,12 +21080,12 @@ CREATE TABLE `tbl_agendamento` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `reagendamento` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_blog`
+-- Estrutura para tabela `tbl_blog`
 --
 
 CREATE TABLE `tbl_blog` (
@@ -21104,10 +21104,10 @@ CREATE TABLE `tbl_blog` (
   `url_amigavel` text DEFAULT NULL,
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_blog`
+-- Despejando dados para a tabela `tbl_blog`
 --
 
 INSERT INTO `tbl_blog` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`) VALUES
@@ -21119,7 +21119,7 @@ INSERT INTO `tbl_blog` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postage
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_brasil_tailandia`
+-- Estrutura para tabela `tbl_brasil_tailandia`
 --
 
 CREATE TABLE `tbl_brasil_tailandia` (
@@ -21136,10 +21136,10 @@ CREATE TABLE `tbl_brasil_tailandia` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_brasil_tailandia`
+-- Despejando dados para a tabela `tbl_brasil_tailandia`
 --
 
 INSERT INTO `tbl_brasil_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21148,27 +21148,27 @@ INSERT INTO `tbl_brasil_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `d
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_campanha`
+-- Estrutura para tabela `tbl_campanha`
 --
 
 CREATE TABLE `tbl_campanha` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_cargo`
+-- Estrutura para tabela `tbl_cargo`
 --
 
 CREATE TABLE `tbl_cargo` (
   `id` int(11) NOT NULL,
   `cargo` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `tbl_cargo`
+-- Despejando dados para a tabela `tbl_cargo`
 --
 
 INSERT INTO `tbl_cargo` (`id`, `cargo`) VALUES
@@ -21179,7 +21179,7 @@ INSERT INTO `tbl_cargo` (`id`, `cargo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_categoria`
+-- Estrutura para tabela `tbl_categoria`
 --
 
 CREATE TABLE `tbl_categoria` (
@@ -21187,23 +21187,23 @@ CREATE TABLE `tbl_categoria` (
   `nome` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_cat_servicos`
+-- Estrutura para tabela `tbl_cat_servicos`
 --
 
 CREATE TABLE `tbl_cat_servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_cat_tailandia`
+-- Estrutura para tabela `tbl_cat_tailandia`
 --
 
 CREATE TABLE `tbl_cat_tailandia` (
@@ -21211,10 +21211,10 @@ CREATE TABLE `tbl_cat_tailandia` (
   `nome` varchar(255) DEFAULT NULL,
   `nome_en` varchar(255) DEFAULT NULL,
   `nome_th` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_cat_tailandia`
+-- Despejando dados para a tabela `tbl_cat_tailandia`
 --
 
 INSERT INTO `tbl_cat_tailandia` (`id`, `nome`, `nome_en`, `nome_th`) VALUES
@@ -21224,30 +21224,30 @@ INSERT INTO `tbl_cat_tailandia` (`id`, `nome`, `nome_en`, `nome_th`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_cidades`
+-- Estrutura para tabela `tbl_cidades`
 --
 
 CREATE TABLE `tbl_cidades` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `estado` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_classe_indicativa`
+-- Estrutura para tabela `tbl_classe_indicativa`
 --
 
 CREATE TABLE `tbl_classe_indicativa` (
   `id` int(11) NOT NULL,
   `titulo` varchar(80) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_cliente`
+-- Estrutura para tabela `tbl_cliente`
 --
 
 CREATE TABLE `tbl_cliente` (
@@ -21265,12 +21265,12 @@ CREATE TABLE `tbl_cliente` (
   `numero` varchar(20) DEFAULT NULL,
   `complemento` varchar(250) DEFAULT NULL,
   `cpf` varchar(80) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_compras`
+-- Estrutura para tabela `tbl_compras`
 --
 
 CREATE TABLE `tbl_compras` (
@@ -21288,12 +21288,12 @@ CREATE TABLE `tbl_compras` (
   `id_pagamento` varchar(250) DEFAULT NULL,
   `forma_pagamento` varchar(3) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_config`
+-- Estrutura para tabela `tbl_config`
 --
 
 CREATE TABLE `tbl_config` (
@@ -21314,10 +21314,10 @@ CREATE TABLE `tbl_config` (
   `cep_loja` varchar(20) DEFAULT NULL,
   `merchant_id_cielo` varchar(250) DEFAULT NULL,
   `merchant_key_cielo` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_config`
+-- Despejando dados para a tabela `tbl_config`
 --
 
 INSERT INTO `tbl_config` (`id`, `id_campanha`, `favicon`, `facebook`, `twitter`, `instagram`, `youtube`, `linkedln`, `nome_empresa`, `endereco`, `telefone1`, `telefone2`, `email1`, `email2`, `cep_loja`, `merchant_id_cielo`, `merchant_key_cielo`) VALUES
@@ -21326,7 +21326,7 @@ INSERT INTO `tbl_config` (`id`, `id_campanha`, `favicon`, `facebook`, `twitter`,
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_contato`
+-- Estrutura para tabela `tbl_contato`
 --
 
 CREATE TABLE `tbl_contato` (
@@ -21354,12 +21354,12 @@ CREATE TABLE `tbl_contato` (
   `tipo` varchar(200) DEFAULT NULL,
   `valor_plano` float DEFAULT NULL,
   `id_plano` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_convenios`
+-- Estrutura para tabela `tbl_convenios`
 --
 
 CREATE TABLE `tbl_convenios` (
@@ -21367,12 +21367,12 @@ CREATE TABLE `tbl_convenios` (
   `titulo` varchar(250) DEFAULT NULL,
   `link` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_doutores`
+-- Estrutura para tabela `tbl_doutores`
 --
 
 CREATE TABLE `tbl_doutores` (
@@ -21390,12 +21390,12 @@ CREATE TABLE `tbl_doutores` (
   `dias_trabalho` varchar(250) DEFAULT NULL,
   `telefone` varchar(80) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_especialidades`
+-- Estrutura para tabela `tbl_especialidades`
 --
 
 CREATE TABLE `tbl_especialidades` (
@@ -21406,12 +21406,12 @@ CREATE TABLE `tbl_especialidades` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_eventos`
+-- Estrutura para tabela `tbl_eventos`
 --
 
 CREATE TABLE `tbl_eventos` (
@@ -21428,19 +21428,23 @@ CREATE TABLE `tbl_eventos` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_eventos`
+-- Despejando dados para a tabela `tbl_eventos`
 --
 
 INSERT INTO `tbl_eventos` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `data`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
-(2, 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', '0000-00-00', NULL, NULL, NULL, NULL, NULL);
+(2, 'Domingo, 01 de Janeiro', 'Sunday, January 1st', 'วันอาทิตย์ที่ 1 มกราคม', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', '1970-01-01', '', '', '', '1675101634.2765-foto-N.jpg', 'domingo,-01-janeiro'),
+(3, 'Segunda-Feira 20 de Fevereiro', 'Monday February 20th', 'วันจันทร์ที่ 20 กุมภาพันธ์', '', '', '', '1970-01-01', '', '', '', '1675101555.8813-foto-N.jpg', 'segundafeira-20-fevereiro'),
+(4, 'Domingo 26 de Fevereiro', 'Sunday, February 26th', 'วันอาทิตย์ที่ 26 กุมภาพันธ์', '', '', '', '1970-01-01', '', '', '', '1675101611.506-foto-N.jpg', 'domingo-26-fevereiro'),
+(5, 'Sexta-Feira 07 de Abril', 'Friday, April 7th', 'วันศุกร์ที่ 7 เมษายน', '', '', '', '1970-01-01', '', '', '', '1675101514.5874-foto-N.jpg', 'sextafeira-07-abril'),
+(6, 'Sexta-Feira 21 de Abril', 'Friday, April 21st', 'วันศุกร์ที่ 21 เมษายน', '', '', '', '1970-01-01', '', '', '', '1675101442.3508-foto-N.jpg', 'sextafeira-21-abril');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_exames`
+-- Estrutura para tabela `tbl_exames`
 --
 
 CREATE TABLE `tbl_exames` (
@@ -21451,12 +21455,12 @@ CREATE TABLE `tbl_exames` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_filmes`
+-- Estrutura para tabela `tbl_filmes`
 --
 
 CREATE TABLE `tbl_filmes` (
@@ -21476,21 +21480,21 @@ CREATE TABLE `tbl_filmes` (
   `breve` text DEFAULT NULL,
   `id_classificacao_indicativa` int(11) DEFAULT NULL,
   `id_categoria` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_frases`
+-- Estrutura para tabela `tbl_frases`
 --
 
 CREATE TABLE `tbl_frases` (
   `id` int(11) NOT NULL,
   `frase` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Extraindo dados da tabela `tbl_frases`
+-- Despejando dados para a tabela `tbl_frases`
 --
 
 INSERT INTO `tbl_frases` (`id`, `frase`) VALUES
@@ -21548,7 +21552,7 @@ INSERT INTO `tbl_frases` (`id`, `frase`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_galeria_imagem`
+-- Estrutura para tabela `tbl_galeria_imagem`
 --
 
 CREATE TABLE `tbl_galeria_imagem` (
@@ -21557,10 +21561,10 @@ CREATE TABLE `tbl_galeria_imagem` (
   `destaque` varchar(3) DEFAULT NULL,
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_galeria_imagem`
+-- Despejando dados para a tabela `tbl_galeria_imagem`
 --
 
 INSERT INTO `tbl_galeria_imagem` (`id`, `foto`, `destaque`, `descricao_imagem`, `legenda_imagem`) VALUES
@@ -21572,7 +21576,7 @@ INSERT INTO `tbl_galeria_imagem` (`id`, `foto`, `destaque`, `descricao_imagem`, 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_historicos`
+-- Estrutura para tabela `tbl_historicos`
 --
 
 CREATE TABLE `tbl_historicos` (
@@ -21582,12 +21586,12 @@ CREATE TABLE `tbl_historicos` (
   `ocorrencia` text DEFAULT NULL,
   `data` date DEFAULT NULL,
   `hora` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_metas_tags`
+-- Estrutura para tabela `tbl_metas_tags`
 --
 
 CREATE TABLE `tbl_metas_tags` (
@@ -21617,10 +21621,10 @@ CREATE TABLE `tbl_metas_tags` (
   `meta_title_produtos` text DEFAULT NULL,
   `meta_keywords_produtos` text DEFAULT NULL,
   `meta_description_produtos` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_metas_tags`
+-- Despejando dados para a tabela `tbl_metas_tags`
 --
 
 INSERT INTO `tbl_metas_tags` (`id`, `meta_title_principal`, `meta_keywords_principal`, `meta_description_principal`, `meta_title_convenio`, `meta_keywords_convenio`, `meta_description_convenio`, `meta_title_blog`, `meta_keywords_blog`, `meta_description_blog`, `meta_title_contato`, `meta_keywords_contato`, `meta_description_contato`, `meta_title_parceria`, `meta_keywords_parceria`, `meta_description_parceria`, `meta_title_servico`, `meta_keywords_servico`, `meta_description_servico`, `meta_title_sobre`, `meta_keywords_sobre`, `meta_description_sobre`, `meta_title_criacao`, `meta_title_produtos`, `meta_keywords_produtos`, `meta_description_produtos`) VALUES
@@ -21629,17 +21633,17 @@ INSERT INTO `tbl_metas_tags` (`id`, `meta_title_principal`, `meta_keywords_princ
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_newsletter`
+-- Estrutura para tabela `tbl_newsletter`
 --
 
 CREATE TABLE `tbl_newsletter` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_newsletter`
+-- Despejando dados para a tabela `tbl_newsletter`
 --
 
 INSERT INTO `tbl_newsletter` (`id`, `nome`, `email`) VALUES
@@ -21648,30 +21652,30 @@ INSERT INTO `tbl_newsletter` (`id`, `nome`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_parceiro`
+-- Estrutura para tabela `tbl_parceiro`
 --
 
 CREATE TABLE `tbl_parceiro` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_planos`
+-- Estrutura para tabela `tbl_planos`
 --
 
 CREATE TABLE `tbl_planos` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_procedimentos`
+-- Estrutura para tabela `tbl_procedimentos`
 --
 
 CREATE TABLE `tbl_procedimentos` (
@@ -21682,12 +21686,12 @@ CREATE TABLE `tbl_procedimentos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_produto`
+-- Estrutura para tabela `tbl_produto`
 --
 
 CREATE TABLE `tbl_produto` (
@@ -21711,12 +21715,12 @@ CREATE TABLE `tbl_produto` (
   `altura` float DEFAULT NULL,
   `largura` float DEFAULT NULL,
   `comprimento` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_programacao_filmes`
+-- Estrutura para tabela `tbl_programacao_filmes`
 --
 
 CREATE TABLE `tbl_programacao_filmes` (
@@ -21727,12 +21731,12 @@ CREATE TABLE `tbl_programacao_filmes` (
   `id_sala` int(11) DEFAULT NULL,
   `valor` float DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_relaciona_cadeiras`
+-- Estrutura para tabela `tbl_relaciona_cadeiras`
 --
 
 CREATE TABLE `tbl_relaciona_cadeiras` (
@@ -21745,12 +21749,12 @@ CREATE TABLE `tbl_relaciona_cadeiras` (
   `assento` varchar(80) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL,
   `id_sala` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_relaciona_compras`
+-- Estrutura para tabela `tbl_relaciona_compras`
 --
 
 CREATE TABLE `tbl_relaciona_compras` (
@@ -21765,24 +21769,24 @@ CREATE TABLE `tbl_relaciona_compras` (
   `quantidade_produto` int(11) DEFAULT NULL,
   `id_sala` int(11) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_sala`
+-- Estrutura para tabela `tbl_sala`
 --
 
 CREATE TABLE `tbl_sala` (
   `id` int(11) NOT NULL,
   `titulo` varchar(100) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_servicos_consular`
+-- Estrutura para tabela `tbl_servicos_consular`
 --
 
 CREATE TABLE `tbl_servicos_consular` (
@@ -21799,10 +21803,10 @@ CREATE TABLE `tbl_servicos_consular` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_servicos_consular`
+-- Despejando dados para a tabela `tbl_servicos_consular`
 --
 
 INSERT INTO `tbl_servicos_consular` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21816,7 +21820,7 @@ INSERT INTO `tbl_servicos_consular` (`id`, `titulo`, `titulo_en`, `titulo_th`, `
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_sliders`
+-- Estrutura para tabela `tbl_sliders`
 --
 
 CREATE TABLE `tbl_sliders` (
@@ -21831,10 +21835,10 @@ CREATE TABLE `tbl_sliders` (
   `lado_texto` varchar(2) DEFAULT NULL,
   `tem_titulo2` enum('S','N') NOT NULL,
   `foto_mobile` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_sliders`
+-- Despejando dados para a tabela `tbl_sliders`
 --
 
 INSERT INTO `tbl_sliders` (`id`, `foto`, `titulo1`, `titulo2`, `breve`, `tem_botao`, `nome_botao`, `link_botao`, `lado_texto`, `tem_titulo2`, `foto_mobile`) VALUES
@@ -21843,7 +21847,7 @@ INSERT INTO `tbl_sliders` (`id`, `foto`, `titulo1`, `titulo2`, `breve`, `tem_bot
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_sobre`
+-- Estrutura para tabela `tbl_sobre`
 --
 
 CREATE TABLE `tbl_sobre` (
@@ -21860,10 +21864,10 @@ CREATE TABLE `tbl_sobre` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_sobre`
+-- Despejando dados para a tabela `tbl_sobre`
 --
 
 INSERT INTO `tbl_sobre` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21872,7 +21876,7 @@ INSERT INTO `tbl_sobre` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_solucoes`
+-- Estrutura para tabela `tbl_solucoes`
 --
 
 CREATE TABLE `tbl_solucoes` (
@@ -21892,10 +21896,10 @@ CREATE TABLE `tbl_solucoes` (
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL,
   `embed` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_solucoes`
+-- Despejando dados para a tabela `tbl_solucoes`
 --
 
 INSERT INTO `tbl_solucoes` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`, `embed`) VALUES
@@ -21911,7 +21915,7 @@ INSERT INTO `tbl_solucoes` (`id`, `titulo`, `postado_por`, `conteudo`, `data_pos
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_tailandia`
+-- Estrutura para tabela `tbl_tailandia`
 --
 
 CREATE TABLE `tbl_tailandia` (
@@ -21928,10 +21932,10 @@ CREATE TABLE `tbl_tailandia` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_tailandia`
+-- Despejando dados para a tabela `tbl_tailandia`
 --
 
 INSERT INTO `tbl_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21940,7 +21944,7 @@ INSERT INTO `tbl_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descrica
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_testemunhos`
+-- Estrutura para tabela `tbl_testemunhos`
 --
 
 CREATE TABLE `tbl_testemunhos` (
@@ -21949,10 +21953,10 @@ CREATE TABLE `tbl_testemunhos` (
   `testemunho` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `sexo` varchar(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_testemunhos`
+-- Despejando dados para a tabela `tbl_testemunhos`
 --
 
 INSERT INTO `tbl_testemunhos` (`id`, `nome`, `testemunho`, `foto`, `sexo`) VALUES
@@ -21963,7 +21967,7 @@ INSERT INTO `tbl_testemunhos` (`id`, `nome`, `testemunho`, `foto`, `sexo`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_textos`
+-- Estrutura para tabela `tbl_textos`
 --
 
 CREATE TABLE `tbl_textos` (
@@ -21976,10 +21980,10 @@ CREATE TABLE `tbl_textos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `pagina_referencia` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_textos`
+-- Despejando dados para a tabela `tbl_textos`
 --
 
 INSERT INTO `tbl_textos` (`id`, `titulo`, `descricao`, `texto`, `foto`, `meta_title`, `meta_keywords`, `meta_description`, `pagina_referencia`) VALUES
@@ -21996,7 +22000,7 @@ INSERT INTO `tbl_textos` (`id`, `titulo`, `descricao`, `texto`, `foto`, `meta_ti
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_tipo_servico`
+-- Estrutura para tabela `tbl_tipo_servico`
 --
 
 CREATE TABLE `tbl_tipo_servico` (
@@ -22004,12 +22008,12 @@ CREATE TABLE `tbl_tipo_servico` (
   `nome` varchar(250) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_tratamentos`
+-- Estrutura para tabela `tbl_tratamentos`
 --
 
 CREATE TABLE `tbl_tratamentos` (
@@ -22020,12 +22024,12 @@ CREATE TABLE `tbl_tratamentos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_treinamentos`
+-- Estrutura para tabela `tbl_treinamentos`
 --
 
 CREATE TABLE `tbl_treinamentos` (
@@ -22045,10 +22049,10 @@ CREATE TABLE `tbl_treinamentos` (
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL,
   `embed` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_treinamentos`
+-- Despejando dados para a tabela `tbl_treinamentos`
 --
 
 INSERT INTO `tbl_treinamentos` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`, `embed`) VALUES
@@ -22061,7 +22065,7 @@ INSERT INTO `tbl_treinamentos` (`id`, `titulo`, `postado_por`, `conteudo`, `data
 -- --------------------------------------------------------
 
 --
--- Estrutura da tabela `tbl_usuarios`
+-- Estrutura para tabela `tbl_usuarios`
 --
 
 CREATE TABLE `tbl_usuarios` (
@@ -22091,315 +22095,315 @@ CREATE TABLE `tbl_usuarios` (
   `data_frase` date DEFAULT NULL,
   `id_frase` int(11) DEFAULT NULL,
   `frase_lida` varchar(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Extraindo dados da tabela `tbl_usuarios`
+-- Despejando dados para a tabela `tbl_usuarios`
 --
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `email`, `telefone`, `endereco`, `cpf`, `login`, `senha`, `foto`, `id_cargo`, `sexo`, `perm_cad_usuario`, `perm_relatorio`, `perm_add_usuario`, `perm_edit_usuario`, `perm_del_usuario`, `perm_cad_contato`, `perm_edit_contato`, `perm_del_contato`, `perm_edit_contato_nf`, `perm_pag_principal_rm`, `perm_pag_principal_uc`, `admin_geral`, `data_frase`, `id_frase`, `frase_lida`) VALUES
-(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-01-29', 24, 'N');
+(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-01-30', 20, 'N');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices para tabela `contadores_paginas`
+-- Índices de tabela `contadores_paginas`
 --
 ALTER TABLE `contadores_paginas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `dados_cidades`
+-- Índices de tabela `dados_cidades`
 --
 ALTER TABLE `dados_cidades`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Índices para tabela `estado`
+-- Índices de tabela `estado`
 --
 ALTER TABLE `estado`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Índices para tabela `municipio`
+-- Índices de tabela `municipio`
 --
 ALTER TABLE `municipio`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Índices para tabela `simulador`
+-- Índices de tabela `simulador`
 --
 ALTER TABLE `simulador`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_agendamento`
+-- Índices de tabela `tbl_agendamento`
 --
 ALTER TABLE `tbl_agendamento`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_blog`
+-- Índices de tabela `tbl_blog`
 --
 ALTER TABLE `tbl_blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_brasil_tailandia`
+-- Índices de tabela `tbl_brasil_tailandia`
 --
 ALTER TABLE `tbl_brasil_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_campanha`
+-- Índices de tabela `tbl_campanha`
 --
 ALTER TABLE `tbl_campanha`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_cargo`
+-- Índices de tabela `tbl_cargo`
 --
 ALTER TABLE `tbl_cargo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_categoria`
+-- Índices de tabela `tbl_categoria`
 --
 ALTER TABLE `tbl_categoria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_cat_servicos`
+-- Índices de tabela `tbl_cat_servicos`
 --
 ALTER TABLE `tbl_cat_servicos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_cat_tailandia`
+-- Índices de tabela `tbl_cat_tailandia`
 --
 ALTER TABLE `tbl_cat_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_cidades`
+-- Índices de tabela `tbl_cidades`
 --
 ALTER TABLE `tbl_cidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_classe_indicativa`
+-- Índices de tabela `tbl_classe_indicativa`
 --
 ALTER TABLE `tbl_classe_indicativa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_cliente`
+-- Índices de tabela `tbl_cliente`
 --
 ALTER TABLE `tbl_cliente`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_compras`
+-- Índices de tabela `tbl_compras`
 --
 ALTER TABLE `tbl_compras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_config`
+-- Índices de tabela `tbl_config`
 --
 ALTER TABLE `tbl_config`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_contato`
+-- Índices de tabela `tbl_contato`
 --
 ALTER TABLE `tbl_contato`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_convenios`
+-- Índices de tabela `tbl_convenios`
 --
 ALTER TABLE `tbl_convenios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_doutores`
+-- Índices de tabela `tbl_doutores`
 --
 ALTER TABLE `tbl_doutores`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_especialidades`
+-- Índices de tabela `tbl_especialidades`
 --
 ALTER TABLE `tbl_especialidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_eventos`
+-- Índices de tabela `tbl_eventos`
 --
 ALTER TABLE `tbl_eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_exames`
+-- Índices de tabela `tbl_exames`
 --
 ALTER TABLE `tbl_exames`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_filmes`
+-- Índices de tabela `tbl_filmes`
 --
 ALTER TABLE `tbl_filmes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_frases`
+-- Índices de tabela `tbl_frases`
 --
 ALTER TABLE `tbl_frases`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_galeria_imagem`
+-- Índices de tabela `tbl_galeria_imagem`
 --
 ALTER TABLE `tbl_galeria_imagem`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_historicos`
+-- Índices de tabela `tbl_historicos`
 --
 ALTER TABLE `tbl_historicos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_metas_tags`
+-- Índices de tabela `tbl_metas_tags`
 --
 ALTER TABLE `tbl_metas_tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_newsletter`
+-- Índices de tabela `tbl_newsletter`
 --
 ALTER TABLE `tbl_newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_parceiro`
+-- Índices de tabela `tbl_parceiro`
 --
 ALTER TABLE `tbl_parceiro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_planos`
+-- Índices de tabela `tbl_planos`
 --
 ALTER TABLE `tbl_planos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_procedimentos`
+-- Índices de tabela `tbl_procedimentos`
 --
 ALTER TABLE `tbl_procedimentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_produto`
+-- Índices de tabela `tbl_produto`
 --
 ALTER TABLE `tbl_produto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_programacao_filmes`
+-- Índices de tabela `tbl_programacao_filmes`
 --
 ALTER TABLE `tbl_programacao_filmes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_relaciona_cadeiras`
+-- Índices de tabela `tbl_relaciona_cadeiras`
 --
 ALTER TABLE `tbl_relaciona_cadeiras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_relaciona_compras`
+-- Índices de tabela `tbl_relaciona_compras`
 --
 ALTER TABLE `tbl_relaciona_compras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_sala`
+-- Índices de tabela `tbl_sala`
 --
 ALTER TABLE `tbl_sala`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_servicos_consular`
+-- Índices de tabela `tbl_servicos_consular`
 --
 ALTER TABLE `tbl_servicos_consular`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_sliders`
+-- Índices de tabela `tbl_sliders`
 --
 ALTER TABLE `tbl_sliders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_sobre`
+-- Índices de tabela `tbl_sobre`
 --
 ALTER TABLE `tbl_sobre`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_solucoes`
+-- Índices de tabela `tbl_solucoes`
 --
 ALTER TABLE `tbl_solucoes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_tailandia`
+-- Índices de tabela `tbl_tailandia`
 --
 ALTER TABLE `tbl_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_testemunhos`
+-- Índices de tabela `tbl_testemunhos`
 --
 ALTER TABLE `tbl_testemunhos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_textos`
+-- Índices de tabela `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_tipo_servico`
+-- Índices de tabela `tbl_tipo_servico`
 --
 ALTER TABLE `tbl_tipo_servico`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_tratamentos`
+-- Índices de tabela `tbl_tratamentos`
 --
 ALTER TABLE `tbl_tratamentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_treinamentos`
+-- Índices de tabela `tbl_treinamentos`
 --
 ALTER TABLE `tbl_treinamentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices para tabela `tbl_usuarios`
+-- Índices de tabela `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT de tabelas despejadas
+-- AUTO_INCREMENT para tabelas despejadas
 --
 
 --
@@ -22538,7 +22542,7 @@ ALTER TABLE `tbl_especialidades`
 -- AUTO_INCREMENT de tabela `tbl_eventos`
 --
 ALTER TABLE `tbl_eventos`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_exames`
@@ -22646,7 +22650,7 @@ ALTER TABLE `tbl_sliders`
 -- AUTO_INCREMENT de tabela `tbl_sobre`
 --
 ALTER TABLE `tbl_sobre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_solucoes`
