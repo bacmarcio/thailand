@@ -1,6 +1,6 @@
 <?php include "verifica.php";
-$tailandia->add();
-$puxaCategorias = $tailandia->rsCatServicos();
+$eventos->add();
+
 
 ?>
 <!DOCTYPE html>

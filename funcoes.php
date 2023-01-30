@@ -4,6 +4,10 @@ function formataData($data){
     return date("d/m/Y", strtotime($data));
 }
 
+function formataDataSql($data){
+  return date("Y-m-d", strtotime($data));
+}
+
 //Formatar palavras maiusculas e com espaços
 function editaSemEspaco($texto){
   return retiraAcentos(strtolower(str_replace(' ', '-', $texto)));
@@ -327,7 +331,12 @@ function obterBandeira($numero){
         return false;
     }
 
-    if(isset($_GET['lang']))
+    
+    
+    
+    
+    
+  if(isset($_GET['lang']))
   {
     $lang = $_GET['lang'];
 

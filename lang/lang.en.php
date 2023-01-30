@@ -41,6 +41,8 @@ $lang['FEITO_POR'] = 'Made with';
 $lang['POR'] = 'by';
 $lang['DIREITOS'] = 'All rights reserved';
 $lang['PARA_EMBAIXADA'] = 'Royal Thai Embassy';
+$lang['LISTAR_ITENS'] = 'List Items';
+
 
 // Botões
 
@@ -48,6 +50,7 @@ $lang['BTN_ACESSAR'] = 'Access';
 $lang['CANCELAR'] = 'Cancel';
 $lang['SAIR'] = 'Go to';
 $lang['SALVAR'] = 'Save';
+$lang['SAIBA_MAIS'] = 'Know more';
 
 // Form
 
@@ -83,6 +86,7 @@ $lang['MONARQUIA'] = 'The Monarchy';
 $lang['SUMARIO'] = 'Summary About Thailand';
 $lang['NEGOCIOS'] = 'Doing Business in Thailand';
 $lang['INVESTIMENTOS'] = 'Investments';
+$lang['EVENTOS'] = 'holidays and events';
 
 //Footer
 $lang['SITE_OFICIAL'] = 'This is the official website of the Royal Thai Embassy in Brazil - Developed by Capital Prime';

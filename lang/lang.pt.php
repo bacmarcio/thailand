@@ -42,6 +42,8 @@ $lang['FEITO_POR'] = 'Feito com';
 $lang['POR'] = 'por';
 $lang['DIREITOS'] = 'Todos os direitos reservados';
 $lang['PARA_EMBAIXADA'] = 'Embaixada Real da Tailândia';
+$lang['LISTAR_ITENS'] = 'Listar Itens';
+
 
 
 // Botões
@@ -50,6 +52,8 @@ $lang['BTN_ACESSAR'] = 'Acessar';
 $lang['CANCELAR'] = 'Cancelar';
 $lang['SAIR'] = 'Sair';
 $lang['SALVAR'] = 'Salvar';
+$lang['SAIBA_MAIS'] = 'Saiba Mais';
+
 
 // Form
 
@@ -85,6 +89,7 @@ $lang['MONARQUIA'] = 'A Monarquia';
 $lang['SUMARIO'] = 'Sumário Sobre a Tailândia';
 $lang['NEGOCIOS'] = 'Fazendo Negócios na Tailândia';
 $lang['INVESTIMENTOS'] = 'Investimentos';
+$lang['EVENTOS'] = 'Feriados e Eventos';
 
 //Footer
 $lang['SITE_OFICIAL'] = 'Este é o site oficial da Embaixada Real da Tailândia no Brasil - Desenvolvido por Capital Prime';

@@ -42,7 +42,7 @@ $eventos->excluir();
                         </div>
                     </div>
                     <div class="col-5 align-self-center">
-                        <a href="add-sobre.php" class="btn btn-success float-right">Add. Item</a>
+                        <a href="add-eventos.php" class="btn btn-success float-right">Add. Item</a>
                     </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@ $eventos->excluir();
                                                 <td><?php echo $puxaEventos->url_amigavel;?></td>
                                                 <td>
                                                     <a href="editar-eventos.php?id=<?php echo $puxaEventos->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a href="eventos.php" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
+                                                    <a href="eventos.php?id=<?php echo $puxaEventos->id;?>&acao=excluirEventos" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
                                                 </td>
                                             </tr>
                                             <?php } }?>

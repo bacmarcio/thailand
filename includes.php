@@ -38,5 +38,8 @@ $tailandia = Tailandia::getInstance(Conexao::getInstance());
 include "Class/brasil-tailandia.class.php";
 $brasilTailandia = brasilTailandia::getInstance(Conexao::getInstance());
 
+include "Class/eventos.class.php";
+$eventos = Eventos::getInstance(Conexao::getInstance());
+
 define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/thailand');
 ?>

@@ -81,7 +81,7 @@ $sobre->excluir();
                                                 <td><?php echo $itemSobre->url_amigavel;?></td>
                                                 <td>
                                                     <a href="editar-sobre.php?id=<?php echo $itemSobre->id;?>" class="btn btn-success btn-circle"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a href="sobre.php?id=<?php echo $itemSobre->id;?>&acao=excluirServico" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
+                                                    <a href="sobre.php?id=<?php echo $itemSobre->id;?>&acao=excluirSobre" class="btn btn-warning btn-circle"><i class="fa fa-times"></i></a>
                                                 </td>
                                             </tr>
                                             <?php } }?>

@@ -4,13 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="copyright-item d-block d-md-flex justify-content-between align-items-center">
-                    <p>© Copyright 2020, All Rights Reserved</p>
-                    <ul>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Advertise</a></li>
-                        <li><a href="#">Privacy & Policy</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                    </ul>
+                    <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
                 </div>
             </div>
         </div>
@@ -50,31 +44,31 @@
 
 
 <!--====== jquery js ======-->
-<script src="js/vendor/modernizr-3.6.0.min.js"></script>
-<script src="js/vendor/jquery-1.12.4.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/vendor/modernizr-3.6.0.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/vendor/jquery-1.12.4.min.js"></script>
 
 
 <!--====== Bootstrap js ======-->
-<script src="js/bootstrap.min.js"></script>
-<script src="js/popper.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/bootstrap.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/popper.min.js"></script>
 
 <!--====== Slick js ======-->
-<script src="js/slick.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/slick.min.js"></script>
 
 <!--====== nice select js ======-->
-<script src="js/jquery.nice-select.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/jquery.nice-select.min.js"></script>
 
 <!--====== stellarnav js ======-->
-<script src="js/stellarnav.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/stellarnav.min.js"></script>
 
 <!--====== circle progress js ======-->
-<script src="js/circle-progress.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/circle-progress.min.js"></script>
 
 <!--====== Magnific Popup js ======-->
-<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="<?php echo SITE_URL?>/js/jquery.magnific-popup.min.js"></script>
 
 <!--====== Main js ======-->
-<script src="js/main.js"></script>
+<script src="<?php echo SITE_URL?>/js/main.js"></script>
 
 </body>
 

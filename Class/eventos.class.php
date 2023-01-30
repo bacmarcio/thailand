@@ -109,7 +109,7 @@ if(empty($EventosInstanciada)) {
 						$stm->bindValue(5, $descricao);
 						$stm->bindValue(6, $descricaoEn);
 						$stm->bindValue(7, $descricaoTh);
-						$stm->bindValue(8, $data);   
+						$stm->bindValue(8, formataDataSql($data));   
 						$stm->bindValue(9, $meta_title);   
 						$stm->bindValue(10, $meta_keywords);   
 						$stm->bindValue(11, $meta_description); 
@@ -163,7 +163,7 @@ if(empty($EventosInstanciada)) {
 							$pastaArquivos = '../img';
 						}
 				
-					$sql = "UPDATE eventos SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao=?, descricao_en=?, descricao_th=?, data=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
+					$sql = "UPDATE tbl_eventos  SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao=?, descricao_en=?, descricao_th=?, data=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
 					$stm = $this->pdo->prepare($sql);   
 					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
 					$stm->bindValue(2, $titulo);   
@@ -172,7 +172,7 @@ if(empty($EventosInstanciada)) {
 					$stm->bindValue(5, $descricao);
 					$stm->bindValue(6, $descricaoEn);
 					$stm->bindValue(7, $descricaoTh);
-					$stm->bindValue(8, $id_cat);   
+					$stm->bindValue(8, formataDataSql($data));   
 					$stm->bindValue(9, $meta_title);   
 					$stm->bindValue(10, $meta_keywords);   
 					$stm->bindValue(11, $meta_description);
@@ -186,7 +186,6 @@ if(empty($EventosInstanciada)) {
 				} catch(PDOException $erro){
 					echo $erro->getMessage(); 
 				}
-
 				echo "	<script>
 							window.location='{$redireciona}';
 							</script>";

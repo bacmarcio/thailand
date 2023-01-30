@@ -174,7 +174,7 @@ $editaEventos = $eventos->rsDados($id);
                                            
                                         </div>
                                     </div>
-                                    <input type="hidden" name="acao" value="editaTailandia">
+                                    <input type="hidden" name="acao" value="editaEventos">
                                     <input type="hidden" name="id" value="<?php echo $editaEventos->id;?>">
                                     <input type="hidden" name="foto_Atual" value="<?php if(isset($editaEventos->foto) && !empty($editaEventos->foto)){ echo $editaEventos->foto;}?>">
                                 </form>

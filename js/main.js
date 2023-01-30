@@ -208,7 +208,7 @@
             prevArrow: '<span class="prev"><i class="fal fa-angle-left"></i></span>',
             nextArrow: '<span class="next"><i class="fal fa-angle-right"></i></span>',
             centerPadding: "0",
-            focusOnSelect: true,            
+            focusOnSelect: true,
             responsive: [
                 {
                     breakpoint: 768,
@@ -499,12 +499,23 @@
                 scrollTop: "0"
             }, 1200);
         });
-        
-        
-        
-        
+
+
+        // Change Language
+        $(function () {
+            // bind change event to select
+            $('#lang').on('change', function () {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
+                }
+                return false;
+            });
+        });
+
+
         // circle
-        
+
         jQuery('.first.circle').circleProgress({
             value: 0.5,
             size: 40,

@@ -1,0 +1,7 @@
+.stellarnav {
+    position: relative;
+    width: 106% !important;
+    z-index: 990;
+    line-height: normal;
+    margin-left: -49px !important;
+  }

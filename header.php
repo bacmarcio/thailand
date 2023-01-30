@@ -10,34 +10,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!--====== Title ======-->
-    <title>Embaixada Real da Tailândia em Brasília</title>
+    <title><?php echo $lang['PARA_EMBAIXADA']?></title>
 
     <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="./images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="<?php echo SITE_URL?>/images/favicon.png" type="image/png">
 
     <!--====== Bootstrap css ======-->
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/bootstrap.min.css">
 
     <!--====== Fontawesome css ======-->
-    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/font-awesome.min.css">
 
     <!--====== Magnific Popup css ======-->
-    <link rel="stylesheet" href="./css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/magnific-popup.css">
 
     <!--====== nice select css ======-->
-    <link rel="stylesheet" href="./css/nice-select.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/nice-select.css">
 
     <!--====== Slick css ======-->
-    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/slick.css">
 
     <!--====== stellarnav css ======-->
-    <link rel="stylesheet" href="./css/stellarnav.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/stellarnav.css">
 
     <!--====== Default css ======-->
-    <link rel="stylesheet" href="./css/default.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/default.css">
 
     <!--====== Style css ======-->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/style.css">
+    <?php if(isset($_GET['lang'])&&$_GET['lang']=='th'){?>
+    <link rel="stylesheet" href="<?php echo SITE_URL?>/css/thai.css">   
+    <?php }?>
 
 
 </head>
@@ -96,9 +99,9 @@
                     <div class="col-lg-8">
                         <div class="logo">
                             <a href="index.html">
-                                <img src="./images/logo-p.png" width="100" alt="">
+                                <img src="<?php echo SITE_URL?>/images/logo-p.png" width="100" alt="">
                             </a>
-                            <h2 class="header-text-logo">Embaixada Real da Tailandia</h2>
+                            <h2 class="header-text-logo"><?php echo $lang['PARA_EMBAIXADA']?></h2>
 
                         </div>
                     </div>
@@ -113,28 +116,58 @@
                         <div class="header-menu">
                             <div class="stellarnav">
                                 <ul>
-                                    <li><a class="active" href="">Inicio</a>
+                                    <li><a class="active" href=""><?php echo $lang['INICIO']?></a>
 
                                     </li>
-                                    <li><a href="#">Sobre a Embaixada</a>
+                                    <li><a href="#"><?php echo $lang['SOBRE_EMBAIXADA']?></a>
                                         <ul>
-                                            <?php foreach ($puxaSobre as $itemSobre) { ?>
+                                            <?php foreach ($puxaSobre as $itemSobre) { 
+                                                if($_SESSION['lang']=== 'en'){
+                                                    $titulo = $itemSobre->titulo_en;
+                                                }
+                                                elseif($_SESSION['lang']==='th') {
+                                                    $titulo = $itemSobre->titulo_th;
+                                                }
+                                                else
+                                                {
+                                                    $titulo = $itemSobre->titulo;
+                                                }
+                                                ?>
                                                 <li>
-                                                    <a href="<?php echo SITE_URL?>/<?php echo $itemSobre->url_amigavel?>"><?php echo $itemSobre->titulo?></a>
+                                                    <a href="<?php echo SITE_URL?>/<?php echo $itemSobre->url_amigavel?>"><?php echo $titulo?></a>
                                                 </li>
                                             <?php }?>       
                                         </ul>
                                     </li>
-                                    <li><a href="">Sobre a Tailândia</a>
+                                    <li><a href=""><?php echo $lang['SOBRE_TAILANDIA']?></a>
 
                                         <ul>
                                         <?php foreach($puxaCatTailandia as $itemCat) { 
-                                            $puxaTailandiaComCat = $tailandia->rsDados('','','',$itemCat->id);?>
-                                            <li class="has-sub"><a href="#"><?php echo $itemCat->nome?></a>
+                                            $puxaTailandiaComCat = $tailandia->rsDados('','','',$itemCat->id);
+                                            if($_SESSION['lang']=== 'en'){
+                                                $cat = $itemCat->nome_en;
+                                                $tituloCom = $puxaTailandiaComCat[0]->titulo_en;
+                                            }
+                                            elseif($_SESSION['lang']==='th') {
+                                                $cat = $itemCat->nome_th;
+                                                $tituloCom = $puxaTailandiaComCat[0]->titulo_th;
+                                            }
+                                            else
+                                            {
+                                                $cat = $itemCat->nome;
+                                                $tituloCom = $puxaTailandiaComCat[0]->titulo;
+                                            }
+
+                                            
+
+                                
+                                            
+                                            ?>
+                                            <li class="has-sub"><a href="#"><?php echo $cat?></a>
                                                
                                             <ul>
                                             <?php if(isset($puxaTailandiaComCat[0]->id)){?>
-                                                    <li><a href="<?php echo SITE_URL?>/<?php echo $puxaTailandiaComCat[0]->url_amigavel?>"><?php echo $puxaTailandiaComCat[0]->titulo?></a>
+                                                    <li><a href="<?php echo SITE_URL?>/<?php echo $puxaTailandiaComCat[0]->url_amigavel?>"><?php echo $tituloCom?></a>
                                                     </li>
                                                     <?php }?>
                                                     
@@ -156,7 +189,7 @@
                                         </ul>
                                         
                                     </li>
-                                    <li><a href="">Tailandia e Brasil </a>
+                                    <li><a href=""><?php echo $lang['TAILANDIA_BRASIL']?></a>
                                         <ul>
                                             <?php foreach ($puxaBrasilTailandia as $itemBrasilTalilandia) {?>
                                                
@@ -165,9 +198,9 @@
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="">Serviços Consular</a></li>
-                                    <li><a href="">Multimidia</a></li>
-                                    <li><a href="contact.html">Fale Conosco</a></li>
+                                    <li><a href="#"><?php echo $lang['SERVICO_CONSULAR']?></a></li>
+                                    <li><a href="#"><?php echo $lang['MULTIMIDIA']?></a></li>
+                                    <li><a href="#"><?php echo $lang['CONTATO']?></a></li>
                                 </ul>
                             </div><!-- .stellarnav -->
                         </div>
@@ -181,10 +214,10 @@
                                 </ul>
                             </div> -->
                             <div class="nice-select-item">
-                                <select>
-                                    <option value="1">Português</option>
-                                    <option value="2">English</option>
-                                    <option value="3">ภาษาไทย</option>
+                                <select id="lang">
+                                    <option value="<?php echo SITE_URL?>/home/pt" <?php if($_GET['lang']== 'pt'){echo "selected";}?> >Português</option>
+                                    <option value="<?php echo SITE_URL?>/home/en" <?php if($_GET['lang']== 'en'){echo "selected";}?> >English</option>
+                                    <option value="<?php echo SITE_URL?>/home/th" <?php if($_GET['lang']== 'th'){echo "selected";}?> >ภาษาไทย</option>
 
                                 </select>
                             </div>
