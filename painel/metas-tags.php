@@ -11,7 +11,7 @@ $editaConfig = $metastags->rsDados(1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Adriano Monteiro">
+    <meta name="author" content="Capital Prime">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hoogli_logo.svg">
     <title>Painel Hoogli - Metas Tags</title>
     <link href="dist/css/style.min.css" rel="stylesheet">

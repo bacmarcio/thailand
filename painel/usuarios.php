@@ -13,10 +13,10 @@ $usuarios->excluir();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Adriano Monteiro">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hoogli_logo.svg">
-    <title>Painel Hoogli - Usuários</title>
-    <link href="dist/css/style.min.css" rel="stylesheet">
+    <meta name="author" content="Capital Prime">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title><?php echo $lang['PAINEL'].' - '.$lang['PARA_EMBAIXADA']?></title>
+    <link href="dist/css/style.css" rel="stylesheet">
 </head>
 
 <body>

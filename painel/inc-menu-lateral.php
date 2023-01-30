@@ -71,6 +71,7 @@
                                 </li>
                             </ul>
                         </li>
+
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Brasil Tailândia</span></a>
@@ -95,6 +96,20 @@
                                 </li>
                                 <li class="sidebar-item"><a href="add-servico.php" class="sidebar-link"><span
                                             class="hide-menu"> Adicionar Itens
+                                        </span></a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
+                                aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
+                                    class="hide-menu">Eventos</span></a>
+                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                <li class="sidebar-item"><a href="eventos.php" class="sidebar-link"><span
+                                            class="hide-menu"> Listar Itens
+                                        </span></a>
+                                </li>
+                                <li class="sidebar-item"><a href="add-eventos.php" class="sidebar-link"><span
+                                            class="hide-menu"> Adicionar Item
                                         </span></a>
                                 </li>
                             </ul>

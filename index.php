@@ -4,6 +4,8 @@ include "includes.php";
 $puxaSobre = $sobre->rsDados();
 $puxaCatTailandia = $tailandia->rsCatServicos();
 $puxaTailandia = $tailandia->rsDados();
+$puxaBrasilTailandia = $brasilTailandia->rsDados();
+$puxaServicos = $servicos->rsDados();
 include "header.php";
 ?>
 <!--====== HEADER PART ENDS ======-->
@@ -17,122 +19,34 @@ include "header.php";
 
 
                 <div class="row">
+                <?php foreach ($puxaServicos as $itemServicos) {?>
                     <div class="col-lg-6 col-md-6">
                         <div class="trending-news-post-items">
+                            
                             <div class="gallery_item">
                                 <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-1.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
+                                    <img class="icon-service" src="<?php echo SITE_URL?>/img/<?php echo $itemServicos->foto?>" alt="gallery">
+                                    <!-- <div class="icon"><i class="fas fa-bolt"></i></div> -->
                                 </div>
                                 <div class="gallery_item_content">
                                     <div class="post-meta">
                                         <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
+                                            <a href="#">Saiba Mais</a>
                                         </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
+                                        
                                     </div>
-                                    <h4 class="title"><a href="#">Nancy zhang a chinese busy woman and dhaka</a>
+                                    <h4 class="title"><a href="<?php echo SITE_URL?>/<?php echo $itemServicos->url_amigavel?>"><?php echo $itemServicos->titulo?></a>
                                     </h4>
                                 </div>
                             </div>
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-2.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
-                                        </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="#">The billionaire Philan thropist read to learn</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-3.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
-                                        </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="#">Cheap smartphone sensor could help you old food
-                                            safe</a></h4>
-                                </div>
-                            </div>
+                            
+                            
                         </div>
+                           
+                        
                     </div>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="trending-news-post-items">
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-1.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
-                                        </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="#">Nancy zhang a chinese busy woman and dhaka</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-2.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
-                                        </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="#">The billionaire Philan thropist read to learn</a>
-                                    </h4>
-                                </div>
-                            </div>
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img src="./images/gallery-3.jpg" alt="gallery">
-                                    <div class="icon"><i class="fas fa-bolt"></i></div>
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#">TECHNOLOGY</a>
-                                        </div>
-                                        <div class="meta-date">
-                                            <span>March 26, 2020</span>
-                                        </div>
-                                    </div>
-                                    <h4 class="title"><a href="#">Cheap smartphone sensor could help you old food
-                                            safe</a></h4>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <?php }?>
+                    
                 </div>
             </div>
             <div class="col-lg-4">

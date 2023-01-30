@@ -11,10 +11,10 @@ $editaConfig = $infoSistema->rsDados(1);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Adriano Monteiro">
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/hoogli_logo.svg">
-    <title>Painel Hoogli - Configurações Gerais</title>
-    <link href="dist/css/style.min.css" rel="stylesheet">
+    <meta name="author" content="Capital Prime">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title><?php echo $lang['PAINEL'].' - '.$lang['PARA_EMBAIXADA']?></title>
+    <link href="dist/css/style.css" rel="stylesheet">
 </head>
 <body>
     <div class="preloader">
@@ -134,7 +134,7 @@ $editaConfig = $infoSistema->rsDados(1);
                                             </div>
                                         </div>
                                         <hr>
-                                        <div class="form-group">
+                                        <!-- <div class="form-group">
                                             <div class="col-md-12">
                                                 <h3>Chaves Cielo</h3>
                                             </div>
@@ -148,7 +148,7 @@ $editaConfig = $infoSistema->rsDados(1);
                                             <label  class="col-form-label">Merchant Key</label>
                                             <input class="form-control" type="text" name="merchant_key_cielo" value="<?php if(isset($editaConfig->merchant_key_cielo) && !empty($editaConfig->merchant_key_cielo)){ echo $editaConfig->merchant_key_cielo;}?>" />
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                     <div class="form-actions">
                                         <div class="text-right">

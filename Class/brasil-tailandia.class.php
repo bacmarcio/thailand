@@ -163,7 +163,7 @@ if(empty($BrasilTailandia)) {
 							$pastaArquivos = '../img';
 						}
 				
-					$sql = "UPDATE tbl_brasil_tailandia SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao, descricao_en=?, descricao_th=?, id_cat=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
+					$sql = "UPDATE tbl_brasil_tailandia SET foto=?, titulo=?, titulo_en=?, titulo_th=?, descricao=?, descricao_en=?, descricao_th=?, id_cat=?, meta_title=?, meta_keywords=?, meta_description=?, url_amigavel=? WHERE id=?";   
 					$stm = $this->pdo->prepare($sql);   
 					$stm->bindValue(1, upload('foto', $pastaArquivos, 'N'));   
 					$stm->bindValue(2, $titulo);   

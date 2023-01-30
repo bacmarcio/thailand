@@ -17,24 +17,9 @@
       
           <!-- Step Navigation -->
           <div class="d-flex align-items-start mb-3 sm:mb-5 progress-form__tabs" role="tablist">
-<<<<<<< HEAD
-            <button id="progress-form__tab-1" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-1" aria-selected="true">
-              <!-- <span class="d-block step" aria-hidden="true">Step 1 <span class="sm:d-none">of 3</span></span>
-              Details -->
-            </button>
-            <button id="progress-form__tab-2" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-2" aria-selected="false" tabindex="-1" aria-disabled="true">
-              <!-- <span class="d-block step" aria-hidden="true">Step 2 <span class="sm:d-none">of 3</span></span>
-              Shipping -->
-            </button>
-            <!-- <button id="progress-form__tab-3" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-3" aria-selected="false" tabindex="-1" aria-disabled="true"> -->
-              <!-- <span class="d-block step" aria-hidden="true">Step 3 <span class="sm:d-none">of 3</span></span>
-              Survey -->
-            </button>
-=======
             <button id="progress-form__tab-1" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-1" aria-selected="true"></button>
             <button id="progress-form__tab-2" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-2" aria-selected="false" tabindex="-1" aria-disabled="true"></button>
             <!-- <button id="progress-form__tab-3" class="flex-1 px-0 pt-2 progress-form__tabs-item" type="button" role="tab" aria-controls="progress-form__panel-3" aria-selected="false" tabindex="-1" aria-disabled="true"></button> -->
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
           </div>
           <!-- / End Step Navigation -->
       
@@ -48,9 +33,6 @@
                 </label>
                 <input id="first-name" type="text" name="nome" autocomplete="given-name" required>
               </div>
-      
-<<<<<<< HEAD
-              
             </div>
       
             <div class="mt-3 form__field">
@@ -596,9 +578,6 @@
           <!-- / End Step 1 -->
       
           <!-- Step 2 -->
-<<<<<<< HEAD
-          
-=======
           <section id="progress-form__panel-2" role="tabpanel" aria-labelledby="progress-form__tab-2" tabindex="0" hidden>
             <div class="mt-3 form__field">
               <label for="address">
@@ -630,14 +609,13 @@
                   <span data-required="true" aria-hidden="true"></span>
                 </label>
                 <select id="address-state" name="address-state" autocomplete="shipping address-level1" required>
-=======
+
               <div class="mt-3 sm:mt-0 form__field">
                 <label for="last-name">
                   Nacionalidade
                   <span data-required="true" aria-hidden="true"></span>
                 </label>
                <select id="address-state" name="pais" autocomplete="shipping address-level1" required>
->>>>>>> 6baf67c04cfe5ed8e5da4a263ae0112f78f5e326
                   <option value="" disabled selected>Please select</option>
                   <option value="1">
                   <?php echo $lang['AFEGANISTAO']?> </option>
@@ -1175,7 +1153,6 @@
               </button>
             </div>
           </section>
->>>>>>> 1525deb9c2df2d2b623650c13b4259db1d294ce9
           <!-- / End Step 1 -->
       
           <!-- Step 2 -->
@@ -1185,12 +1162,7 @@
                 Solicitante
                 <span data-required="true" aria-hidden="true"></span>
               </label>
-<<<<<<< HEAD
-              <h3 class="solicitante"></h3>
-              <!-- <input id="address" type="text" name="solicitante" autocomplete="shipping address-line1" required> -->
-=======
               <h3 class="teste1"></h3>
->>>>>>> 1525deb9c2df2d2b623650c13b4259db1d294ce9
             </div>
       
             <div class="mt-3 form__field">
@@ -1271,25 +1243,11 @@
       <footer class="footer text-center text-muted mt-auto fixed-bottom">
                 <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
             </footer>
-<<<<<<< HEAD
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-=======
             <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
->>>>>>> 1525deb9c2df2d2b623650c13b4259db1d294ce9
             <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"></script>
             
       <script src="main.js"></script>
       <script>
-<<<<<<< HEAD
-        $('input[type="text"]').on('keydown, keyup', function () {
-          //get a reference to the text input value
-          var texInputValue = $('#first-name').val();
-  
-            //show the text input value in the UI
-            $('.solicitante').html(texInputValue);
-          });
-      </script>
-=======
         $("#first-name")
             .keyup(function () {
                 var value = $(this).val();
@@ -1299,6 +1257,5 @@
             .keyup();
     </script>
       
->>>>>>> 1525deb9c2df2d2b623650c13b4259db1d294ce9
 </body>
 </html>

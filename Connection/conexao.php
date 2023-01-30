@@ -1,6 +1,6 @@
 <?php 
 $hostname_conexao = "localhost";
-$database_conexao = "pico_solar";
+$database_conexao = "embaixada_tailandia";
 $username_conexao = "root";
 $password_conexao = "";
 

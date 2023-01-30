@@ -19,7 +19,7 @@ $editaSobre = $sobre->rsDados($id);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="author" content="Adriano Monteiro">
+    <meta name="author" content="Capital Prime">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
     <title><?php echo $lang['PAINEL'].' - '.$lang['PARA_EMBAIXADA']?></title>
     <link href="dist/css/style.css" rel="stylesheet">

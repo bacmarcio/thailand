@@ -128,58 +128,40 @@
                                     <li><a href="">Sobre a Tailândia</a>
 
                                         <ul>
-                                        <?php foreach($puxaCatTailandia as $itemCat) { ?>
+                                        <?php foreach($puxaCatTailandia as $itemCat) { 
+                                            $puxaTailandiaComCat = $tailandia->rsDados('','','',$itemCat->id);?>
                                             <li class="has-sub"><a href="#"><?php echo $itemCat->nome?></a>
-                                                <ul>
-
-                                                    <li><a href="post-1.html">Post 1</a>
+                                               
+                                            <ul>
+                                            <?php if(isset($puxaTailandiaComCat[0]->id)){?>
+                                                    <li><a href="<?php echo SITE_URL?>/<?php echo $puxaTailandiaComCat[0]->url_amigavel?>"><?php echo $puxaTailandiaComCat[0]->titulo?></a>
                                                     </li>
-                                                    <li><a href="post-2.html">Post 2</a>
-                                                    </li>
-                                                    <li><a href="post-3.html">Post 3</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="dd-toggle" href="#"><span class="icon-plus"></span></a>
+                                                    <?php }?>
+                                                    
+                                                </ul> 
+                                                
+                                                
                                             </li>
-                                            <!-- <li class="has-sub"><a href="#">Video Posts</a>
-                                                <ul>
-                                                    <li><a href="#">Video Style 1</a>
-                                                    </li>
-                                                    <li><a href="#">Video Style 2</a>
-                                                    </li>
-                                                    <li><a href="#">Video Style 3</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="dd-toggle" href="#"><span class="icon-plus"></span></a>
-                                            </li>
-                                            <li class="has-sub"><a href="#">Audio Posts</a>
-                                                <ul>
-                                                    <li><a href="#">Audio Style 1</a>
-                                                    </li>
-                                                    <li><a href="#">Audio Style 2</a>
-                                                    </li>
-                                                    <li><a href="#">Audio Style 3</a>
-                                                    </li>
-                                                </ul>
-                                                <a class="dd-toggle" href="#"><span class="icon-plus"></span></a>
-                                            </li> -->
-                                            <?php }?>
                                             
+                                            <?php }?>
+                                            <?php $puxaTailandia = $tailandia->rsDados();?>
+                                            <?php foreach ($puxaTailandia as $itemTailandia) { 
+                                                if($itemTailandia->id_cat == ""){ 
+                                            ?>
+                                                
+                                           
+                                            <li class=""><a href="<?php echo SITE_URL?>/<?php echo $itemTailandia->url_amigavel?>"><?php echo $itemTailandia->titulo?></a>
+                                            <?php }?>
+                                            <?php }?>
                                         </ul>
+                                        
                                     </li>
                                     <li><a href="">Tailandia e Brasil </a>
                                         <ul>
-                                            <li class="active"><a href="business.html">Business</a>
-                                            </li>
-                                            <li><a href="entertainment.html">Entertainment</a>
-                                            </li>
-                                            <li><a href="features.html">Features</a>
-                                            </li>
-                                            <li><a href="sports.html">Sports</a>
-                                            </li>
-                                            <li><a href="trending.html">trending</a>
-                                            </li>
-                                            <li><a href="technology.html">Technology</a>
+                                            <?php foreach ($puxaBrasilTailandia as $itemBrasilTalilandia) {?>
+                                               
+                                            <li><a href="<?php echo SITE_URL?>/<?php echo $itemBrasilTalilandia->url_amigavel?>"><?php echo $itemBrasilTalilandia->titulo?></a>
+                                            <?php }?>
                                             </li>
                                         </ul>
                                     </li>

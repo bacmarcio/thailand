@@ -35,5 +35,8 @@ $sobre = Sobre::getInstance(Conexao::getInstance());
 include "Class/tailandia.class.php";
 $tailandia = Tailandia::getInstance(Conexao::getInstance());
 
+include "Class/brasil-tailandia.class.php";
+$brasilTailandia = brasilTailandia::getInstance(Conexao::getInstance());
+
 define('SITE_URL', 'https://'.$_SERVER['HTTP_HOST'].'/projetos/thailand');
 ?>
