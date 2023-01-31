@@ -1,13 +1,14 @@
 <?php 
 session_start();
 include "includes.php";
-$puxaSobre = $sobre->rsDados();
+
+
 $puxaCatTailandia = $tailandia->rsCatServicos();
 $puxaTailandia = $tailandia->rsDados();
 $puxaBrasilTailandia = $brasilTailandia->rsDados();
 $puxaServicos = $servicos->rsDados();
 $puxaEventos = $eventos->rsDados();
-
+$puxaSobre = $sobre->rsDados();
 
 
 include "header.php";
@@ -152,6 +153,8 @@ include "header.php";
             </div>
         </div>
     </div>
-    </div>
-</section>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+    <div class="clearfix">&nbsp;</div>
+                    
 <?php include "footer.php";?>

@@ -1,3 +1,4 @@
+<?php $puxaSobre = $sobre->rsDados();?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -38,7 +39,7 @@
 
     <!--====== Style css ======-->
     <link rel="stylesheet" href="<?php echo SITE_URL?>/css/style.css">
-    <?php if(isset($_GET['lang'])&&$_GET['lang']=='th'){?>
+    <?php if(isset($_SESSION['lang']) && $_SESSION['lang']=='th'){?>
     <link rel="stylesheet" href="<?php echo SITE_URL?>/css/thai.css">   
     <?php }?>
 
@@ -98,7 +99,7 @@
                 <div class="row align-items-center">
                     <div class="col-lg-8">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="<?php echo SITE_URL?>/">
                                 <img src="<?php echo SITE_URL?>/images/logo-p.png" width="100" alt="">
                             </a>
                             <h2 class="header-text-logo"><?php echo $lang['PARA_EMBAIXADA']?></h2>
@@ -116,7 +117,7 @@
                         <div class="header-menu">
                             <div class="stellarnav">
                                 <ul>
-                                    <li><a class="active" href=""><?php echo $lang['INICIO']?></a>
+                                    <li><a class="active" href="<?php echo SITE_URL?>/"><?php echo $lang['INICIO']?></a>
 
                                     </li>
                                     <li><a href="#"><?php echo $lang['SOBRE_EMBAIXADA']?></a>
@@ -215,9 +216,9 @@
                             </div> -->
                             <div class="nice-select-item">
                                 <select id="lang">
-                                    <option value="<?php echo SITE_URL?>/home/pt" <?php if($_GET['lang']== 'pt'){echo "selected";}?> >Português</option>
-                                    <option value="<?php echo SITE_URL?>/home/en" <?php if($_GET['lang']== 'en'){echo "selected";}?> >English</option>
-                                    <option value="<?php echo SITE_URL?>/home/th" <?php if($_GET['lang']== 'th'){echo "selected";}?> >ภาษาไทย</option>
+                                    <option value="<?php echo SITE_URL?>/home/pt" <?php if($_SESSION['lang']== 'pt'){echo "selected";}?> >Português</option>
+                                    <option value="<?php echo SITE_URL?>/home/en" <?php if($_SESSION['lang']== 'en'){echo "selected";}?> >English</option>
+                                    <option value="<?php echo SITE_URL?>/home/th" <?php if($_SESSION['lang']== 'th'){echo "selected";}?> >ภาษาไทย</option>
 
                                 </select>
                             </div>

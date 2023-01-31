@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="copyright-item d-block d-md-flex justify-content-between align-items-center">
-                    <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
+                    <p>©<?php echo date('Y');?> <?php echo $lang['FEITO_POR']?> <i class="fa fa-heart fa-beat" style="color: red;"></i> <?php echo $lang['POR']?> <span><a href="#" target="_blank" style="color:white">Capital Prime</a></span>. <?php echo $lang['PARA_EMBAIXADA']?> <?php echo $lang['DIREITOS']?>.</p>
                 </div>
             </div>
         </div>
@@ -30,7 +30,7 @@
 
 <!--====== PART START ======-->
 
-<!-- <section class="">
+<section class="">
         <div class="container">
             <div class="row">
                 <div class="col-lg-">
@@ -38,7 +38,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
 <!--====== PART ENDS ======-->
 
