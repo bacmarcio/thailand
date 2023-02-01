@@ -10,24 +10,21 @@ if(isset($_GET['id'])){
     }
 }
 
-$descServicos = $servicos->rsDados('', '', '', '', '', $id);
-$listaServicos = $servicos->rsDados('', '', '', '', $descServicos[0]->id);
-
-
+$descServicos = $servicos->rsDados('','','','','','', $id);
+$listaServicos = $servicos->rsDados('', '', '', '', $id);
 
 if($_SESSION['lang']=== 'en'){
-    
-    $tituloServicos = $descServicos[0]->titulo_en;
-    $descricaoServicos = $descServicos[0]->descricao_en;
+    $titulo = $descServicos[0]->titulo_en;
+    $descricao = $descServicos[0]->descricao_en;
 }
 elseif($_SESSION['lang']==='th') {
-    $tituloServicos = $descServicos[0]->titulo_th;
-    $descricaoServicos = $descServicos[0]->descricao_th;
+    $titulo = $descServicos[0]->titulo_th;
+    $descricao = $descServicos[0]->descricao_th;
 }
 else
 {
-    $tituloServicos = $descServicos[0]->titulo;
-    $descricaoServicos = $descServicos[0]->descricao;
+    $titulo = $descServicos[0]->titulo;
+    $descricao = $descServicos[0]->descricao;
 }
 
 
@@ -53,11 +50,11 @@ include "header.php";
                 <div class="col-lg-8">
                     <div class="post-layout-top-content">
                         <div class="post-content">
-                            <h3 class="title"><?php echo $tituloServicos?></h3>
+                            <h3 class="title"><?php echo $titulo?></h3>
                         </div>
                         
                         <div class="post-text mt-30">
-                            <?php echo $descricaoServicos?>
+                            <?php echo $descricao?>
                         </div>
                     </div>
                 </div>

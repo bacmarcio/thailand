@@ -39,7 +39,7 @@ $lang['SOLUCOES'] = 'Soluções';
 $lang['CONFIGURACOES'] = 'Configurações';
 $lang['EXTRA'] = 'Extra';
 $lang['FEITO_POR'] = 'Feito com';
-$lang['POR'] = 'por';
+$lang['POR'] = 'por'; 
 $lang['DIREITOS'] = 'Todos os direitos reservados';
 $lang['PARA_EMBAIXADA'] = 'Embaixada Real da Tailândia';
 $lang['LISTAR_ITENS'] = 'Listar Itens';
@@ -74,7 +74,7 @@ $lang['INICIO'] = 'Início';
 $lang['SOBRE_EMBAIXADA'] = 'Sobre a Embaixada';
 $lang['SOBRE_TAILANDIA'] = 'Sobre a Tailândia';
 $lang['TAILANDIA_BRASIL'] = 'Tailândia Brasil';
-$lang['SERVICO_CONSULAR'] = 'Servico Consular';
+$lang['SERVICO_CONSULAR'] = 'Serviços Consulares';
 $lang['MULTIMIDIA'] = 'Multimídia';
 $lang['CONTATO'] = 'Fale Conosco';
 

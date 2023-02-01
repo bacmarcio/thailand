@@ -3,7 +3,7 @@ session_start();
 include "includes.php";
 
 
-$puxaCatTailandia = $tailandia->rsCatServicos();
+
 $puxaTailandia = $tailandia->rsDados();
 $puxaBrasilTailandia = $brasilTailandia->rsDados();
 $puxaServicos = $servicos->rsDados();

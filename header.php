@@ -1,4 +1,10 @@
-<?php $puxaSobre = $sobre->rsDados();?>
+<?php 
+$headerSobre = $sobre->rsDados();
+$headerServicos = $servicos->rsDados(1);
+$puxaCatTailandia = $tailandia->rsCatServicos();
+$headerTailandia = $tailandia->rsDados();
+$headerBrasilTailandia = $brasilTailandia->rsDados();
+?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -122,7 +128,7 @@
                                     </li>
                                     <li><a href="#"><?php echo $lang['SOBRE_EMBAIXADA']?></a>
                                         <ul>
-                                            <?php foreach ($puxaSobre as $itemSobre) { 
+                                            <?php foreach ($headerSobre as $itemSobre) { 
                                                 if($_SESSION['lang']=== 'en'){
                                                     $titulo = $itemSobre->titulo_en;
                                                 }
@@ -135,7 +141,7 @@
                                                 }
                                                 ?>
                                                 <li>
-                                                    <a href="<?php echo SITE_URL?>/<?php echo $itemSobre->url_amigavel?>"><?php echo $titulo?></a>
+                                                    <a href="<?php echo SITE_URL?>/sobre-a-embaixada/<?php echo $itemSobre->url_amigavel?>"><?php echo $titulo?></a>
                                                 </li>
                                             <?php }?>       
                                         </ul>
@@ -168,7 +174,7 @@
                                                
                                             <ul>
                                             <?php if(isset($puxaTailandiaComCat[0]->id)){?>
-                                                    <li><a href="<?php echo SITE_URL?>/<?php echo $puxaTailandiaComCat[0]->url_amigavel?>"><?php echo $tituloCom?></a>
+                                                    <li><a href="<?php echo SITE_URL?>/tailandia/<?php echo $puxaTailandiaComCat[0]->url_amigavel?>"><?php echo $tituloCom?></a>
                                                     </li>
                                                     <?php }?>
                                                     
@@ -180,11 +186,10 @@
                                             <?php }?>
                                             <?php $puxaTailandia = $tailandia->rsDados();?>
                                             <?php foreach ($puxaTailandia as $itemTailandia) { 
-                                                if($itemTailandia->id_cat == ""){ 
-                                            ?>
+                                                if($itemTailandia->id_cat == ""){ ?>
                                                 
                                            
-                                            <li class=""><a href="<?php echo SITE_URL?>/<?php echo $itemTailandia->url_amigavel?>"><?php echo $itemTailandia->titulo?></a>
+                                            <li class=""><a href="<?php echo SITE_URL?>/tailandia/<?php echo $itemTailandia->url_amigavel?>"><?php echo $itemTailandia->titulo?></a>
                                             <?php }?>
                                             <?php }?>
                                         </ul>
@@ -192,14 +197,14 @@
                                     </li>
                                     <li><a href=""><?php echo $lang['TAILANDIA_BRASIL']?></a>
                                         <ul>
-                                            <?php foreach ($puxaBrasilTailandia as $itemBrasilTalilandia) {?>
+                                            <?php foreach ($headerBrasilTailandia as $itemBrasilTalilandia) {?>
                                                
-                                            <li><a href="<?php echo SITE_URL?>/<?php echo $itemBrasilTalilandia->url_amigavel?>"><?php echo $itemBrasilTalilandia->titulo?></a>
+                                            <li><a href="<?php echo SITE_URL?>/brasil-tailandia/<?php echo $itemBrasilTalilandia->url_amigavel?>"><?php echo $itemBrasilTalilandia->titulo?></a>
                                             <?php }?>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li><a href="#"><?php echo $lang['SERVICO_CONSULAR']?></a></li>
+                                    <li><a href="<?php echo SITE_URL?>/servico-consular/<?php echo $headerServicos->url_amigavel?>"><?php echo $lang['SERVICO_CONSULAR']?></a></li>
                                     <li><a href="#"><?php echo $lang['MULTIMIDIA']?></a></li>
                                     <li><a href="#"><?php echo $lang['CONTATO']?></a></li>
                                 </ul>

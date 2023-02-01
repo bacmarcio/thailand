@@ -10,24 +10,21 @@ if(isset($_GET['id'])){
     }
 }
 
-$descServicos = $servicos->rsDados('', '', '', '', '', $id);
-$listaServicos = $servicos->rsDados('', '', '', '', $descServicos[0]->id);
-
-
+$descTailandia = $tailandia->rsDados('', '', '', '', '', $id);
+$listaTailandia = $tailandia->rsDados('', '', '', '', $descTailandia[0]->id);
 
 if($_SESSION['lang']=== 'en'){
-    
-    $tituloServicos = $descServicos[0]->titulo_en;
-    $descricaoServicos = $descServicos[0]->descricao_en;
+    $tituloTailandia = $descTailandia[0]->titulo_en;
+    $descricaoTailandia = $descTailandia[0]->descricao_en;
 }
 elseif($_SESSION['lang']==='th') {
-    $tituloServicos = $descServicos[0]->titulo_th;
-    $descricaoServicos = $descServicos[0]->descricao_th;
+    $tituloTailandia = $descTailandia[0]->titulo_th;
+    $descricaoTailandia = $descTailandia[0]->descricao_th;
 }
 else
 {
-    $tituloServicos = $descServicos[0]->titulo;
-    $descricaoServicos = $descServicos[0]->descricao;
+    $tituloTailandia = $descTailandia[0]->titulo;
+    $descricaoTailandia = $descTailandia[0]->descricao;
 }
 
 
@@ -53,11 +50,11 @@ include "header.php";
                 <div class="col-lg-8">
                     <div class="post-layout-top-content">
                         <div class="post-content">
-                            <h3 class="title"><?php echo $tituloServicos?></h3>
+                            <h3 class="title"><?php echo $tituloTailandia?></h3>
                         </div>
                         
                         <div class="post-text mt-30">
-                            <?php echo $descricaoServicos?>
+                            <?php echo $descricaoTailandia?>
                         </div>
                     </div>
                 </div>
@@ -66,21 +63,21 @@ include "header.php";
 
                 <div class="Categories-post mt-40">
                     <div class="section-title d-flex justify-content-between align-items-center">
-                        <h3 class="title"><?php echo $lang['SERVICO_CONSULAR']?></h3>
+                        <h3 class="title"><?php echo $lang['SOBRE_TAILANDIA']?></h3>
                         <!-- <a href="#">ALL SEE</a> -->
                     </div>
                     <div class="Categories-item">
-                   <?php foreach ($listaServicos as $itemServico) {
+                   <?php foreach ($listaTailandia as $itemTailandia) {
                     
                     if($_SESSION['lang']=== 'en'){
-                        $titulo = $itemServico->titulo_en;
+                        $titulo = $itemTailandia->titulo_en;
                     }
                     elseif($_SESSION['lang']==='th') {
-                        $titulo = $itemServico->titulo_th;
+                        $titulo = $itemTailandia->titulo_th;
                     }
                     else
                     {
-                        $titulo = $itemServico->titulo;
+                        $titulo = $itemTailandia->titulo;
                     }
                     
                     ?>
@@ -88,7 +85,7 @@ include "header.php";
                     <div class="item">
                             <img src="<?php echo SITE_URL?>/images/tailandes.jpg" alt="categories">
                             <div class="Categories-content">
-                                <a href="<?php echo SITE_URL?>/servico-consular/<?php echo $itemServico->url_amigavel?>">
+                                <a href="<?php echo SITE_URL?>/tailandia/<?php echo $itemTailandia->url_amigavel?>">
                                     <span><?php echo $titulo;?></span>
                                     <img src="<?php echo SITE_URL?>/images/arrow.svg" alt="">
                                 </a>

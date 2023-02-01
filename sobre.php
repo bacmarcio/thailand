@@ -10,24 +10,21 @@ if(isset($_GET['id'])){
     }
 }
 
-$descServicos = $servicos->rsDados('', '', '', '', '', $id);
-$listaServicos = $servicos->rsDados('', '', '', '', $descServicos[0]->id);
-
-
+$descEmbaixada = $sobre->rsDados('', '', '', '', '', $id);
+$listaEmbaixada = $sobre->rsDados('', '', '', '', $descEmbaixada[0]->id);
 
 if($_SESSION['lang']=== 'en'){
-    
-    $tituloServicos = $descServicos[0]->titulo_en;
-    $descricaoServicos = $descServicos[0]->descricao_en;
+    $tituloEmbaixada = $descEmbaixada[0]->titulo_en;
+    $descricaoEmbaixada = $descEmbaixada[0]->descricao_en;
 }
 elseif($_SESSION['lang']==='th') {
-    $tituloServicos = $descServicos[0]->titulo_th;
-    $descricaoServicos = $descServicos[0]->descricao_th;
+    $tituloEmbaixada = $descEmbaixada[0]->titulo_th;
+    $descricaoEmbaixada = $descEmbaixada[0]->descricao_th;
 }
 else
 {
-    $tituloServicos = $descServicos[0]->titulo;
-    $descricaoServicos = $descServicos[0]->descricao;
+    $tituloEmbaixada = $descEmbaixada[0]->titulo;
+    $descricaoEmbaixada = $descEmbaixada[0]->descricao;
 }
 
 
@@ -45,7 +42,7 @@ include "header.php";
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="<?php echo SITE_URL?>/"><?php echo $lang['INICIO']?></a></li>
-                                <li class="breadcrumb-item active" aria-current="page"><?php echo $lang['SERVICO_CONSULAR']?></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo $lang['SOBRE_EMBAIXADA']?></li>
                             </ol>
                         </nav>
                     </div>
@@ -53,11 +50,11 @@ include "header.php";
                 <div class="col-lg-8">
                     <div class="post-layout-top-content">
                         <div class="post-content">
-                            <h3 class="title"><?php echo $tituloServicos?></h3>
+                            <h3 class="title"><?php echo $tituloEmbaixada?></h3>
                         </div>
                         
                         <div class="post-text mt-30">
-                            <?php echo $descricaoServicos?>
+                            <?php echo $descricaoEmbaixada?>
                         </div>
                     </div>
                 </div>
@@ -66,21 +63,21 @@ include "header.php";
 
                 <div class="Categories-post mt-40">
                     <div class="section-title d-flex justify-content-between align-items-center">
-                        <h3 class="title"><?php echo $lang['SERVICO_CONSULAR']?></h3>
+                        <h3 class="title"><?php echo $lang['SOBRE_EMBAIXADA']?></h3>
                         <!-- <a href="#">ALL SEE</a> -->
                     </div>
                     <div class="Categories-item">
-                   <?php foreach ($listaServicos as $itemServico) {
+                   <?php foreach ($listaEmbaixada as $itemEmbaixada) {
                     
                     if($_SESSION['lang']=== 'en'){
-                        $titulo = $itemServico->titulo_en;
+                        $titulo = $itemEmbaixada->titulo_en;
                     }
                     elseif($_SESSION['lang']==='th') {
-                        $titulo = $itemServico->titulo_th;
+                        $titulo = $itemEmbaixada->titulo_th;
                     }
                     else
                     {
-                        $titulo = $itemServico->titulo;
+                        $titulo = $itemEmbaixada->titulo;
                     }
                     
                     ?>
@@ -88,7 +85,7 @@ include "header.php";
                     <div class="item">
                             <img src="<?php echo SITE_URL?>/images/tailandes.jpg" alt="categories">
                             <div class="Categories-content">
-                                <a href="<?php echo SITE_URL?>/servico-consular/<?php echo $itemServico->url_amigavel?>">
+                                <a href="<?php echo SITE_URL?>/sobre-a-embaixada/<?php echo $itemEmbaixada->url_amigavel?>">
                                     <span><?php echo $titulo;?></span>
                                     <img src="<?php echo SITE_URL?>/images/arrow.svg" alt="">
                                 </a>
