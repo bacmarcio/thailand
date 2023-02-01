@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Tempo de geração: 30/01/2023 às 21:34
--- Versão do servidor: 10.4.22-MariaDB
--- Versão do PHP: 8.1.2
+-- Host: 127.0.0.1
+-- Tempo de geração: 01-Fev-2023 às 05:12
+-- Versão do servidor: 10.4.27-MariaDB
+-- versão do PHP: 8.1.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `contadores_paginas`
+-- Estrutura da tabela `contadores_paginas`
 --
 
 CREATE TABLE `contadores_paginas` (
@@ -35,12 +35,12 @@ CREATE TABLE `contadores_paginas` (
   `pagina` int(11) DEFAULT NULL,
   `id_campanha` int(11) DEFAULT NULL,
   `veio_de_onde` varchar(3) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `dados_cidades`
+-- Estrutura da tabela `dados_cidades`
 --
 
 CREATE TABLE `dados_cidades` (
@@ -48,10 +48,10 @@ CREATE TABLE `dados_cidades` (
   `id_estado` int(4) NOT NULL DEFAULT 0,
   `uf` varchar(4) NOT NULL DEFAULT '',
   `nome` varchar(50) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `dados_cidades`
+-- Extraindo dados da tabela `dados_cidades`
 --
 
 INSERT INTO `dados_cidades` (`id`, `id_estado`, `uf`, `nome`) VALUES
@@ -9780,17 +9780,17 @@ INSERT INTO `dados_cidades` (`id`, `id_estado`, `uf`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `dados_estados`
+-- Estrutura da tabela `dados_estados`
 --
 
 CREATE TABLE `dados_estados` (
   `id` tinyint(4) NOT NULL,
   `uf` varchar(10) NOT NULL DEFAULT '',
   `nome` varchar(20) NOT NULL DEFAULT ''
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `dados_estados`
+-- Extraindo dados da tabela `dados_estados`
 --
 
 INSERT INTO `dados_estados` (`id`, `uf`, `nome`) VALUES
@@ -9826,7 +9826,7 @@ INSERT INTO `dados_estados` (`id`, `uf`, `nome`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `estado`
+-- Estrutura da tabela `estado`
 --
 
 CREATE TABLE `estado` (
@@ -9835,10 +9835,10 @@ CREATE TABLE `estado` (
   `Nome` varchar(50) NOT NULL,
   `Uf` char(2) NOT NULL,
   `Regiao` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `estado`
+-- Extraindo dados da tabela `estado`
 --
 
 INSERT INTO `estado` (`Id`, `CodigoUf`, `Nome`, `Uf`, `Regiao`) VALUES
@@ -9873,7 +9873,7 @@ INSERT INTO `estado` (`Id`, `CodigoUf`, `Nome`, `Uf`, `Regiao`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `municipio`
+-- Estrutura da tabela `municipio`
 --
 
 CREATE TABLE `municipio` (
@@ -9881,10 +9881,10 @@ CREATE TABLE `municipio` (
   `Codigo` int(11) NOT NULL,
   `Nome` varchar(255) NOT NULL,
   `Uf` char(2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `municipio`
+-- Extraindo dados da tabela `municipio`
 --
 
 INSERT INTO `municipio` (`Id`, `Codigo`, `Nome`, `Uf`) VALUES
@@ -15466,7 +15466,7 @@ INSERT INTO `municipio` (`Id`, `Codigo`, `Nome`, `Uf`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `simulador`
+-- Estrutura da tabela `simulador`
 --
 
 CREATE TABLE `simulador` (
@@ -15475,10 +15475,10 @@ CREATE TABLE `simulador` (
   `uf` varchar(20) DEFAULT NULL,
   `municipio` varchar(100) DEFAULT NULL,
   `anual_kwh` varchar(40) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `simulador`
+-- Extraindo dados da tabela `simulador`
 --
 
 INSERT INTO `simulador` (`id`, `identificacao_local`, `uf`, `municipio`, `anual_kwh`) VALUES
@@ -21064,7 +21064,7 @@ INSERT INTO `simulador` (`id`, `identificacao_local`, `uf`, `municipio`, `anual_
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_agendamento`
+-- Estrutura da tabela `tbl_agendamento`
 --
 
 CREATE TABLE `tbl_agendamento` (
@@ -21080,12 +21080,12 @@ CREATE TABLE `tbl_agendamento` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   `reagendamento` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_blog`
+-- Estrutura da tabela `tbl_blog`
 --
 
 CREATE TABLE `tbl_blog` (
@@ -21104,10 +21104,10 @@ CREATE TABLE `tbl_blog` (
   `url_amigavel` text DEFAULT NULL,
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_blog`
+-- Extraindo dados da tabela `tbl_blog`
 --
 
 INSERT INTO `tbl_blog` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`) VALUES
@@ -21119,7 +21119,7 @@ INSERT INTO `tbl_blog` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postage
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_brasil_tailandia`
+-- Estrutura da tabela `tbl_brasil_tailandia`
 --
 
 CREATE TABLE `tbl_brasil_tailandia` (
@@ -21136,10 +21136,10 @@ CREATE TABLE `tbl_brasil_tailandia` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_brasil_tailandia`
+-- Extraindo dados da tabela `tbl_brasil_tailandia`
 --
 
 INSERT INTO `tbl_brasil_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21148,27 +21148,27 @@ INSERT INTO `tbl_brasil_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `d
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_campanha`
+-- Estrutura da tabela `tbl_campanha`
 --
 
 CREATE TABLE `tbl_campanha` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_cargo`
+-- Estrutura da tabela `tbl_cargo`
 --
 
 CREATE TABLE `tbl_cargo` (
   `id` int(11) NOT NULL,
   `cargo` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `tbl_cargo`
+-- Extraindo dados da tabela `tbl_cargo`
 --
 
 INSERT INTO `tbl_cargo` (`id`, `cargo`) VALUES
@@ -21179,7 +21179,7 @@ INSERT INTO `tbl_cargo` (`id`, `cargo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_categoria`
+-- Estrutura da tabela `tbl_categoria`
 --
 
 CREATE TABLE `tbl_categoria` (
@@ -21187,23 +21187,23 @@ CREATE TABLE `tbl_categoria` (
   `nome` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_cat_servicos`
+-- Estrutura da tabela `tbl_cat_servicos`
 --
 
 CREATE TABLE `tbl_cat_servicos` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_cat_tailandia`
+-- Estrutura da tabela `tbl_cat_tailandia`
 --
 
 CREATE TABLE `tbl_cat_tailandia` (
@@ -21211,43 +21211,44 @@ CREATE TABLE `tbl_cat_tailandia` (
   `nome` varchar(255) DEFAULT NULL,
   `nome_en` varchar(255) DEFAULT NULL,
   `nome_th` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_cat_tailandia`
+-- Extraindo dados da tabela `tbl_cat_tailandia`
 --
 
 INSERT INTO `tbl_cat_tailandia` (`id`, `nome`, `nome_en`, `nome_th`) VALUES
 (1, 'A Monarquia', NULL, NULL),
-(2, 'Sumário Sobre a Tailândia', NULL, NULL);
+(2, 'Sumário Sobre a Tailândia', NULL, NULL),
+(3, 'Fazendo Negócios na Tailândia ', 'Doing Business in Thailand', 'การทำธุรกิจในประเทศไทย');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_cidades`
+-- Estrutura da tabela `tbl_cidades`
 --
 
 CREATE TABLE `tbl_cidades` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `estado` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_classe_indicativa`
+-- Estrutura da tabela `tbl_classe_indicativa`
 --
 
 CREATE TABLE `tbl_classe_indicativa` (
   `id` int(11) NOT NULL,
   `titulo` varchar(80) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_cliente`
+-- Estrutura da tabela `tbl_cliente`
 --
 
 CREATE TABLE `tbl_cliente` (
@@ -21265,12 +21266,12 @@ CREATE TABLE `tbl_cliente` (
   `numero` varchar(20) DEFAULT NULL,
   `complemento` varchar(250) DEFAULT NULL,
   `cpf` varchar(80) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_compras`
+-- Estrutura da tabela `tbl_compras`
 --
 
 CREATE TABLE `tbl_compras` (
@@ -21288,12 +21289,12 @@ CREATE TABLE `tbl_compras` (
   `id_pagamento` varchar(250) DEFAULT NULL,
   `forma_pagamento` varchar(3) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_config`
+-- Estrutura da tabela `tbl_config`
 --
 
 CREATE TABLE `tbl_config` (
@@ -21314,19 +21315,19 @@ CREATE TABLE `tbl_config` (
   `cep_loja` varchar(20) DEFAULT NULL,
   `merchant_id_cielo` varchar(250) DEFAULT NULL,
   `merchant_key_cielo` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_config`
+-- Extraindo dados da tabela `tbl_config`
 --
 
 INSERT INTO `tbl_config` (`id`, `id_campanha`, `favicon`, `facebook`, `twitter`, `instagram`, `youtube`, `linkedln`, `nome_empresa`, `endereco`, `telefone1`, `telefone2`, `email1`, `email2`, `cep_loja`, `merchant_id_cielo`, `merchant_key_cielo`) VALUES
-(1, NULL, '1609955165.1366-favicon-N.png', 'https://www.facebook.com/picosolardf', '', 'https://www.instagram.com/picosolar/', '', 'https://www.linkedin.com/company/hooglimkt/', 'Embaixada Real da Tailândia ', '', '(61) 3224-6943', '(61) 3224-6943', 'setorconsulartai@gmail.com', '', '', NULL, NULL);
+(1, NULL, '1609955165.1366-favicon-N.png', '', '', '', '', 'https://www.linkedin.com/company/hooglimkt/', 'Embaixada Real da Tailândia ', '', '(61) 3224-6943', '(61) 3224-6943', 'setorconsulartai@gmail.com', '', '', NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_contato`
+-- Estrutura da tabela `tbl_contato`
 --
 
 CREATE TABLE `tbl_contato` (
@@ -21354,12 +21355,12 @@ CREATE TABLE `tbl_contato` (
   `tipo` varchar(200) DEFAULT NULL,
   `valor_plano` float DEFAULT NULL,
   `id_plano` varchar(10) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_convenios`
+-- Estrutura da tabela `tbl_convenios`
 --
 
 CREATE TABLE `tbl_convenios` (
@@ -21367,12 +21368,12 @@ CREATE TABLE `tbl_convenios` (
   `titulo` varchar(250) DEFAULT NULL,
   `link` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_doutores`
+-- Estrutura da tabela `tbl_doutores`
 --
 
 CREATE TABLE `tbl_doutores` (
@@ -21390,12 +21391,12 @@ CREATE TABLE `tbl_doutores` (
   `dias_trabalho` varchar(250) DEFAULT NULL,
   `telefone` varchar(80) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_especialidades`
+-- Estrutura da tabela `tbl_especialidades`
 --
 
 CREATE TABLE `tbl_especialidades` (
@@ -21406,12 +21407,12 @@ CREATE TABLE `tbl_especialidades` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_eventos`
+-- Estrutura da tabela `tbl_eventos`
 --
 
 CREATE TABLE `tbl_eventos` (
@@ -21428,10 +21429,10 @@ CREATE TABLE `tbl_eventos` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_eventos`
+-- Extraindo dados da tabela `tbl_eventos`
 --
 
 INSERT INTO `tbl_eventos` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `data`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21444,7 +21445,7 @@ INSERT INTO `tbl_eventos` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_exames`
+-- Estrutura da tabela `tbl_exames`
 --
 
 CREATE TABLE `tbl_exames` (
@@ -21455,12 +21456,12 @@ CREATE TABLE `tbl_exames` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_filmes`
+-- Estrutura da tabela `tbl_filmes`
 --
 
 CREATE TABLE `tbl_filmes` (
@@ -21480,21 +21481,21 @@ CREATE TABLE `tbl_filmes` (
   `breve` text DEFAULT NULL,
   `id_classificacao_indicativa` int(11) DEFAULT NULL,
   `id_categoria` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_frases`
+-- Estrutura da tabela `tbl_frases`
 --
 
 CREATE TABLE `tbl_frases` (
   `id` int(11) NOT NULL,
   `frase` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 --
--- Despejando dados para a tabela `tbl_frases`
+-- Extraindo dados da tabela `tbl_frases`
 --
 
 INSERT INTO `tbl_frases` (`id`, `frase`) VALUES
@@ -21552,7 +21553,7 @@ INSERT INTO `tbl_frases` (`id`, `frase`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_galeria_imagem`
+-- Estrutura da tabela `tbl_galeria_imagem`
 --
 
 CREATE TABLE `tbl_galeria_imagem` (
@@ -21561,10 +21562,10 @@ CREATE TABLE `tbl_galeria_imagem` (
   `destaque` varchar(3) DEFAULT NULL,
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_galeria_imagem`
+-- Extraindo dados da tabela `tbl_galeria_imagem`
 --
 
 INSERT INTO `tbl_galeria_imagem` (`id`, `foto`, `destaque`, `descricao_imagem`, `legenda_imagem`) VALUES
@@ -21576,7 +21577,7 @@ INSERT INTO `tbl_galeria_imagem` (`id`, `foto`, `destaque`, `descricao_imagem`, 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_historicos`
+-- Estrutura da tabela `tbl_historicos`
 --
 
 CREATE TABLE `tbl_historicos` (
@@ -21586,12 +21587,12 @@ CREATE TABLE `tbl_historicos` (
   `ocorrencia` text DEFAULT NULL,
   `data` date DEFAULT NULL,
   `hora` time DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_metas_tags`
+-- Estrutura da tabela `tbl_metas_tags`
 --
 
 CREATE TABLE `tbl_metas_tags` (
@@ -21621,10 +21622,10 @@ CREATE TABLE `tbl_metas_tags` (
   `meta_title_produtos` text DEFAULT NULL,
   `meta_keywords_produtos` text DEFAULT NULL,
   `meta_description_produtos` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_metas_tags`
+-- Extraindo dados da tabela `tbl_metas_tags`
 --
 
 INSERT INTO `tbl_metas_tags` (`id`, `meta_title_principal`, `meta_keywords_principal`, `meta_description_principal`, `meta_title_convenio`, `meta_keywords_convenio`, `meta_description_convenio`, `meta_title_blog`, `meta_keywords_blog`, `meta_description_blog`, `meta_title_contato`, `meta_keywords_contato`, `meta_description_contato`, `meta_title_parceria`, `meta_keywords_parceria`, `meta_description_parceria`, `meta_title_servico`, `meta_keywords_servico`, `meta_description_servico`, `meta_title_sobre`, `meta_keywords_sobre`, `meta_description_sobre`, `meta_title_criacao`, `meta_title_produtos`, `meta_keywords_produtos`, `meta_description_produtos`) VALUES
@@ -21633,17 +21634,17 @@ INSERT INTO `tbl_metas_tags` (`id`, `meta_title_principal`, `meta_keywords_princ
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_newsletter`
+-- Estrutura da tabela `tbl_newsletter`
 --
 
 CREATE TABLE `tbl_newsletter` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `email` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_newsletter`
+-- Extraindo dados da tabela `tbl_newsletter`
 --
 
 INSERT INTO `tbl_newsletter` (`id`, `nome`, `email`) VALUES
@@ -21652,30 +21653,30 @@ INSERT INTO `tbl_newsletter` (`id`, `nome`, `email`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_parceiro`
+-- Estrutura da tabela `tbl_parceiro`
 --
 
 CREATE TABLE `tbl_parceiro` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_planos`
+-- Estrutura da tabela `tbl_planos`
 --
 
 CREATE TABLE `tbl_planos` (
   `id` int(11) NOT NULL,
   `nome` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_procedimentos`
+-- Estrutura da tabela `tbl_procedimentos`
 --
 
 CREATE TABLE `tbl_procedimentos` (
@@ -21686,12 +21687,12 @@ CREATE TABLE `tbl_procedimentos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_produto`
+-- Estrutura da tabela `tbl_produto`
 --
 
 CREATE TABLE `tbl_produto` (
@@ -21715,12 +21716,12 @@ CREATE TABLE `tbl_produto` (
   `altura` float DEFAULT NULL,
   `largura` float DEFAULT NULL,
   `comprimento` float DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_programacao_filmes`
+-- Estrutura da tabela `tbl_programacao_filmes`
 --
 
 CREATE TABLE `tbl_programacao_filmes` (
@@ -21731,12 +21732,12 @@ CREATE TABLE `tbl_programacao_filmes` (
   `id_sala` int(11) DEFAULT NULL,
   `valor` float DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_relaciona_cadeiras`
+-- Estrutura da tabela `tbl_relaciona_cadeiras`
 --
 
 CREATE TABLE `tbl_relaciona_cadeiras` (
@@ -21749,12 +21750,12 @@ CREATE TABLE `tbl_relaciona_cadeiras` (
   `assento` varchar(80) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL,
   `id_sala` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_relaciona_compras`
+-- Estrutura da tabela `tbl_relaciona_compras`
 --
 
 CREATE TABLE `tbl_relaciona_compras` (
@@ -21769,24 +21770,24 @@ CREATE TABLE `tbl_relaciona_compras` (
   `quantidade_produto` int(11) DEFAULT NULL,
   `id_sala` int(11) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_sala`
+-- Estrutura da tabela `tbl_sala`
 --
 
 CREATE TABLE `tbl_sala` (
   `id` int(11) NOT NULL,
   `titulo` varchar(100) DEFAULT NULL,
   `id_cidade` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_servicos_consular`
+-- Estrutura da tabela `tbl_servicos_consular`
 --
 
 CREATE TABLE `tbl_servicos_consular` (
@@ -21803,10 +21804,10 @@ CREATE TABLE `tbl_servicos_consular` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_servicos_consular`
+-- Extraindo dados da tabela `tbl_servicos_consular`
 --
 
 INSERT INTO `tbl_servicos_consular` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
@@ -21820,7 +21821,7 @@ INSERT INTO `tbl_servicos_consular` (`id`, `titulo`, `titulo_en`, `titulo_th`, `
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_sliders`
+-- Estrutura da tabela `tbl_sliders`
 --
 
 CREATE TABLE `tbl_sliders` (
@@ -21835,10 +21836,10 @@ CREATE TABLE `tbl_sliders` (
   `lado_texto` varchar(2) DEFAULT NULL,
   `tem_titulo2` enum('S','N') NOT NULL,
   `foto_mobile` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_sliders`
+-- Extraindo dados da tabela `tbl_sliders`
 --
 
 INSERT INTO `tbl_sliders` (`id`, `foto`, `titulo1`, `titulo2`, `breve`, `tem_botao`, `nome_botao`, `link_botao`, `lado_texto`, `tem_titulo2`, `foto_mobile`) VALUES
@@ -21847,7 +21848,7 @@ INSERT INTO `tbl_sliders` (`id`, `foto`, `titulo1`, `titulo2`, `breve`, `tem_bot
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_sobre`
+-- Estrutura da tabela `tbl_sobre`
 --
 
 CREATE TABLE `tbl_sobre` (
@@ -21864,19 +21865,24 @@ CREATE TABLE `tbl_sobre` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_sobre`
+-- Extraindo dados da tabela `tbl_sobre`
 --
 
 INSERT INTO `tbl_sobre` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
-(3, 'Lista da embaixada equipe', '', '', '<div style=\"background-color:#262335; color:#bbbbbb; font-family:\'Fira Code\',\'Droid Sans Mono\',\'monospace\',monospace; font-size:14px; font-weight:normal; line-height:19px; white-space:pre\">\r\n<div><span style=\"color:#ffffff\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci sequi nemo odio iure repellat repellendus dolorum fuga vitae, tempore quam numquam saepe dicta maxime consequuntur nam magnam officiis eaque.</span></div>\r\n</div>\r\n', '', '', NULL, '', '', '', NULL, 'lista-embaixada-equipe');
+(3, 'Lista da embaixada equipe', 'List of Embassy Staff', 'ทำเนียบข้าราชการ/เจ้าหน้าที่', '<div style=\"background-color:#262335; color:#bbbbbb; font-family:\'Fira Code\',\'Droid Sans Mono\',\'monospace\',monospace; font-size:14px; font-weight:normal; line-height:19px; white-space:pre\">\r\n<div><span style=\"color:#ffffff\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit adipisci sequi nemo odio iure repellat repellendus dolorum fuga vitae, tempore quam numquam saepe dicta maxime consequuntur nam magnam officiis eaque.</span></div>\r\n</div>\r\n', '<p>List of Embassy Staff</p>\r\n', '<p>ทำเนียบข้าราชการ/เจ้าหน้าที่</p>\r\n', NULL, '', '', '', NULL, 'lista-embaixada-equipe'),
+(8, 'Time da Tailândia', 'Team Thailand', 'ทีมประเทศไทย', '<p style=\"text-align:center\">Escritório de Assuntos Comerciais</p>\r\n', '<p style=\"text-align:center\">Office of Commercial Affairs</p>\r\n', '<p style=\"text-align:center\">สำนักงานส่งเสริมการค้าในต่างประเทศ ณ นครเซาเปาโล</p>\r\n\r\n<p style=\"text-align:center\"> </p>\r\n', NULL, '', '', '', NULL, 'time-tailandia'),
+(9, 'História', 'History', 'ประวัติสถานเอกอัครราชทูตฯ', '<p>História</p>\r\n', '<h1>History</h1>\r\n', '<h1>ประวัติสถานเอกอัครราชทูตฯ</h1>\r\n', NULL, '', '', '', NULL, 'historia'),
+(10, 'Lista de Embaixadores no Brasil', 'List of Thai Ambassadors to Brazil', '', '<table>\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:center\">1</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Visutr Arthayukti</td>\r\n			<td style=\"text-align:center\">1959 - 1963</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">2</td>\r\n			<td style=\"text-align:center\">H.E. M.R. Thuaithep Devakul</td>\r\n			<td style=\"text-align:center\">1964 - 1966</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">3</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Charas Chaloemtiarana</td>\r\n			<td style=\"text-align:center\">1968 - 1970</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">4</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Manu Amatayakul</td>\r\n			<td style=\"text-align:center\">1970 - 1971</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">5</td>\r\n			<td style=\"text-align:center\">H.E. Colonel Arsh Boongrapu</td>\r\n			<td style=\"text-align:center\">1973 - 1976</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">6</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Chamnong Phahulrat</td>\r\n			<td style=\"text-align:center\">1976 - 1979</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">7</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Prasong Suwanpradhes</td>\r\n			<td style=\"text-align:center\">1980 - 1981</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">8</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Thongchan Jotikasthira</td>\r\n			<td style=\"text-align:center\">1981 - 1983</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">9</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pranom Kongsamut</td>\r\n			<td style=\"text-align:center\">1983 - 1985</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">10</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pradeep Sochiratna</td>\r\n			<td style=\"text-align:center\">1985 - 1990</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">11</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Anurak Thananan</td>\r\n			<td style=\"text-align:center\">1991 - 1993</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">12</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Saksit Srisorn</td>\r\n			<td style=\"text-align:center\">1994 - 1997</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">13</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Samroeng Laksanasut</td>\r\n			<td style=\"text-align:center\">1998 - 2000</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">14</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Suphat Chitranukoh</td>\r\n			<td style=\"text-align:center\">2001 - 2005</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">15</td>\r\n			<td style=\"text-align:center\">H.E. Ms. Siree Bunnag</td>\r\n			<td style=\"text-align:center\">2005 - 2009</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">16</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Chakarin Chayabongse</td>\r\n			<td style=\"text-align:center\">2009 - 2011</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">17</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Tharit Charungvat</td>\r\n			<td style=\"text-align:center\">2011 - 2013</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">18</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pitchayaphant Charnbhumidol</td>\r\n			<td style=\"text-align:center\">2014 - 2017</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">19</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Surasak Suparat</td>\r\n			<td style=\"text-align:center\">2017 - 2019</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">20</td>\r\n			<td style=\"text-align:center\">H.E. Ms. Nitivadee Manitkul</td>\r\n			<td style=\"text-align:center\">2019 - 2021</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', '<table>\r\n	<tbody>\r\n		<tr>\r\n			<td style=\"text-align:center\">1</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Visutr Arthayukti</td>\r\n			<td style=\"text-align:center\">1959 - 1963</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">2</td>\r\n			<td style=\"text-align:center\">H.E. M.R. Thuaithep Devakul</td>\r\n			<td style=\"text-align:center\">1964 - 1966</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">3</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Charas Chaloemtiarana</td>\r\n			<td style=\"text-align:center\">1968 - 1970</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">4</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Manu Amatayakul</td>\r\n			<td style=\"text-align:center\">1970 - 1971</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">5</td>\r\n			<td style=\"text-align:center\">H.E. Colonel Arsh Boongrapu</td>\r\n			<td style=\"text-align:center\">1973 - 1976</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">6</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Chamnong Phahulrat</td>\r\n			<td style=\"text-align:center\">1976 - 1979</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">7</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Prasong Suwanpradhes</td>\r\n			<td style=\"text-align:center\">1980 - 1981</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">8</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Thongchan Jotikasthira</td>\r\n			<td style=\"text-align:center\">1981 - 1983</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">9</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pranom Kongsamut</td>\r\n			<td style=\"text-align:center\">1983 - 1985</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">10</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pradeep Sochiratna</td>\r\n			<td style=\"text-align:center\">1985 - 1990</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">11</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Anurak Thananan</td>\r\n			<td style=\"text-align:center\">1991 - 1993</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">12</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Saksit Srisorn</td>\r\n			<td style=\"text-align:center\">1994 - 1997</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">13</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Samroeng Laksanasut</td>\r\n			<td style=\"text-align:center\">1998 - 2000</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">14</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Suphat Chitranukoh</td>\r\n			<td style=\"text-align:center\">2001 - 2005</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">15</td>\r\n			<td style=\"text-align:center\">H.E. Ms. Siree Bunnag</td>\r\n			<td style=\"text-align:center\">2005 - 2009</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">16</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Chakarin Chayabongse</td>\r\n			<td style=\"text-align:center\">2009 - 2011</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">17</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Tharit Charungvat</td>\r\n			<td style=\"text-align:center\">2011 - 2013</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">18</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Pitchayaphant Charnbhumidol</td>\r\n			<td style=\"text-align:center\">2014 - 2017</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">19</td>\r\n			<td style=\"text-align:center\">H.E. Mr. Surasak Suparat</td>\r\n			<td style=\"text-align:center\">2017 - 2019</td>\r\n		</tr>\r\n		<tr>\r\n			<td style=\"text-align:center\">20</td>\r\n			<td style=\"text-align:center\">H.E. Ms. Nitivadee Manitkul</td>\r\n			<td style=\"text-align:center\">2019 - 2021</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', '', NULL, '', '', '', NULL, 'lista-embaixadores-no-brasil'),
+(11, 'Feriados e Eventos', 'Public Holidays and Events', 'วันหยุดราชการและกิจกรรมสถานเอกอัครราชทูตฯ', '<table>\r\n	<thead>\r\n		<tr>\r\n			<th scope=\"col\">Nº</th>\r\n			<th scope=\"col\">Data</th>\r\n			<th scope=\"col\">Feriados, Atividades e Eventos</th>\r\n		</tr>\r\n	</thead>\r\n	<tbody>\r\n		<tr>\r\n			<th scope=\"row\">1</th>\r\n			<td>Segunda-Feira, 15 de Fevereiro</td>\r\n			<td>Carnaval</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">2</th>\r\n			<td>Sexta-Feira, 26 de Fevereiro</td>\r\n			<td>Makha Bucha Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">3</th>\r\n			<td>Sexta-Feira, 2 de Abril</td>\r\n			<td>Paixão de Cristo</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">4</th>\r\n			<td>Quarta-Feira, 21 de Abril</td>\r\n			<td>Tiradentes</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">5</th>\r\n			<td>Terça-Feira, 4 de Maio</td>\r\n			<td>Coronation Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">6</th>\r\n			<td>Quarta-Feira, 26 de Maio</td>\r\n			<td>Visakha Bucha Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">7</th>\r\n			<td>Quinta-Feira, 3 de Junho</td>\r\n			<td>Her Majesty Queen Suthida Bajrasudhabimalalakshana’s Birthday</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">8</th>\r\n			<td>Quinta-Feira, 3 de Junho</td>\r\n			<td>Corpus Christi</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">9</th>\r\n			<td>Quarta-Feira, 28 de Julho</td>\r\n			<td>His Majesty King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">10</th>\r\n			<td>Quinta-Feira, 12 de Agosto</td>\r\n			<td>Her Majesty Queen Sirikit The Queen Mother’s Birthday / National Mother’s Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">11</th>\r\n			<td>Terça-Feira, 7 de Setembro</td>\r\n			<td>Independência do Brasil</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">12</th>\r\n			<td>Terça-Feira, 12 de Outubro</td>\r\n			<td>Nossa Srª. de Aparecida</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">13</th>\r\n			<td>Quarta-Feira, 13 de Outubro</td>\r\n			<td>His Majesty King Bhumibol Adulyadej The Great Memorial Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">14</th>\r\n			<td>Terça-Feira, 2 de Novembro</td>\r\n			<td>Finados</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">15</th>\r\n			<td>Segunda-Feira, 15 de Novembro</td>\r\n			<td>Proclamação da República</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">16</th>\r\n			<td>Terça-Feira, 30 de Novembro</td>\r\n			<td>Dia do Evangélico</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">17</th>\r\n			<td>Segunda-Feira, 6 de Dezembro</td>\r\n			<td>Substitution for His Majesty King Bhumibol Adulyadej The Great’s Birthday / National Father’s Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">18</th>\r\n			<td>Sábado, 25 de Dezembro</td>\r\n			<td>Natal</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">19</th>\r\n			<td>Sexta-Feira, 31 de Dezembro</td>\r\n			<td>Véspera de Ano Novo</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">20</th>\r\n			<td>Segunda-Feira, 3 de Janeiro</td>\r\n			<td>Substituição para Ano Novo</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', '<table>\r\n	<thead>\r\n		<tr>\r\n			<th scope=\"col\">No.</th>\r\n			<th scope=\"col\">Date</th>\r\n			<th scope=\"col\">Holidays, Activities and Events</th>\r\n		</tr>\r\n	</thead>\r\n	<tbody>\r\n		<tr>\r\n			<th scope=\"row\">1</th>\r\n			<td style=\"text-align:center\">Monday, 15 February</td>\r\n			<td style=\"text-align:center\">Carnival Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">2</th>\r\n			<td style=\"text-align:center\">Friday, 26 February</td>\r\n			<td style=\"text-align:center\">Makha Bucha Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">3</th>\r\n			<td style=\"text-align:center\">Friday, 2 April</td>\r\n			<td style=\"text-align:center\">Paixão de Cristo Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">4</th>\r\n			<td style=\"text-align:center\">Wednesday, 21 April</td>\r\n			<td style=\"text-align:center\">Tiradentes Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">5</th>\r\n			<td style=\"text-align:center\">Tuesday, 4 May</td>\r\n			<td style=\"text-align:center\">Coronation Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">6</th>\r\n			<td style=\"text-align:center\">Wednesday, 26 May</td>\r\n			<td style=\"text-align:center\">Visakha Bucha Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">7</th>\r\n			<td style=\"text-align:center\">Thursday, 3 June</td>\r\n			<td style=\"text-align:center\">Her Majesty Queen Suthida Bajrasudhabimalalakshana’s Birthday</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">8</th>\r\n			<td style=\"text-align:center\">Thursday, 3 June</td>\r\n			<td style=\"text-align:center\">Corpus Christi Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">9</th>\r\n			<td style=\"text-align:center\">Wednesday, 28 July</td>\r\n			<td style=\"text-align:center\">His Majesty King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua’s Birthday</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">10</th>\r\n			<td style=\"text-align:center\">Thursday, 12 August</td>\r\n			<td style=\"text-align:center\">Her Majesty Queen Sirikit The Queen Mother’s Birthday / National Mother’s Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">11</th>\r\n			<td style=\"text-align:center\">Tuesday, 7 September</td>\r\n			<td style=\"text-align:center\">Independência do Brasil Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">12</th>\r\n			<td style=\"text-align:center\">Tuesday, 12 October</td>\r\n			<td style=\"text-align:center\">Senhora Aparecida Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">13</th>\r\n			<td style=\"text-align:center\">Wednesday, 13 October</td>\r\n			<td style=\"text-align:center\">His Majesty King Bhumibol Adulyadej The Great Memorial Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">14</th>\r\n			<td style=\"text-align:center\">Tuesday, 2 November</td>\r\n			<td style=\"text-align:center\">Finados Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">15</th>\r\n			<td style=\"text-align:center\">Monday, 15 November</td>\r\n			<td style=\"text-align:center\">Proclamação da República Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">16</th>\r\n			<td style=\"text-align:center\">Tuesday, 30 November</td>\r\n			<td style=\"text-align:center\">Evangelical Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">17</th>\r\n			<td style=\"text-align:center\">Monday, 6 December</td>\r\n			<td style=\"text-align:center\">Substitution for His Majesty King Bhumibol Adulyadej The Great’s Birthday/ National Father’s Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">18</th>\r\n			<td style=\"text-align:center\">Saturday, 25 December</td>\r\n			<td style=\"text-align:center\">Christmas Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">19</th>\r\n			<td style=\"text-align:center\">Friday, 31 December</td>\r\n			<td style=\"text-align:center\">New Year’s Eve</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">20</th>\r\n			<td style=\"text-align:center\">Monday, 3 January</td>\r\n			<td style=\"text-align:center\">Substitution for New Year’s Day</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', '<table>\r\n	<tbody>\r\n		<tr>\r\n			<th scope=\"row\">1</th>\r\n			<td style=\"text-align:center\">วันจันทร์ที่ 15 กุมภาพันธ์</td>\r\n			<td style=\"text-align:center\">Carnival Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">2</th>\r\n			<td style=\"text-align:center\">วันศุกร์ที่ 26 กุมภาพันธ์</td>\r\n			<td style=\"text-align:center\">วันมาฆบูชา</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">3</th>\r\n			<td style=\"text-align:center\">วันศุกร์ที่ 2 เมษายน</td>\r\n			<td style=\"text-align:center\">Paixao de Cristo Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">4</th>\r\n			<td style=\"text-align:center\">วันพุธที่ 21 เมษายน</td>\r\n			<td style=\"text-align:center\">Tiradentes Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">5</th>\r\n			<td style=\"text-align:center\">วันอังคารที่ 4 พฤษภาคม</td>\r\n			<td style=\"text-align:center\">วันฉัตรมงคล</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">6</th>\r\n			<td style=\"text-align:center\">วันพุธที่ 26 พฤษภาคม</td>\r\n			<td style=\"text-align:center\">วันวิสาขบูชา</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">7</th>\r\n			<td style=\"text-align:center\">วันพฤหัสบดีที่ 3 มิถุนายน</td>\r\n			<td style=\"text-align:center\">วันเฉลิมพระชนมพรรษาสมเด็จพระนางเจ้าฯ พระบรมราชินี</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">8</th>\r\n			<td style=\"text-align:center\">วันพฤหัสบดีที่ 3 มิถุนายน</td>\r\n			<td style=\"text-align:center\">Corpus Christi Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">9</th>\r\n			<td style=\"text-align:center\">วันพุธที่ 28 กรกฎาคม</td>\r\n			<td style=\"text-align:center\">วันพระบรมราชสมภพ พระบาทสมเด็จพระปรเมนทรรามาธิบดีศรีสินทร มหาวชิราลงกรณ<br />\r\n			พระวชิรเกล้าเจ้าอยู่หัว</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">10</th>\r\n			<td style=\"text-align:center\">วันพฤหัสบดีที่ 12 สิงหาคม</td>\r\n			<td style=\"text-align:center\">วันแม่แห่งชาติ</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">11</th>\r\n			<td style=\"text-align:center\">วันอังคารที่ 7 กันยายน</td>\r\n			<td style=\"text-align:center\">Independencia do Brasil Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">12</th>\r\n			<td style=\"text-align:center\">วันอังคารที่ 12 ตุลาคม</td>\r\n			<td style=\"text-align:center\">Senhora Aparecida Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">13</th>\r\n			<td style=\"text-align:center\">วันพุธที่ 13 ตุลาคม</td>\r\n			<td style=\"text-align:center\">วันคล้ายวันสวรรคต พระบาทสมเด็จพระบรมชนกาธิเบศร มหาภูมิพลอดุลยเดชมหาราช<br />\r\n			บรมนาถบพิตร</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">14</th>\r\n			<td style=\"text-align:center\">วันเสาร์ที่ 30 ตุลาคม</td>\r\n			<td style=\"text-align:center\">Evangelical Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">15</th>\r\n			<td style=\"text-align:center\">วันอังคารที่ 2 พฤศจิกายน</td>\r\n			<td style=\"text-align:center\">Finados Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">16</th>\r\n			<td style=\"text-align:center\">วันจันทร์ที่ 15 พฤศจิกายน</td>\r\n			<td style=\"text-align:center\">Proclamacao da Republica Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">17</th>\r\n			<td style=\"text-align:center\">วันจันทร์ที่ 6 ธันวาคม</td>\r\n			<td style=\"text-align:center\">วันคล้ายวันพระบรมราชสมภพ พระบาทสมเด็จพระบรมชนกาธิเบศร<br />\r\n			มหาภูมิพลอดุลยเดชมหาราช บรมนาถบพิตร วันชาติ และวันพ่อแห่งชาติ</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">18</th>\r\n			<td style=\"text-align:center\">วันเสาร์ที่ 25 ธันวาคม</td>\r\n			<td style=\"text-align:center\">Christmas Day</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">19</th>\r\n			<td style=\"text-align:center\">วันศุกร์ที่ 31 ธันวาคม</td>\r\n			<td style=\"text-align:center\">วันสิ้นปี</td>\r\n		</tr>\r\n		<tr>\r\n			<th scope=\"row\">20</th>\r\n			<td style=\"text-align:center\">วันจันทร์ที่ 3 มกราคม</td>\r\n			<td style=\"text-align:center\">วันหยุดชดเชยวันปีใหม่</td>\r\n		</tr>\r\n	</tbody>\r\n</table>\r\n', NULL, '', '', '', NULL, 'feriados-eventos'),
+(14, 'Tailândia 4.0', 'Thailand 4.0', 'ไทยแลนด์ 4.0', '', '', '', NULL, '', '', '', NULL, 'tailandia-40');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_solucoes`
+-- Estrutura da tabela `tbl_solucoes`
 --
 
 CREATE TABLE `tbl_solucoes` (
@@ -21896,10 +21902,10 @@ CREATE TABLE `tbl_solucoes` (
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL,
   `embed` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_solucoes`
+-- Extraindo dados da tabela `tbl_solucoes`
 --
 
 INSERT INTO `tbl_solucoes` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`, `embed`) VALUES
@@ -21915,7 +21921,7 @@ INSERT INTO `tbl_solucoes` (`id`, `titulo`, `postado_por`, `conteudo`, `data_pos
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_tailandia`
+-- Estrutura da tabela `tbl_tailandia`
 --
 
 CREATE TABLE `tbl_tailandia` (
@@ -21932,19 +21938,26 @@ CREATE TABLE `tbl_tailandia` (
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `url_amigavel` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_tailandia`
+-- Extraindo dados da tabela `tbl_tailandia`
 --
 
 INSERT INTO `tbl_tailandia` (`id`, `titulo`, `titulo_en`, `titulo_th`, `descricao`, `descricao_en`, `descricao_th`, `id_cat`, `meta_title`, `meta_keywords`, `meta_description`, `foto`, `url_amigavel`) VALUES
-(2, 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?', 1, NULL, NULL, NULL, NULL, NULL);
+(2, 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', 'H.M. King Maha Vajiralongkorn Phra Vajiraklaochaoyuhua', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', '<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor nisi sequi corporis, optio et in ad itaque labore, nam odit illo deserunt harum tempore dignissimos doloremque! Eius sit quae velit?</p>\r\n', 2, '', '', '', NULL, 'hm-king-maha-vajiralongkorn-phra-vajiraklaochaoyuhua'),
+(3, 'H.M. Queen Suthida Bajrasudhabimalalakshana', 'H.M. Queen Suthida Bajrasudhabimalalakshana', 'H.M. Queen Suthida Bajrasudhabimalalakshana', '', '', '', 3, '', '', '', NULL, 'hm-queen-suthida-bajrasudhabimalalakshana'),
+(4, 'Família Real da Tailândia', 'Thai Royal Family', 'ราชวงศ์ไทย', '', '', '', NULL, '', '', '', NULL, 'familia-real-tailandia'),
+(5, 'Visite a Tailândia', 'visit thailand', 'เยือนไทย', '', '', '', NULL, '', '', '', NULL, 'visite-tailandia'),
+(6, 'Comunidades Tailandesas no Brasil', 'Thai Communities in Brazil', 'ชุมชนไทยในบราซิล', '', '', '', NULL, '', '', '', NULL, 'comunidades-tailandesas-no-brasil'),
+(7, 'Agências Tailandesas', 'Thai Agencies', 'หน่วยงานไทย', '', '', '', NULL, '', '', '', NULL, 'agencias-tailandesas'),
+(8, 'Comidas de Rua na Tailândia', 'Street Food in Thailand', 'สตรีทฟู้ดในประเทศไทย', '', '', '', NULL, '', '', '', NULL, 'comidas-rua-na-tailandia'),
+(9, 'Tailândia 4.0', 'Thailand 4.0', 'ไทยแลนด์ 4.0', '', '', '', 3, '', '', '', NULL, 'tailandia-40');
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_testemunhos`
+-- Estrutura da tabela `tbl_testemunhos`
 --
 
 CREATE TABLE `tbl_testemunhos` (
@@ -21953,10 +21966,10 @@ CREATE TABLE `tbl_testemunhos` (
   `testemunho` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL,
   `sexo` varchar(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_testemunhos`
+-- Extraindo dados da tabela `tbl_testemunhos`
 --
 
 INSERT INTO `tbl_testemunhos` (`id`, `nome`, `testemunho`, `foto`, `sexo`) VALUES
@@ -21967,7 +21980,7 @@ INSERT INTO `tbl_testemunhos` (`id`, `nome`, `testemunho`, `foto`, `sexo`) VALUE
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_textos`
+-- Estrutura da tabela `tbl_textos`
 --
 
 CREATE TABLE `tbl_textos` (
@@ -21980,10 +21993,10 @@ CREATE TABLE `tbl_textos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `pagina_referencia` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_textos`
+-- Extraindo dados da tabela `tbl_textos`
 --
 
 INSERT INTO `tbl_textos` (`id`, `titulo`, `descricao`, `texto`, `foto`, `meta_title`, `meta_keywords`, `meta_description`, `pagina_referencia`) VALUES
@@ -22000,7 +22013,7 @@ INSERT INTO `tbl_textos` (`id`, `titulo`, `descricao`, `texto`, `foto`, `meta_ti
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_tipo_servico`
+-- Estrutura da tabela `tbl_tipo_servico`
 --
 
 CREATE TABLE `tbl_tipo_servico` (
@@ -22008,12 +22021,12 @@ CREATE TABLE `tbl_tipo_servico` (
   `nome` varchar(250) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_tratamentos`
+-- Estrutura da tabela `tbl_tratamentos`
 --
 
 CREATE TABLE `tbl_tratamentos` (
@@ -22024,12 +22037,12 @@ CREATE TABLE `tbl_tratamentos` (
   `meta_keywords` text DEFAULT NULL,
   `meta_description` text DEFAULT NULL,
   `foto` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_treinamentos`
+-- Estrutura da tabela `tbl_treinamentos`
 --
 
 CREATE TABLE `tbl_treinamentos` (
@@ -22049,10 +22062,10 @@ CREATE TABLE `tbl_treinamentos` (
   `descricao_imagem` varchar(250) DEFAULT NULL,
   `legenda_imagem` varchar(250) DEFAULT NULL,
   `embed` varchar(250) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_treinamentos`
+-- Extraindo dados da tabela `tbl_treinamentos`
 --
 
 INSERT INTO `tbl_treinamentos` (`id`, `titulo`, `postado_por`, `conteudo`, `data_postagem`, `especialidade`, `foto`, `breve`, `meta_title`, `meta_keywords`, `meta_description`, `foto1`, `url_amigavel`, `descricao_imagem`, `legenda_imagem`, `embed`) VALUES
@@ -22065,7 +22078,7 @@ INSERT INTO `tbl_treinamentos` (`id`, `titulo`, `postado_por`, `conteudo`, `data
 -- --------------------------------------------------------
 
 --
--- Estrutura para tabela `tbl_usuarios`
+-- Estrutura da tabela `tbl_usuarios`
 --
 
 CREATE TABLE `tbl_usuarios` (
@@ -22095,315 +22108,315 @@ CREATE TABLE `tbl_usuarios` (
   `data_frase` date DEFAULT NULL,
   `id_frase` int(11) DEFAULT NULL,
   `frase_lida` varchar(2) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Despejando dados para a tabela `tbl_usuarios`
+-- Extraindo dados da tabela `tbl_usuarios`
 --
 
 INSERT INTO `tbl_usuarios` (`id`, `nome`, `email`, `telefone`, `endereco`, `cpf`, `login`, `senha`, `foto`, `id_cargo`, `sexo`, `perm_cad_usuario`, `perm_relatorio`, `perm_add_usuario`, `perm_edit_usuario`, `perm_del_usuario`, `perm_cad_contato`, `perm_edit_contato`, `perm_del_contato`, `perm_edit_contato_nf`, `perm_pag_principal_rm`, `perm_pag_principal_uc`, `admin_geral`, `data_frase`, `id_frase`, `frase_lida`) VALUES
-(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-01-30', 20, 'N');
+(1, 'Administrador', 'adm@adm.com', NULL, NULL, NULL, 'admin', '1234', NULL, NULL, 'M', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', 'S', NULL, '2023-02-01', 48, 'N');
 
 --
 -- Índices para tabelas despejadas
 --
 
 --
--- Índices de tabela `contadores_paginas`
+-- Índices para tabela `contadores_paginas`
 --
 ALTER TABLE `contadores_paginas`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `dados_cidades`
+-- Índices para tabela `dados_cidades`
 --
 ALTER TABLE `dados_cidades`
   ADD UNIQUE KEY `id` (`id`);
 
 --
--- Índices de tabela `estado`
+-- Índices para tabela `estado`
 --
 ALTER TABLE `estado`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Índices de tabela `municipio`
+-- Índices para tabela `municipio`
 --
 ALTER TABLE `municipio`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Índices de tabela `simulador`
+-- Índices para tabela `simulador`
 --
 ALTER TABLE `simulador`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_agendamento`
+-- Índices para tabela `tbl_agendamento`
 --
 ALTER TABLE `tbl_agendamento`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_blog`
+-- Índices para tabela `tbl_blog`
 --
 ALTER TABLE `tbl_blog`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_brasil_tailandia`
+-- Índices para tabela `tbl_brasil_tailandia`
 --
 ALTER TABLE `tbl_brasil_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_campanha`
+-- Índices para tabela `tbl_campanha`
 --
 ALTER TABLE `tbl_campanha`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_cargo`
+-- Índices para tabela `tbl_cargo`
 --
 ALTER TABLE `tbl_cargo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_categoria`
+-- Índices para tabela `tbl_categoria`
 --
 ALTER TABLE `tbl_categoria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_cat_servicos`
+-- Índices para tabela `tbl_cat_servicos`
 --
 ALTER TABLE `tbl_cat_servicos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_cat_tailandia`
+-- Índices para tabela `tbl_cat_tailandia`
 --
 ALTER TABLE `tbl_cat_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_cidades`
+-- Índices para tabela `tbl_cidades`
 --
 ALTER TABLE `tbl_cidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_classe_indicativa`
+-- Índices para tabela `tbl_classe_indicativa`
 --
 ALTER TABLE `tbl_classe_indicativa`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_cliente`
+-- Índices para tabela `tbl_cliente`
 --
 ALTER TABLE `tbl_cliente`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_compras`
+-- Índices para tabela `tbl_compras`
 --
 ALTER TABLE `tbl_compras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_config`
+-- Índices para tabela `tbl_config`
 --
 ALTER TABLE `tbl_config`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_contato`
+-- Índices para tabela `tbl_contato`
 --
 ALTER TABLE `tbl_contato`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_convenios`
+-- Índices para tabela `tbl_convenios`
 --
 ALTER TABLE `tbl_convenios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_doutores`
+-- Índices para tabela `tbl_doutores`
 --
 ALTER TABLE `tbl_doutores`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_especialidades`
+-- Índices para tabela `tbl_especialidades`
 --
 ALTER TABLE `tbl_especialidades`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_eventos`
+-- Índices para tabela `tbl_eventos`
 --
 ALTER TABLE `tbl_eventos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_exames`
+-- Índices para tabela `tbl_exames`
 --
 ALTER TABLE `tbl_exames`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_filmes`
+-- Índices para tabela `tbl_filmes`
 --
 ALTER TABLE `tbl_filmes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_frases`
+-- Índices para tabela `tbl_frases`
 --
 ALTER TABLE `tbl_frases`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_galeria_imagem`
+-- Índices para tabela `tbl_galeria_imagem`
 --
 ALTER TABLE `tbl_galeria_imagem`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_historicos`
+-- Índices para tabela `tbl_historicos`
 --
 ALTER TABLE `tbl_historicos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_metas_tags`
+-- Índices para tabela `tbl_metas_tags`
 --
 ALTER TABLE `tbl_metas_tags`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_newsletter`
+-- Índices para tabela `tbl_newsletter`
 --
 ALTER TABLE `tbl_newsletter`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_parceiro`
+-- Índices para tabela `tbl_parceiro`
 --
 ALTER TABLE `tbl_parceiro`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_planos`
+-- Índices para tabela `tbl_planos`
 --
 ALTER TABLE `tbl_planos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_procedimentos`
+-- Índices para tabela `tbl_procedimentos`
 --
 ALTER TABLE `tbl_procedimentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_produto`
+-- Índices para tabela `tbl_produto`
 --
 ALTER TABLE `tbl_produto`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_programacao_filmes`
+-- Índices para tabela `tbl_programacao_filmes`
 --
 ALTER TABLE `tbl_programacao_filmes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_relaciona_cadeiras`
+-- Índices para tabela `tbl_relaciona_cadeiras`
 --
 ALTER TABLE `tbl_relaciona_cadeiras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_relaciona_compras`
+-- Índices para tabela `tbl_relaciona_compras`
 --
 ALTER TABLE `tbl_relaciona_compras`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_sala`
+-- Índices para tabela `tbl_sala`
 --
 ALTER TABLE `tbl_sala`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_servicos_consular`
+-- Índices para tabela `tbl_servicos_consular`
 --
 ALTER TABLE `tbl_servicos_consular`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_sliders`
+-- Índices para tabela `tbl_sliders`
 --
 ALTER TABLE `tbl_sliders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_sobre`
+-- Índices para tabela `tbl_sobre`
 --
 ALTER TABLE `tbl_sobre`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_solucoes`
+-- Índices para tabela `tbl_solucoes`
 --
 ALTER TABLE `tbl_solucoes`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_tailandia`
+-- Índices para tabela `tbl_tailandia`
 --
 ALTER TABLE `tbl_tailandia`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_testemunhos`
+-- Índices para tabela `tbl_testemunhos`
 --
 ALTER TABLE `tbl_testemunhos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_textos`
+-- Índices para tabela `tbl_textos`
 --
 ALTER TABLE `tbl_textos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_tipo_servico`
+-- Índices para tabela `tbl_tipo_servico`
 --
 ALTER TABLE `tbl_tipo_servico`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_tratamentos`
+-- Índices para tabela `tbl_tratamentos`
 --
 ALTER TABLE `tbl_tratamentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_treinamentos`
+-- Índices para tabela `tbl_treinamentos`
 --
 ALTER TABLE `tbl_treinamentos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Índices de tabela `tbl_usuarios`
+-- Índices para tabela `tbl_usuarios`
 --
 ALTER TABLE `tbl_usuarios`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT para tabelas despejadas
+-- AUTO_INCREMENT de tabelas despejadas
 --
 
 --
@@ -22482,7 +22495,7 @@ ALTER TABLE `tbl_cat_servicos`
 -- AUTO_INCREMENT de tabela `tbl_cat_tailandia`
 --
 ALTER TABLE `tbl_cat_tailandia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_cidades`
@@ -22650,7 +22663,7 @@ ALTER TABLE `tbl_sliders`
 -- AUTO_INCREMENT de tabela `tbl_sobre`
 --
 ALTER TABLE `tbl_sobre`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_solucoes`
@@ -22662,7 +22675,7 @@ ALTER TABLE `tbl_solucoes`
 -- AUTO_INCREMENT de tabela `tbl_tailandia`
 --
 ALTER TABLE `tbl_tailandia`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT de tabela `tbl_testemunhos`

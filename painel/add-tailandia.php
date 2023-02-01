@@ -59,7 +59,7 @@ $puxaCategorias = $tailandia->rsCatServicos();
                                             </div>
                                             <div class="col-md-6 col-sm-12">
                                             <label  class="col-form-label">Categoria</label>
-                                            <select name="id_cat" id="" class="form-control">
+                                            <select name="id_cat" class="form-control">
                                                 <option value=""></option>
                                                 <?php foreach($puxaCategorias as $itemCategoria){?>
                                                 <option value="<?php echo $itemCategoria->id;?>"><?php echo $itemCategoria->nome;?></option>
