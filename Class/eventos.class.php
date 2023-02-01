@@ -28,7 +28,7 @@ if(empty($EventosInstanciada)) {
 		}
 		
 	
-		function rsDados($id='', $orderBy='', $limite='', $idCat='') {
+		function rsDados($id='', $orderBy='', $limite='', $idCat='', $idDiferente='', $url_amigavel='') {
 			
 			/// FILTROS
 			$nCampos = 0;
@@ -44,6 +44,17 @@ if(empty($EventosInstanciada)) {
 				$sql .= " and id_cat = ?"; 
 				$nCampos++;
 				$campo[$nCampos] = $idCat;
+			}
+			if(!empty($idDiferente)) {
+				$sql .= " and id != ?"; 
+				$nCampos++;
+				$campo[$nCampos] = $idDiferente;
+			}
+
+			if(!empty($url_amigavel)) {
+				$sql .= " and url_amigavel = ?"; 
+				$nCampos++;
+				$campo[$nCampos] = $url_amigavel;
 			}
 		
 			/// ORDEM		

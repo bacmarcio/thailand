@@ -151,40 +151,59 @@ $headerBrasilTailandia = $brasilTailandia->rsDados();
                                         <ul>
                                         <?php foreach($puxaCatTailandia as $itemCat) { 
                                                 $puxaTailandiaComCat = $tailandia->rsDados('','','',$itemCat->id);
-                                                print_r($puxaTailandiaComCat);
+                                                
                                                 if($_SESSION['lang']=== 'en')
                                                 {
                                                     $cat = $itemCat->nome_en;
                                                     
-                                                    if(isset($puxaTailandiaComCat->titulo_en) && !empty($puxaTailandiaComCat->titulo_en))
-                                                    { $tituloCom = $puxaTailandiaComCat->titulo_en;}
+                                                    //if(isset($puxaTailandiaComCat->titulo_en) && !empty($puxaTailandiaComCat->titulo_en))
+                                                    //{ $tituloCom = $puxaTailandiaComCat->titulo_en;}
                                                 }
                                                 elseif($_SESSION['lang']==='th') 
                                                 {
                                                     $cat = $itemCat->nome_th;
-                                                    if(isset($puxaTailandiaComCat->titulo_th) && !empty($puxaTailandiaComCat->titulo_th))
-                                                    { $tituloCom = $puxaTailandiaComCat->titulo_th;}
+                                                    //if(isset($puxaTailandiaComCat->titulo_th) && !empty($puxaTailandiaComCat->titulo_th))
+                                                    //{ $tituloCom = $puxaTailandiaComCat->titulo_th;}
                                                 }
                                                 else
                                                 {
                                                     $cat = $itemCat->nome;
-                                                    if(isset($puxaTailandiaComCat->titulo) && !empty($puxaTailandiaComCat->titulo))
-                                                    { $tituloCom = $puxaTailandiaComCat->titulo;}
+                                                    //if(isset($puxaTailandiaComCat->titulo) && !empty($puxaTailandiaComCat->titulo))
+                                                    //{ $tituloCom = $puxaTailandiaComCat->titulo;}
+
+                                                    
                                                 }
                                             ?>
                                             <li class="has-sub"><a href="#"><?php echo $cat?></a>
-                                               
+                                            <?php $puxaTailandiaComCat = $tailandia->rsDados('','','',$itemCat->id); 
+                                                if(isset($puxaTailandiaComCat[0]->id_cat) && !empty($puxaTailandiaComCat[0]->id_cat)){?>  
                                             <ul>
-                                           
+
+                                            
+                                                   <?php foreach ($puxaTailandiaComCat as $itemComCat) {
+                                                        if($_SESSION['lang']=== 'en')
+                                                        {
+                                                            $tituloCom = $itemComCat->titulo_en;
+                                                        }
+                                                        elseif($_SESSION['lang']==='th') 
+                                                        {
+                                                           $tituloCom = $itemComCat->titulo_th;
+                                                        }
+                                                        else
+                                                        {
+                                                            $tituloCom = $itemComCat->titulo;   
+                                                        }
+                                            ?> 
+                                                
                                                 <li>
-                                                    <a href="<?php echo SITE_URL?>/tailandia/<?php echo $puxaTailandiaComCat->url_amigavel?>">
-                                                    dsdada
+                                                    <a href="<?php echo SITE_URL?>/tailandia/<?php echo $itemComCat->url_amigavel?>">
+                                                    <?php echo $tituloCom?>
                                                     </a>
                                                 </li>
-                                                    
+                                               <?php } ?>     
                                                     
                                                 </ul> 
-                                                
+                                                <?php } ?>
                                                 
                                             </li>
                                             
@@ -221,9 +240,9 @@ $headerBrasilTailandia = $brasilTailandia->rsDados();
 
                                     <li><a href=""><?php echo $lang['TAILANDIA_BRASIL']?></a>
                                         <ul>
-                                            <?php foreach ($headerBrasilTailandia as $itemBrasilTalilandia) {?>
+                                            <?php foreach ($headerBrasilTailandia as $hBrasilTalilandia) {?>
                                                
-                                            <li><a href="<?php echo SITE_URL?>/brasil-tailandia/<?php echo $itemBrasilTalilandia->url_amigavel?>"><?php echo $itemBrasilTalilandia->titulo?></a>
+                                            <li><a href="<?php echo SITE_URL?>/brasil-tailandia/<?php echo $hBrasilTalilandia->url_amigavel?>"><?php echo $hBrasilTalilandia->titulo?></a>
                                             <?php }?>
                                             </li>
                                         </ul>

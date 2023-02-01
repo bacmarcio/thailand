@@ -19,6 +19,7 @@ RewriteRule ^servico-consular/([a-zA-Z-0-9-_]+)$ servico-consular.php?id=$1
 RewriteRule ^sobre-a-embaixada/([a-zA-Z-0-9-_]+)$ sobre.php?id=$1
 RewriteRule ^tailandia/([a-zA-Z-0-9-_]+)$ tailandia.php?id=$1
 RewriteRule ^brasil-tailandia/([a-zA-Z-0-9-_]+)$ brasil-tailandia.php?id=$1
+RewriteRule ^eventos/([a-zA-Z-0-9-_]+)$ eventos.php?id=$1
 RewriteRule ^treinamento/([a-zA-Z-0-9-_]+)$ desc-treinamento.php?id=$1
 RewriteRule ^solucao/([a-zA-Z-0-9-_]+)$ desc-solucao.php?id=$1
 RewriteRule ^blog$ blog.php

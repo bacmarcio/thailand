@@ -1,14 +1,31 @@
 <?php 
 session_start();
 include "includes.php";
+$id = '';
+if(isset($_GET['id'])){
+    if(empty($_GET['id'])){
+        header('Location: /');
+    }else{
+        $id = $_GET['id'];        
+    }
+}
 
+$descEventos = $eventos->rsDados('', '', '', '', '', $id);
+$listaEventos = $eventos->rsDados('', '', '', '', $descEventos[0]->id);
 
-$puxaCatTailandia = $tailandia->rsCatServicos();
-$puxaTailandia = $tailandia->rsDados();
-$puxaBrasilTailandia = $brasilTailandia->rsDados();
-$puxaServicos = $servicos->rsDados();
-$puxaEventos = $eventos->rsDados();
-
+if($_SESSION['lang']=== 'en'){
+    $tituloEventos = $descEventos[0]->titulo_en;
+    $descricaoEventos = $descEventos[0]->descricao_en;
+}
+elseif($_SESSION['lang']==='th') {
+    $tituloEventos = $descEventos[0]->titulo_th;
+    $descricaoEventos = $descEventos[0]->descricao_th;
+}
+else
+{
+    $tituloEventos = $descEventos[0]->titulo;
+    $descricaoEventos = $descEventos[0]->descricao;
+}
 
 
 include "header.php";
@@ -20,53 +37,27 @@ include "header.php";
 <section class="trending-news-area">
     <div class="container">
         <div class="row">
-            <div class="col-lg-8">
-
-
-                <div class="row">
-                <?php foreach ($puxaServicos as $itemServicos) {
-                    
-                    if($_SESSION['lang']=== 'en'){
-                        $titulo = $itemServicos->titulo_en;
-                    }
-                    elseif($_SESSION['lang']==='th') {
-                        $titulo = $itemServicos->titulo_th;
-                    }
-                    else
-                    {
-                        $titulo = $itemServicos->titulo;
-                    }
-                    
-                    ?>
-                    <div class="col-lg-6 col-md-6">
-                        <div class="trending-news-post-items">
-                            
-                            <div class="gallery_item">
-                                <div class="gallery_item_thumb">
-                                    <img class="icon-service" src="<?php echo SITE_URL?>/img/<?php echo $itemServicos->foto?>" alt="gallery">
-                                    <!-- <div class="icon"><i class="fas fa-bolt"></i></div> -->
-                                </div>
-                                <div class="gallery_item_content">
-                                    <div class="post-meta">
-                                        <div class="meta-categories">
-                                            <a href="#"><?php echo $lang['SAIBA_MAIS']?></a>
-                                        </div>
-                                        
-                                    </div>
-                                    <h4 class="title"><a href="<?php echo SITE_URL?>/servico-consular/<?php echo $itemServicos->url_amigavel?>"><?php echo $titulo?></a>
-                                    </h4>
-                                </div>
-                            </div>
-                            
-                            
-                        </div>
-                           
-                        
+        <div class="col-lg-12">
+                    <div class="about-author-content">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="<?php echo SITE_URL?>/"><?php echo $lang['INICIO']?></a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><?php echo $lang['EVENTOS']?></li>
+                            </ol>
+                        </nav>
                     </div>
-                    <?php }?>
-                    
                 </div>
-            </div>
+                <div class="col-lg-8">
+                    <div class="post-layout-top-content">
+                        <div class="post-content">
+                            <h3 class="title"><?php echo $tituloEventos?></h3>
+                        </div>
+                        
+                        <div class="post-text mt-30">
+                            <?php echo $descricaoEventos?>
+                        </div>
+                    </div>
+                </div>
             <div class="col-lg-4">
 
 
@@ -76,25 +67,25 @@ include "header.php";
                         <!-- <a href="#">ALL SEE</a> -->
                     </div>
                     <div class="Categories-item">
-                   <?php foreach ($puxaEventos as $itemEvento) {
+                   <?php foreach ($listaEventos as $itemEventos) {
                     
                     if($_SESSION['lang']=== 'en'){
-                        $titulo = $itemEvento->titulo_en;
+                        $titulo = $itemEventos->titulo_en;
                     }
                     elseif($_SESSION['lang']==='th') {
-                        $titulo = $itemEvento->titulo_th;
+                        $titulo = $itemEventos->titulo_th;
                     }
                     else
                     {
-                        $titulo = $itemEvento->titulo;
+                        $titulo = $itemEventos->titulo;
                     }
                     
                     ?>
                        
                     <div class="item">
-                            <img src="<?php echo SITE_URL?>/img/<?php echo $itemEvento->foto;?>" alt="eventos">
+                            <img src="<?php echo SITE_URL?>/img/<?php echo $itemEventos->foto?>" alt="eventos">
                             <div class="Categories-content">
-                                <a href="<?php echo SITE_URL?>/eventos/<?php echo $itemEvento->url_amigavel?>">
+                                <a href="<?php echo SITE_URL?>/eventos/<?php echo $itemEventos->url_amigavel?>">
                                     <span><?php echo $titulo;?></span>
                                     <img src="<?php echo SITE_URL?>/images/arrow.svg" alt="">
                                 </a>
@@ -153,8 +144,6 @@ include "header.php";
             </div>
         </div>
     </div>
-    <div class="clearfix">&nbsp;</div>
-    <div class="clearfix">&nbsp;</div>
-    <div class="clearfix">&nbsp;</div>
-                    
+    </div>
+</section>
 <?php include "footer.php";?>

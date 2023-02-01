@@ -10,21 +10,21 @@ if(isset($_GET['id'])){
     }
 }
 
-$descServicos = $servicos->rsDados('','','','','','', $id);
-$listaServicos = $servicos->rsDados('', '', '', '', $id);
+$descBrasilTailandia = $brasilTailandia->rsDados('','','','','','', $id);
+$listaBrasilTailandia = $brasilTailandia->rsDados('', '', '', '', $id);
 
 if($_SESSION['lang']=== 'en'){
-    $titulo = $descServicos[0]->titulo_en;
-    $descricao = $descServicos[0]->descricao_en;
+    $titulo = $descBrasilTailandia[0]->titulo_en;
+    $descricao = $descBrasilTailandia[0]->descricao_en;
 }
 elseif($_SESSION['lang']==='th') {
-    $titulo = $descServicos[0]->titulo_th;
-    $descricao = $descServicos[0]->descricao_th;
+    $titulo = $descBrasilTailandia[0]->titulo_th;
+    $descricao = $descBrasilTailandia[0]->descricao_th;
 }
 else
 {
-    $titulo = $descServicos[0]->titulo;
-    $descricao = $descServicos[0]->descricao;
+    $titulo = $descBrasilTailandia[0]->titulo;
+    $descricao = $descBrasilTailandia[0]->descricao;
 }
 
 
@@ -67,17 +67,17 @@ include "header.php";
                         <!-- <a href="#">ALL SEE</a> -->
                     </div>
                     <div class="Categories-item">
-                   <?php foreach ($listaServicos as $itemServico) {
+                   <?php foreach ($listaBrasilTailandia as $itemBrasilTailandia) {
                     
                     if($_SESSION['lang']=== 'en'){
-                        $titulo = $itemServico->titulo_en;
+                        $titulo = $itemBrasilTailandia->titulo_en;
                     }
                     elseif($_SESSION['lang']==='th') {
-                        $titulo = $itemServico->titulo_th;
+                        $titulo = $itemBrasilTailandia->titulo_th;
                     }
                     else
                     {
-                        $titulo = $itemServico->titulo;
+                        $titulo = $itemBrasilTailandia->titulo;
                     }
                     
                     ?>
@@ -85,7 +85,7 @@ include "header.php";
                     <div class="item">
                             <img src="<?php echo SITE_URL?>/images/tailandes.jpg" alt="categories">
                             <div class="Categories-content">
-                                <a href="<?php echo SITE_URL?>/servico-consular/<?php echo $itemServico->url_amigavel?>">
+                                <a href="<?php echo SITE_URL?>/brasil-tailandia/<?php echo $itemBrasilTailandia->url_amigavel?>">
                                     <span><?php echo $titulo;?></span>
                                     <img src="<?php echo SITE_URL?>/images/arrow.svg" alt="">
                                 </a>

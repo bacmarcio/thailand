@@ -1,6 +1,6 @@
 <?php include "verifica.php";
-$puxaTailandia = $tailandia->rsDados();
-$tailandia->excluir();
+$puxaBrasilTailandia = $brasilTailandia->rsDados();
+$brasilTailandia->excluir();
 
 
 ?>
@@ -62,8 +62,8 @@ $tailandia->excluir();
                                         </thead>
                                         <tbody>
                                             <?php 
-                                            if(count($puxaTailandia) > 0){
-                                            foreach($puxaTailandia as $itemTailandia){
+                                            if(count($puxaBrasilTailandia) > 0){
+                                            foreach($puxaBrasilTailandia as $itemTailandia){
                                                 if($_SESSION['lang']=== 'en'){
                                                     $titulo = $itemTailandia->titulo_en;
                                                 }
